@@ -1,0 +1,186 @@
+
+$place-holder-color: #ababab;
+$focus-text-color: #333;
+$focus-background-color: #efefef;
+$input-box-shadow: true;
+$input-box-shadow-value: 0 0 3px rgba(0,0,0,.2);
+$border-color: #aaa; 
+$form-spacing: 0;
+$fieldset-spacing: 1.25em;
+
+form {
+	@include clearfix;
+	margin-bottom: $form-spacing;
+}
+
+fieldset {
+	@include clearfix;
+	border: 1px solid $border-color;
+	padding: 0;
+	margin:0 0 $fieldset-spacing;
+	
+	legend {
+		margin: 0 0 0 1em;
+	}
+}
+
+label {
+	display: block;
+	font-size: 0.8em;
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	@include appearance(none);
+	background-color: transparent;
+    border: 1px solid $border-color;
+	box-sizing: border-box;
+	font-size: 0.8em;
+	color: $place-holder-color;
+	line-height: 2.0;
+	padding: 0.5rem 0.5em 0.25rem;;
+	outline: none;
+	width: 100%;
+	
+	select,
+	&::placeholder {
+		color: $place-holder-color;
+	}
+}
+
+// input[type="option"] Need to build
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus,
+.text:focus,
+.textarea:focus {
+	border-color: $border-color;
+	color: $focus-text-color;
+	background-color: $focus-background-color;
+
+	@if $input-box-shadow{
+		box-shadow:  $input-box-shadow-value;
+	} 
+}
+
+.input-wrap {
+	position: relative;
+}
+
+.label {
+	color: $black;
+	font-size: 0.8em;
+	left: 19px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+input:focus ~ .label,
+input:not(:focus):valid ~ .label,
+select ~ .label {
+	font-size: 12px;
+	top: 0;
+	transform: translateY(0);
+	
+}
+
+textarea:focus ~ .label,
+textarea:not(:focus):valid ~ .label, {
+	
+}
+
+$color2: #3197EE;
+
+input[type="radio"] {
+  	margin: 0.5rem;
+	position: absolute;
+	opacity: 0;
+	+ .radio-label {
+	  &:before {
+	    content: '';
+	    background: $focus-background-color;
+	    border-radius: 100%;
+	    border: 1px solid darken($focus-background-color, 25%);
+	    display: inline-block;
+	    width: 1.2em;
+	    height: 1.2em;
+	    position: relative;
+	    top: 0.1em;
+	    margin-right: 0.6em;
+	    vertical-align: top;
+	    cursor: pointer;
+	    text-align: center;
+	    transition: background-color 250ms ease;
+	  }
+	}
+	&:checked {
+	  + .radio-label {
+	    &:before {
+	      background-color: $color2;
+	      box-shadow: inset 0 0 0 4px $focus-background-color;
+	    }
+	  }
+	}
+	&:focus {
+	  + .radio-label {
+	    &:before {
+	      outline: none;
+	      border-color: $color2;
+	    }
+	  }
+	}
+	&:disabled {
+	  + .radio-label {
+	    &:before {
+	      box-shadow: inset 0 0 0 4px $focus-background-color;
+	      border-color: darken($focus-background-color, 25%);
+	      background: darken($focus-background-color, 25%);
+	    }
+	  }
+	}
+	+ .radio-label {
+	  &:empty {
+	    &:before {
+	      margin-right: 0;
+	    }
+	  }
+	}
+}
+
+input[type="checkbox"] {
+	// opacity: 0;
+	&::before {
+		
+	}
+	&:checked {
+		
+	}
+}
+
+select {
+    border-radius: 0;
+}
+
+textarea {
+	min-height: em(150);
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+}

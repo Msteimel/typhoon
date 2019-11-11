@@ -1,0 +1,89 @@
+/*================================================
+				// Color Variables
+==================================================*/
+// Constant
+$black: #333;
+$white: #fff;
+
+// site colors
+
+/*================================================
+				// Site Styles
+==================================================*/
+$primary-color: $black;
+$secondary-color: $white;
+$link-color: #666;
+
+$nav-link: $white;
+
+$color-h1: $black;
+$color-h2: $black;
+$color-h3: $black;
+$color-h4: $black;
+$color-h5: $black;
+$color-h6: $black;
+
+$text-color: $black;
+
+/*================================================
+				// Button Colors
+==================================================*/
+
+// primary button colors
+$button-primary-background-color: #aaa;
+$button-primary-border-color: #666;
+$button-primary-text: $black;
+
+// secondary button colors
+$button-secondary-background-color: #666;
+$button-secondary-border-color: #aaa;
+$button-secondary-text: $white;
+
+/*================================================
+					Breakpoints
+==================================================*/
+$sm: 350;
+$mp: 479;
+$ml: 667;
+$tp: 800;
+$tl: 1100;
+$dk: 1101;
+$lg: 1901;
+
+/*================================================
+				// Grid column variables
+==================================================*/
+
+$grid: 12;
+$grid-css: 12;
+$grid-css-row: 100;
+
+/*================================================
+				// Typography variables
+==================================================*/
+
+$line-height: 1.6;
+
+// sets font-size range
+$em-base: 16;
+$em-base-max: 20;
+
+/*================================================
+	// Component Spacing
+==================================================*/
+
+$spacing-large: 64;
+$spacing-med: 32;
+$spacing-small: 16;
+
+/*================================================
+				// Responsive units
+==================================================*/
+
+// min-vw and max-vw for fluid font size
+$min-viewport: ($ml / 16) * 1em;
+$max-viewport: ($dk / 16) * 1em;
+
+// // min and max font size for fluid font
+$min-font: ($em-base / 16) * 1em;
+$max-font: ($em-base-max / 16) * 1em;
