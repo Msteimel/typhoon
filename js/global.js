@@ -48,3 +48,8 @@ function check_if_in_view() {
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
+// $.get("https://iastate.libcal.com/1.1/equipment/locations", function (data) {
+//     $(".result").html(data);
+//     alert("Load was performed.");
+// });
+

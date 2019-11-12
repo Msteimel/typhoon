@@ -90,29 +90,6 @@
 	}
 }
 
-// This makes padding and line height responsive
-
-//   line-height:  calc(28px + (38 - 28) * (100vw - 600px) / (1200 - 600));
-
-//   padding: calc(20px + (40 - 20) * (100vw - 600px) / (1200 - 600));
-
-// @media (max-width: 600px) {
-//   p {
-//     padding: 20px;
-//     font-size: 24px;
-//     line-height: 28px;
-
-//   }
-// }
-// @media (min-width: 1200px) {
-//   p {
-//     padding: 40px;
-//     font-size: 34px;
-//     line-height: 38px;
-
-//   }
-// }
-
 /*================================================
 			Misc
 ==================================================*/
@@ -158,12 +135,7 @@ Positioning helpers
 @mixin position($position, $args) {
 	@each $o in top right bottom left {
 		$i: index($args, $o);
-		@if $i and
-			$i +
-			1 <=
-			length($args) and
-			type-of(nth($args, $i + 1)) ==
-			number
+		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number
 		{
 			#{$o}: nth($args, $i + 1);
 		}

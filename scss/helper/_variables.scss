@@ -1,43 +1,40 @@
-/*================================================
-				// Color Variables
-==================================================*/
-// Constant
-$black: #333;
-$white: #fff;
-
-// site colors
+@import 'variables/colors';
+@import 'variables/spacing';
+@import 'variables/font-size';
+@import 'variables/vertical-depth';
+@import 'variables/borders';
 
 /*================================================
 				// Site Styles
 ==================================================*/
-$primary-color: $black;
-$secondary-color: $white;
-$link-color: #666;
+// $primary-color: $black;
+// $secondary-color: $white;
+// $link-color: #666;
 
-$nav-link: $white;
+// $nav-link: $white;
 
-$color-h1: $black;
-$color-h2: $black;
-$color-h3: $black;
-$color-h4: $black;
-$color-h5: $black;
-$color-h6: $black;
+// $color-h1: $black;
+// $color-h2: $black;
+// $color-h3: $black;
+// $color-h4: $black;
+// $color-h5: $black;
+// $color-h6: $black;
 
-$text-color: $black;
+// $text-color: $black;
 
 /*================================================
 				// Button Colors
 ==================================================*/
 
 // primary button colors
-$button-primary-background-color: #aaa;
-$button-primary-border-color: #666;
-$button-primary-text: $black;
+// $button-primary-background-color: #aaa;
+// $button-primary-border-color: #666;
+// $button-primary-text: $black;
 
-// secondary button colors
-$button-secondary-background-color: #666;
-$button-secondary-border-color: #aaa;
-$button-secondary-text: $white;
+// // secondary button colors
+// $button-secondary-background-color: #666;
+// $button-secondary-border-color: #aaa;
+// $button-secondary-text: $white;
 
 /*================================================
 					Breakpoints
@@ -69,7 +66,7 @@ $em-base: 16;
 $em-base-max: 20;
 
 /*================================================
-	// Component Spacing
+	//Spacing
 ==================================================*/
 
 $spacing-large: 64;
