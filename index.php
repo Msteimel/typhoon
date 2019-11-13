@@ -9,6 +9,7 @@
 
 	<section id="type" class="grid">
 		<h1>Typhoon</h1>
+        <p>test</p>
 
 	</section>
 
