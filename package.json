@@ -1,7 +1,7 @@
 {
-  "name": "grid",
+  "name": "Typhoon",
   "version": "1.0.0",
-  "description": "My grid",
+  "description": "Iowa State University Library Style Guide",
   "main": "index.js",
   "scripts": {
   	"test": "echo \"Error: no test specified\" && exit 1",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Msteimel/grid.git"
+    "url": "git+https://github.com/Msteimel/typhoon.git"
   },
   "keywords": [
     "Grid!"
   ],
-  "author": "Mitch Steimel",
+  "author": "ISU - LIB IT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Msteimel/grid/issues"
+    "url": "https://github.com/Msteimel/typhoon/issues"
   },
-  "homepage": "https://github.com/Msteimel/grid#readme",
+  "homepage": "https://github.com/Msteimel/typhoon#readme",
   "dependencies": {
     "node-sass": "^4.12.0"
   }
