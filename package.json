@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build"
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4f28044c18ae93fcf4db41bef74f94939a8c62b3
   },
   "repository": {
     "type": "git",
