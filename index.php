@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-
-<head>
-<!--[if IE 9 ]>   <html class="ie9" lang="en"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <!-- End Font Awesome -->
-  <!-- Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans" rel="stylesheet">
- <title> Iowa State Library Design System</title></title>
-
-
-  <link rel="stylesheet" href="/css/global.css">
-</head>
+<?php include 'includes/global/head/index.php';?>
 
 <body>
 	<section class="hero">
-		<!-- <?php # include 'includes/global/header/index.php';?> -->
+		<?php # include 'includes/global/header/index.php';?>
 	</section>
 
-	<section id="type" class="grid">
-		<h1>Typhoon</h1>
-        
+	<section id="type" class="grid" >
+		<h1>PHP Typhoon</h1>
+		<p>test</p>
+		<p>come on</p>
 	</section>
 
 	<div class="footer-wrap">
-		<!-- <?php # include 'includes/global/footer/index.php';?> -->
+		<?php # include 'includes/global/footer/index.php';?>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/js/global.js"></script>
+
+	<?php include 'js/js-include.php';?>
+
 </body>
 
 </html>
