@@ -1,0 +1,19 @@
+// These are classes you can stick on stuff to do things for you.
+// clearfix is a prime example. If you wanted to do a text-center class.
+// basically you attach a property or style to a single class that
+// changes the element accordingly.
+
+.clearfix {
+  *zoom: 1;
+  clear: both;
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
