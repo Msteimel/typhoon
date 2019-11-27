@@ -1,0 +1,50 @@
+/*================================================
+			margin classes
+==================================================*/
+// creates classes like `.lib-pt4`
+
+$margin-list: (
+  '4': $space4,
+  '8': $space8,
+  '12': $space12,
+  '16': $space16,
+  '24': $space24,
+  '32': $space32,
+  '48': $space48,
+  '64': $space64,
+  '96': $space96,
+  '128': $space128,
+  '192': $space192,
+);
+
+@each $space, $spacing in $margin-list {
+  .lib-m#{$space} {
+    margin: $spacing;
+  }
+
+  .lib-mx#{$space} {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
+
+  .lib-my#{$space} {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+  }
+
+  .lib-mt#{$space} {
+    margin-top: $spacing;
+  }
+
+  .lib-mr#{$space} {
+    margin-right: $spacing;
+  }
+
+  .lib-mb#{$space} {
+    margin-bottom: $spacing;
+  }
+
+  .lib-ml#{$space} {
+    margin-left: $spacing;
+  }
+}

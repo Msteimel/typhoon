@@ -1,0 +1,24 @@
+/*================================================
+			font-size classes
+==================================================*/
+// creates classes like `.lib-fs16`
+
+$fs-list: (
+  '4': $space4,
+  '8': $space8,
+  '12': $space12,
+  '16': $space16,
+  '24': $space24,
+  '32': $space32,
+  '48': $space48,
+  '64': $space64,
+  '96': $space96,
+  '128': $space128,
+  '192': $space192,
+);
+
+@each $fs, $value in $fs-list {
+  .lib-fs#{$fs} {
+    font-size: $value;
+  }
+}

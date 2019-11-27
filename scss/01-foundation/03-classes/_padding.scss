@@ -1,0 +1,50 @@
+/*================================================
+			padding classes
+==================================================*/
+// creates classes like `.lib-pt4`
+
+$padding-list: (
+  '4': $space4,
+  '8': $space8,
+  '12': $space12,
+  '16': $space16,
+  '24': $space24,
+  '32': $space32,
+  '48': $space48,
+  '64': $space64,
+  '96': $space96,
+  '128': $space128,
+  '192': $space192,
+);
+
+@each $space, $spacing in $padding-list {
+  .lib-p#{$space} {
+    padding: $spacing;
+  }
+
+  .lib-px#{$space} {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+
+  .lib-py#{$space} {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  .lib-pt#{$space} {
+    padding-top: $spacing;
+  }
+
+  .lib-pr#{$space} {
+    padding-right: $spacing;
+  }
+
+  .lib-pb#{$space} {
+    padding-bottom: $spacing;
+  }
+
+  .lib-pl#{$space} {
+    padding-left: $spacing;
+  }
+}
