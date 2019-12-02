@@ -22,36 +22,36 @@
 // Body: Allows any em based font size to be responsive
 // element: allows precise control if you use px or rem
 // em units get blown up if responsive text mixin is set at body or root.
-@mixin responsive-text(
-  $min-font-size,
-  $max-font-size,
-  $min-vw: $ml,
-  $max-vw: $dk
-) {
-  $min-viewport: ($min-vw / 16) * 1em;
-  $max-viewport: ($max-vw / 16) * 1em;
+// @mixin responsive-text(
+//   $min-font-size,
+//   $max-font-size,
+//   $min-vw: $ml,
+//   $max-vw: $dk
+// ) {
+//   $min-viewport: ($min-vw / 16) * 1em;
+//   $max-viewport: ($max-vw / 16) * 1em;
 
-  $responsive-calc: calc(
-    #{px-calc($min-font-size)} + (
-        #{strip-unit(px-calc($max-font-size))} - #{strip-unit(
-            px-calc($min-font-size)
-          )}
-      ) * (100vw - #{px-calc($min-viewport)}) / (#{strip-unit(
-            px-calc($max-viewport)
-          )} - #{strip-unit(px-calc($min-viewport))})
-  );
+//   $responsive-calc: calc(
+//     #{px-calc($min-font-size)} + (
+//         #{strip-unit(px-calc($max-font-size))} - #{strip-unit(
+//             px-calc($min-font-size)
+//           )}
+//       ) * (100vw - #{px-calc($min-viewport)}) / (#{strip-unit(
+//             px-calc($max-viewport)
+//           )} - #{strip-unit(px-calc($min-viewport))})
+//   );
 
-  font-size: $min-font-size;
-  // Min width
-  @media screen and (min-width: $min-viewport) {
-    font-size: $responsive-calc;
-  }
+//   font-size: $min-font-size;
+//   // Min width
+//   @media screen and (min-width: $min-viewport) {
+//     font-size: $responsive-calc;
+//   }
 
-  // Max width
-  @media screen and (min-width: $max-viewport) {
-    font-size: $max-font-size;
-  }
-}
+//   // Max width
+//   @media screen and (min-width: $max-viewport) {
+//     font-size: $max-font-size;
+//   }
+// }
 
 /*================================================
 			Misc

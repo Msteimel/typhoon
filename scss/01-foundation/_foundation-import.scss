@@ -1,0 +1,13 @@
+// functions and mixins that help make it go
+@import 'functions';
+@import 'mixins';
+
+// bootstrap grid
+@import '01-grid/bootstrap-grid.scss';
+
+// fundamental variables and classes that permeate the whole system
+@import '02-variables/variables-import';
+@import '03-elements/elements-import';
+@import '04-components/components-import';
+// @import '05-icons/icons-import';
+@import '06-classes/classes-import';

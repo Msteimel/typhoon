@@ -1,10 +1,3 @@
-// @import '02-variables/misc';
-@import '02-variables/colors';
-@import '02-variables/spacing';
-@import '02-variables/font-size';
-@import '02-variables/vertical-depth';
-@import '02-variables/borders';
-
 /*================================================
 				// Site Styles
 ==================================================*/
@@ -40,48 +33,48 @@
 /*================================================
 					Breakpoints
 ==================================================*/
-$sm: 350;
-$mp: 479;
-$ml: 667;
-$tp: 800;
-$tl: 1100;
-$dk: 1101;
-$lg: 1901;
+// $sm: 350;
+// $mp: 479;
+// $ml: 667;
+// $tp: 800;
+// $tl: 1100;
+// $dk: 1101;
+// $lg: 1901;
 
 /*================================================
 				// Grid column variables
 ==================================================*/
 
-$grid: 12;
-$grid-css: 12;
-$grid-css-row: 100;
+// $grid: 12;
+// $grid-css: 12;
+// $grid-css-row: 100;
 
-/*================================================
-				// Typography variables
-==================================================*/
+// /*================================================
+// 				// Typography variables
+// ==================================================*/
 
-$line-height: 1.6;
+// $line-height: 1.6;
 
-// sets font-size range
-$em-base: 16;
-$em-base-max: 20;
+// // sets font-size range
+// $em-base: 16;
+// $em-base-max: 20;
 
-/*================================================
-	//Spacing
-==================================================*/
+// /*================================================
+// 	//Spacing
+// ==================================================*/
 
-$spacing-large: 64;
-$spacing-med: 32;
-$spacing-small: 16;
+// $spacing-large: 64;
+// $spacing-med: 32;
+// $spacing-small: 16;
 
-/*================================================
-				// Responsive units
-==================================================*/
+// /*================================================
+// 				// Responsive units
+// ==================================================*/
 
-// min-vw and max-vw for fluid font size
-$min-viewport: ($ml / 16) * 1em;
-$max-viewport: ($dk / 16) * 1em;
+// // min-vw and max-vw for fluid font size
+// $min-viewport: ($ml / 16) * 1em;
+// $max-viewport: ($dk / 16) * 1em;
 
-// // min and max font size for fluid font
-$min-font: ($em-base / 16) * 1em;
-$max-font: ($em-base-max / 16) * 1em;
+// // // min and max font size for fluid font
+// $min-font: ($em-base / 16) * 1em;
+// $max-font: ($em-base-max / 16) * 1em;
