@@ -2,8 +2,9 @@
 			color classes
 ==================================================*/
 // creates classes like `.lib-bg-red-500`
+// creates classes like `.lib-font-red-500`
 
-// Primary Background Colors
+// Primary Colors
 $primary-colors: (
   'red-100': $red-100,
   'red-200': $red-200,
@@ -20,9 +21,13 @@ $primary-colors: (
   .lib-bg-#{$color} {
     background-color: $colors;
   }
+
+  .lib-text-#{$color} {
+    color: $colors;
+  }
 }
 
-// Secondary Background Colors
+// Secondary Colors
 $secondary-colors: (
   'yellow-100': $yellow-100,
   'yellow-200': $yellow-200,
@@ -39,9 +44,13 @@ $secondary-colors: (
   .lib-bg-#{$color} {
     background-color: $colors;
   }
+
+  .lib-text-#{$color} {
+    color: $colors;
+  }
 }
 
-// Neutral Background Colors
+// Neutral Colors
 $neutral-colors: (
   'warm-grey-100': $warm-grey-100,
   'warm-grey-200': $warm-grey-200,
@@ -67,9 +76,13 @@ $neutral-colors: (
   .lib-bg-#{$color} {
     background-color: $colors;
   }
+
+  .lib-text-#{$color} {
+    color: $colors;
+  }
 }
 
-// Accent Background Colors
+// Accent Colors
 $accent-colors: (
   'blue-100': $blue-100,
   'blue-200': $blue-200,
@@ -85,5 +98,9 @@ $accent-colors: (
 @each $color, $colors in $accent-colors {
   .lib-bg-#{$color} {
     background-color: $colors;
+  }
+
+  .lib-text-#{$color} {
+    color: $colors;
   }
 }
