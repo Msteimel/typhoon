@@ -10,8 +10,11 @@
   <!-- End Font Awesome -->
   <!-- Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans" rel="stylesheet">
+
+
  <title> Iowa State Library Design System</title></title>
 
 
-  <link rel="stylesheet" href="/css/global.css">
+ <!-- <link rel="stylesheet" href="/css/iastate.min.css"> -->
+ <link rel="stylesheet" href="/css/global.css">
 </head>
