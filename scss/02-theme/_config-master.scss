@@ -7,25 +7,33 @@
       This should rarely be changed, if at all.
 ==================================================*/
 $primary-color: $red-500;
+$secondary-color: $yellow-500;
+$accent-color: $blue-900;
 
 $font-size-base: $fs16;
 $font-size-small: $fs14;
 $font-weight-base: 400;
 $line-height-base: 1.5;
+
 $body-color: $black;
 $body-bg: $white;
+
 $font-weight-bolder: 600;
 $link-hover-color: $primary-color;
+
 $table-caption-color: $warm-grey-400;
 $label-margin-bottom: $space24;
 
 $enable-pointer-cursor-for-buttons: true;
 
-$heading-font: 'Merriweather', Georgia, serif;
-$body-font: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font: $merriweather_stack;
+$body-font: $nimbus-sans_stack;
+
+// to override a variable, it needs to be stated and called in a css element
 
 html {
   font-size: $font-size-base;
+  line-height: 1.5;
 }
 
 body {

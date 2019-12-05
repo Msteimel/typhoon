@@ -1,0 +1,72 @@
+
+.lead {
+  color: $lead-color;
+  font-size: $lead-fs;
+  line-height: $lead-lh;
+}
+
+p {
+  // @include responsive-text(14px, 20px);
+  color: $p-color;
+  font-size: $p-fs;
+  line-height: $p-lh;
+
+  code {
+    vertical-align: middle;
+  }
+}
+
+// p,
+// ul,
+// ol,
+// pre,
+// table,
+// blockquote {
+// 	margin-top: 0em;
+// 	margin-bottom: 1em;
+// }
+// ul ul,
+// ol ol,
+// ul ol,
+// ol ul {
+// 	margin-top: 0em;
+// 	margin-bottom: 0em;
+// }
+// a {
+// 	color: $link-color;
+// }
+
+// /* Let's make sure all's aligned */
+// hr,
+// .hr {
+// 	border: 1px solid;
+// 	margin: -1px 0;
+// }
+// a,
+// b,
+// i,
+// strong,
+// em,
+// small,
+// code {
+// 	line-height: 0;
+// }
+// sub,
+// sup {
+// 	line-height: 0;
+// 	position: relative;
+// 	vertical-align: baseline;
+// }
+// sup {
+// 	top: -0.5em;
+// }
+// sub {
+// 	bottom: -0.25em;
+// }
+// strong {
+// 	color: $text-color;
+// }
+// code {
+// 	background-color: $secondary-color;
+// 	color: $primary-color;
+// }

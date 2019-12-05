@@ -1,9 +1,10 @@
 /*================================================
 			Button Elements
 ==================================================*/
+$button-font: $heading-font;
 
 // primary button variables
-$button-primary-background-color: $red-500;
+$button-primary-background-color: $primary-color;
 $button-primary-border-color: transparent;
 $button-primary_border-radius: $br4;
 $button-primary-text: $white;
@@ -12,7 +13,7 @@ $button-primary_hover-background-color: $red-400;
 $button-primary_hover-box-shadow: $dark-vert-3;
 
 // secondary button variables
-$button-secondary-background-color: $yellow-500;
+$button-secondary-background-color: $secondary-color;
 $button-secondary-border-color: transparent;
 $button-secondary-text: $warm-grey-900;
 $button-secondary-box-shadow: $light-vert-1;
@@ -33,7 +34,7 @@ input[type='button'].lib-button {
   color: $button-primary-text;
   cursor: pointer;
   display: inline-block;
-  // font-family: 'system';
+  font-family: $button-font;
   line-height: 1rem;
   margin: 0 0 0.5em;
   padding: 1em 1.5em;
@@ -42,9 +43,10 @@ input[type='button'].lib-button {
   transition: 0.3s ease;
 
   &:hover {
-    color: $button-primary-text;
+    color: $white;
     background-color: $button-primary_hover-background-color;
     box-shadow: $button-primary_hover-box-shadow;
+    text-decoration: none;
   }
 }
 
@@ -62,10 +64,10 @@ input[type='button'].lib-button {
   padding: 0.8em 1em;
 }
 
-.lib-button-ghost {
+.lib-button.lib-button-ghost {
   background-color: transparent;
-  border-color: $button-primary-text;
-  color: $button-primary-text;
+  border-color: $red-500;
+  color: $red-500;
 
   &:hover {
     background-color: darken(#fff, 5%);
@@ -87,12 +89,17 @@ input[type='button'].lib-button-secondary {
   }
 }
 
-.button-ghost.lib-button-secondary {
-  background-color: transparent;
-  border-color: $button-secondary-background-color;
-  color: $button-secondary-background-color;
+.lib-button.lib-button-secondary,
+input[type='reset'].lib-button-secondary,
+input[type='submit'].lib-button-secondary,
+input[type='button'].lib-button-secondary {
+  background-color: $button-secondary-background-color;
+  border-color: $button-secondary-border-color;
+  color: $button-secondary-text;
 
   &:hover {
-    background-color: darken(#fff, 5%);
+    color: $button-secondary-text;
+    background-color: $button-secondary_hover-background-color;
+    box-shadow: $button-secondary_hover-box-shadow;
   }
 }
