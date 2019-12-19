@@ -94,9 +94,10 @@ input[type='button'].lib-button {
     right: 1rem;
   }
 
-  &:hover {
+  &:hover, 
+  &:focus, {
     &::after {
-      right: 0.5em;
+      right: 0.6em;
     }
   }
 }
@@ -163,4 +164,13 @@ input[type='button'].lib-button-accent {
     background-color: $blue-700;
     box-shadow: $button-primary-box-shadow;
   }
+}
+
+.lib-tech-item {
+  display:flex;
+  flex-direction: column;
+}
+
+.lib-tech-item .info {
+  align-self: flex-end;
 }
