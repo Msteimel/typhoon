@@ -1,0 +1,101 @@
+.lib-gen-con--wrap {
+  h1 {
+    margin-bottom: $space48;
+  }
+  h2 {
+    font-size: $fs30;
+    margin-bottom: $space16;
+  }
+  h3 {
+    font-size: $fs24;
+    margin-bottom: $space8;
+  }
+  h4 {
+    font-size: $fs18;
+    font-weight: 600;
+    margin-bottom: $space8;
+  }
+
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p {
+    margin-top: 0;
+  }
+}
+.lib-gen-con--page-title {
+}
+
+.lib-gen-con--block {
+  margin-bottom: $space48;
+
+  .block-title {
+    display: inline-block;
+  }
+
+  & p:first-of-type {
+    margin-top: 0;
+  }
+
+  & p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.img-block {
+  @include clearfix;
+}
+
+.two-img {
+}
+
+.lib-gen-con--img-wrap {
+  max-width: rem(300);
+  width: 100%;
+
+  figure {
+    position: relative;
+    padding-top: percentage(400/400);
+    overflow: hidden;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  .text-img-right & {
+    float: right;
+    margin-left: $space24;
+  }
+
+  .text-img-left & {
+    float: left;
+    margin-right: $space24;
+  }
+
+  .two-img & {
+    max-width: rem(450);
+  }
+}
+
+.content-wrap {
+  .two-img &,
+  .three-img & {
+    display: flex;
+    justify-content: space-around;
+  }
+}
