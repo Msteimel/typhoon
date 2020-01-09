@@ -3,7 +3,7 @@ $body-font: $nimbus-sans_stack;
 
 $h1-color: $warm-grey-900;
 $h1-fs: $fs48;
-$h1-lh: 1.0;
+$h1-lh: 1;
 
 $h2-color: $warm-grey-900;
 $h2-fs: $fs36;
@@ -40,8 +40,7 @@ h1,
   color: $h1-color;
   font-size: $h1-fs;
   line-height: $h1-lh;
-  margin-top: 0.38235294em;
-  margin-bottom: 0.76470588em;
+  margin: 0;
 }
 h2,
 .h2 {
@@ -50,8 +49,7 @@ h2,
   color: $h2-color;
   font-size: $h2-fs;
   line-height: $h2-lh;
-  margin-top: 0.4893617em;
-  margin-bottom: 0.4893617em;
+  margin: 0;
 }
 h3,
 .h3 {
@@ -60,8 +58,7 @@ h3,
   color: $h3-color;
   font-size: $h3-fs;
   line-height: $h3-lh;
-  margin-top: 0.79310345em;
-  margin-bottom: 0em;
+  margin: 0em;
 }
 h4,
 .h4 {
@@ -70,8 +67,7 @@ h4,
   color: $h4-color;
   font-size: $h4-fs;
   line-height: $h4-lh;
-  margin-top: 1.27777778em;
-  margin-bottom: 0em;
+  margin: 0em;
 }
 h5,
 .h5 {
@@ -80,8 +76,7 @@ h5,
   color: $h5-color;
   font-size: $h5-fs;
   line-height: $h5-lh;
-  margin-top: 1.27777778em;
-  margin-bottom: 0em;
+  margin: 0em;
 }
 h6,
 .h6 {
@@ -90,6 +85,5 @@ h6,
   color: $h6-color;
   font-size: $h6-fs;
   line-height: $h6-lh;
-  margin-top: 1.27777778em;
-  margin-bottom: 0em;
+  margin: 0em;
 }

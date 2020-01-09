@@ -94,8 +94,8 @@ input[type='button'].lib-button {
     right: 1rem;
   }
 
-  &:hover, 
-  &:focus, {
+  &:hover,
+  &:focus {
     &::after {
       right: 0.6em;
     }
@@ -167,7 +167,7 @@ input[type='button'].lib-button-accent {
 }
 
 .lib-tech-item {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
