@@ -1,4 +1,7 @@
 .lib-gen-con--wrap {
+  max-width: rem(850);
+  margin: 0 auto;
+
   h1 {
     margin-bottom: $space48;
   }
@@ -24,78 +27,89 @@
   h6 + p {
     margin-top: 0;
   }
-}
-.lib-gen-con--page-title {
-}
 
-.lib-gen-con--block {
-  margin-bottom: $space48;
-
-  .block-title {
-    display: inline-block;
+  .lib-gen-con--page-title {
   }
 
-  & p:first-of-type {
-    margin-top: 0;
+  .lib-gen-con--block {
+    margin-bottom: $space48;
+
+    .block-title {
+      display: inline-block;
+    }
+
+    & p:first-of-type {
+      margin-top: 0;
+    }
+
+    & p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
-  & p:last-of-type {
-    margin-bottom: 0;
+  .img-block {
+    @include clearfix;
   }
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.img-block {
-  @include clearfix;
-}
-
-.two-img {
-}
-
-.lib-gen-con--img-wrap {
-  max-width: rem(300);
-  width: 100%;
-
-  figure {
-    position: relative;
-    padding-top: percentage(400/400);
-    overflow: hidden;
+  .text-img-right {
+    .lib-gen-con--img-wrap {
+      float: right;
+      margin-left: $space24;
+    }
   }
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: auto;
+  .text-img-left {
+    .lib-gen-con--img-wrap {
+      float: left;
+      margin-right: $space24;
+    }
   }
 
-  figcaption {
-    text-align: center;
+  .two-img {
+    .lib-gen-con--img-wrap {
+      max-width: rem(400);
+    }
   }
 
-  .text-img-right & {
-    float: right;
-    margin-left: $space24;
+  .three-img {
+    .lib-gen-con--img-wrap {
+      max-width: rem(250);
+    }
   }
 
-  .text-img-left & {
-    float: left;
-    margin-right: $space24;
+  .two-img,
+  .three-img {
+    .content-wrap {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
-  .two-img & {
-    max-width: rem(450);
-  }
-}
+  .lib-gen-con--img-wrap {
+    max-width: rem(300);
+    width: 100%;
 
-.content-wrap {
-  .two-img &,
-  .three-img & {
-    display: flex;
-    justify-content: space-around;
+    figure {
+      position: relative;
+      padding-top: percentage(400/400);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      height: auto;
+      box-shadow: $vert-dark-2;
+    }
+
+    figcaption {
+      padding-top: $space12;
+      text-align: center;
+    }
   }
 }

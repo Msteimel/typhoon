@@ -8,25 +8,25 @@ $button-primary-background-color: $primary-color;
 $button-primary-border-color: transparent;
 $button-primary_border-radius: $br4;
 $button-primary-text: $white;
-$button-primary-box-shadow: $dark-vert-1;
+$button-primary-box-shadow: $vert-dark-1;
 $button-primary_hover-background-color: $red-400;
-$button-primary_hover-box-shadow: $dark-vert-3;
+$button-primary_hover-box-shadow: $vert-dark-3;
 
 // secondary button variables
 $button-secondary-background-color: $secondary-color;
 $button-secondary-border-color: transparent;
 $button-secondary-text: $warm-grey-900;
-$button-secondary-box-shadow: $light-vert-1;
+$button-secondary-box-shadow: $vert-light-1;
 $button-secondary_hover-background-color: $yellow-400;
-$button-secondary_hover-box-shadow: $light-vert-3;
+$button-secondary_hover-box-shadow: $vert-light-3;
 
 // accent button variables
 $button-accent-background-color: $accent-color;
 $button-accent-border-color: transparent;
 $button-accent-text: $white;
-$button-accent-box-shadow: $dark-vert-1;
+$button-accent-box-shadow: $vert-dark-1;
 $button-accent_hover-background-color: $blue-400;
-$button-accent_hover-box-shadow: $dark-vert-3;
+$button-accent_hover-box-shadow: $vert-dark-3;
 
 .lib-button,
 button.lib-button,
