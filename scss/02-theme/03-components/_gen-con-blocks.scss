@@ -122,29 +122,28 @@
   }
 }
 
-$doc-types: (
-  '.docx': '\f1c2',
-  '.pdf': '\f1c1',
-  '.xlsx': '\f1c3',
-  '.jpg': '\f1c5',
-  '.png': '\f1c5',
-  '.com': '\f35d',
-  '.net': '\f35d',
-  '.edu': '\f35d',
-  '.org': '\f35d',
-);
+.lib-block--link-list {
+  $doc-types: (
+    '.docx': '\f1c2',
+    '.pdf': '\f1c1',
+    '.xlsx': '\f1c3',
+    '.jpg': '\f1c5',
+    '.png': '\f1c5',
+    '.com': '\f35d',
+    '.net': '\f35d',
+    '.edu': '\f35d',
+    '.org': '\f35d',
+  );
 
-@each $docType, $icon in $doc-types {
-  .lib-link-list--item {
-    @if "a[href*='#{$docType}']" {
-      a[href*='#{$docType}']::before {
-        content: $icon;
+  @each $docType, $icon in $doc-types {
+    .lib-link-list--item {
+      @if "a[href*='#{$docType}']" {
+        a[href*='#{$docType}']::before {
+          content: $icon;
+        }
       }
     }
   }
-}
-
-.lib-block--link-list {
   // box-sizing: content-box;
   .lib-link-list {
     display: flex;
@@ -202,5 +201,5 @@ $doc-types: (
 }
 
 .lib-block--quote-ribbon {
-  background-color: $warm-grey-200;
+  background-color: $warm-grey-100;
 }
