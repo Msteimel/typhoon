@@ -19,6 +19,20 @@ p {
   }
 }
 
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+    // todo
+  }
+}
+
 // p,
 // ul,
 // ol,
