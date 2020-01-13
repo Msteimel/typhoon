@@ -2,6 +2,15 @@ $p-color: $warm-grey-900;
 $p-fs: $fs16;
 $p-lh: 1.5;
 
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0;
+}
+
 .lead {
   color: $lead-color;
   font-size: $lead-fs;
