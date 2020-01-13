@@ -120,7 +120,7 @@ Positioning helpers
 }
 
 // Center Absolutely
-@mixin pos_center($top: 50%) {
+@mixin vert_center($top: 50%) {
   position: absolute;
   top: $top;
   transform: translateY(-$top);
