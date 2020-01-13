@@ -15,22 +15,18 @@
   }
   h4 {
     font-size: $fs18;
-    font-weight: 600;
+    // font-weight: 600;
     margin-bottom: $space8;
   }
 
-  h1 + p,
-  h2 + p,
-  h3 + p,
-  h4 + p,
-  h5 + p,
-  h6 + p {
-    margin-top: 0;
+  ul {
+    list-style-type: none;
+    padding: 0;
   }
 }
 
-.lib-gen-con--page-title {
-}
+// .lib-gen-con--page-title {
+// }
 
 .lib-gen-con--block {
   margin-bottom: $space48;
@@ -126,18 +122,6 @@
   }
 }
 
-.lib-block--link-list {
-  box-sizing: content-box;
-}
-
-.lib-link-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: $space32 0 0 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 $doc-types: (
   '.docx': '\f1c2',
   '.pdf': '\f1c1',
@@ -148,7 +132,6 @@ $doc-types: (
   '.net': '\f35d',
   '.edu': '\f35d',
   '.org': '\f35d',
-  // '.csv': '\f6dd', //doesn't work for some reasons,,,
 );
 
 @each $docType, $icon in $doc-types {
@@ -161,23 +144,63 @@ $doc-types: (
   }
 }
 
-.lib-link-list--item {
-  position: relative;
-  width: 50%;
-  margin-bottom: $space16;
-  padding-left: $space32;
+.lib-block--link-list {
+  // box-sizing: content-box;
+  .lib-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $space32 0 0 0;
+  }
+  .lib-link-list--item {
+    position: relative;
+    width: 50%;
+    margin-bottom: $space16;
+    padding-left: $space32;
 
-  a {
-    font-family: $heading-font;
+    a {
+      font-family: $heading-font;
 
-    &::before {
-      @include vert_center();
-      font-family: 'FontAwesome';
-      content: '\f15c';
-      font-size: $fs18;
-      left: 0;
-      color: inherit;
+      &::before {
+        @include vert_center();
+        font-family: 'FontAwesome';
+        content: '\f15c';
+        font-size: $fs18;
+        left: 0;
+        color: inherit;
+      }
     }
   }
-  // display: inline-block;
+}
+
+.lib-link-list--abstract {
+  margin: $space32 0 0 0;
+
+  .lib-abstract-item {
+    position: relative;
+    margin-bottom: $space24;
+    padding-left: $space32;
+
+    &::before {
+      @include vert_center(0);
+      font-family: 'FontAwesome';
+      content: '\f35d';
+      // font-size: $fs16;
+      left: 0;
+      color: $primary-color;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      line-height: 1.5;
+      color: inherit;
+      display: inline-block;
+    }
+  }
+}
+
+.lib-block--quote-ribbon {
+  background-color: $warm-grey-200;
 }
