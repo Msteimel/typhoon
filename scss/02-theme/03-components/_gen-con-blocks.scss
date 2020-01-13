@@ -27,89 +27,157 @@
   h6 + p {
     margin-top: 0;
   }
+}
 
-  .lib-gen-con--page-title {
+.lib-gen-con--page-title {
+}
+
+.lib-gen-con--block {
+  margin-bottom: $space48;
+
+  .lib-block-title {
+    display: inline-block;
   }
 
-  .lib-gen-con--block {
-    margin-bottom: $space48;
-
-    .block-title {
-      display: inline-block;
-    }
-
-    & p:first-of-type {
-      margin-top: 0;
-    }
-
-    & p:last-of-type {
-      margin-bottom: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+  & p:first-of-type {
+    margin-top: 0;
   }
 
-  .img-block {
-    @include clearfix;
+  & p:last-of-type {
+    margin-bottom: 0;
   }
 
-  .text-img-right {
-    .lib-gen-con--img-wrap {
-      float: right;
-      margin-left: $space24;
-    }
+  &:last-of-type {
+    margin-bottom: 0;
   }
+}
 
-  .text-img-left {
-    .lib-gen-con--img-wrap {
-      float: left;
-      margin-right: $space24;
-    }
-  }
+.lib-img-block {
+  @include clearfix;
+}
 
-  .two-img {
-    .lib-gen-con--img-wrap {
-      max-width: rem(400);
-    }
-  }
-
-  .three-img {
-    .lib-gen-con--img-wrap {
-      max-width: rem(250);
-    }
-  }
-
-  .two-img,
-  .three-img {
-    .content-wrap {
-      display: flex;
-      justify-content: space-around;
-    }
-  }
-
+.lib-text-img-right {
   .lib-gen-con--img-wrap {
-    max-width: rem(300);
-    width: 100%;
+    float: right;
+    margin-left: $space24;
+  }
+}
+
+.lib-text-img-left {
+  .lib-gen-con--img-wrap {
+    float: left;
+    margin-right: $space24;
+  }
+}
+
+.lib-block--large-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(850);
 
     figure {
       position: relative;
-      padding-top: percentage(400/400);
-    }
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      height: auto;
-      box-shadow: $vert-dark-2;
-    }
-
-    figcaption {
-      padding-top: $space12;
-      text-align: center;
+      padding-top: percentage(9/16);
     }
   }
+}
+
+.lib-block--two-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(400);
+  }
+}
+
+.lib-block--three-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(250);
+  }
+}
+
+.lib-block--two-img,
+.lib-block--three-img {
+  .lib-content-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.lib-gen-con--img-wrap {
+  max-width: rem(300);
+  width: 100%;
+
+  figure {
+    position: relative;
+    padding-top: percentage(400/400);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    box-shadow: $vert-dark-2;
+  }
+
+  figcaption {
+    padding-top: $space12;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+.lib-block--link-list {
+  box-sizing: content-box;
+}
+
+.lib-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $space32 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+$doc-types: (
+  '.docx': '\f1c2',
+  '.pdf': '\f1c1',
+  '.xlsx': '\f1c3',
+  '.jpg': '\f1c5',
+  '.png': '\f1c5',
+  '.com': '\f35d',
+  '.net': '\f35d',
+  '.edu': '\f35d',
+  '.org': '\f35d',
+  // '.csv': '\f6dd', //doesn't work for some reasons,,,
+);
+
+@each $docType, $icon in $doc-types {
+  .lib-link-list--item {
+    @if "a[href*='#{$docType}']" {
+      a[href*='#{$docType}']::before {
+        content: $icon;
+      }
+    }
+  }
+}
+
+.lib-link-list--item {
+  position: relative;
+  width: 50%;
+  margin-bottom: $space16;
+  padding-left: $space32;
+
+  a {
+    font-family: $heading-font;
+
+    &::before {
+      @include vert_center();
+      font-family: 'FontAwesome';
+      content: '\f15c';
+      font-size: $fs18;
+      left: 0;
+      color: inherit;
+    }
+  }
+  // display: inline-block;
 }
