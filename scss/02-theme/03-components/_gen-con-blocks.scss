@@ -200,6 +200,43 @@
   }
 }
 
-.lib-block--quote-ribbon {
+.lib-block--quote {
   background-color: $warm-grey-100;
+  padding: $space32 0;
+  text-align: center;
+  box-shadow: $vert-light-2;
+  border-radius: $br4;
+  border-left: solid 4px $warm-grey-600;
+
+  blockquote {
+    max-width: 75%;
+    position: relative;
+    font-family: $heading-font;
+    font-style: italic;
+    font-size: $fs18;
+    margin: 0 auto;
+
+    &::before,
+    &::after {
+      @include vert_center(-20%);
+      position: absolute;
+      font-family: $heading-font;
+    }
+
+    &::before {
+      content: open-quote;
+      left: 0;
+    }
+    &::after {
+      content: close-quote;
+      right: 0;
+    }
+  }
+
+  cite {
+    display: block;
+    width: 100%;
+    font-style: initial;
+    padding-top: $space12;
+  }
 }
