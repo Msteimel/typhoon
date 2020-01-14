@@ -126,6 +126,19 @@ Positioning helpers
   transform: translateY(-$top);
 }
 
+@mixin horz_center($left: 50%) {
+  position: absolute;
+  left: $left;
+  transform: translateX(-$left);
+}
+
+@mixin absolute-center($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-$top, -$left);
+}
+
 // image ratio
 @mixin img-ratio($width: 16, $height: 9) {
   padding-top: percentage($width / $height);
