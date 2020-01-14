@@ -38,3 +38,11 @@
     }
   }
 }
+
+.lib-accordion--content {
+  display: none;
+
+  .js-active & {
+    display: block;
+  }
+}
