@@ -2,10 +2,12 @@
 }
 
 .lib-accordion--item {
+  display: flex;
+  flex-direction: column;
   border-radius: $br4;
   box-shadow: $vert-light-2;
   padding: $space16 $space32;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, height 0.3s ease;
 
   &:not(last-of-type) {
     margin-bottom: $space16;
@@ -14,10 +16,15 @@
   &:hover {
     box-shadow: $vert-light-3;
   }
+
+  .js-open {
+    transition: 0.3s ease;
+  }
 }
 
 .lib-accordion--title {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   align-items: center;
 
@@ -40,9 +47,13 @@
 }
 
 .lib-accordion--content {
-  display: none;
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
 
-  .js-active & {
-    display: block;
+  .js-open & {
+    height: auto;
+    max-height: 100%;
   }
 }
