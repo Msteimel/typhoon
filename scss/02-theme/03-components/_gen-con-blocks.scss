@@ -200,43 +200,97 @@
   }
 }
 
-.lib-block--quote {
-  background-color: $warm-grey-100;
-  padding: $space32 0;
+.lib-quote-block {
+  position: relative;
+
+  padding: $space32 0 0;
   text-align: center;
+}
+
+.lib-block--quote {
+}
+
+.lib-block--quote-alt {
+  padding: $space32 0 $space48;
+  background-color: $warm-grey-100;
+
+  .lib-quote {
+    max-width: rem(637.5);
+  }
+}
+
+.lib-quote--marks {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  width: rem(32);
+  height: rem(32);
+  border-radius: 100%;
+  background-color: $warm-grey-300;
+
+  i {
+    @include absolute-center;
+    position: absolute;
+    text-align: center;
+  }
+}
+
+.lib-block--quote-ribbon {
+  padding: $space32 0 $space32;
+  background-color: $warm-grey-100;
   box-shadow: $vert-light-2;
   border-radius: $br4;
   border-left: solid 4px $warm-grey-600;
+  quotes: '“' '”';
 
-  blockquote {
-    max-width: 75%;
-    position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 12%;
     font-family: $heading-font;
-    font-style: italic;
-    font-size: $fs18;
+    font-size: rem(102);
+    line-height: 1;
+    color: $warm-grey-300;
+  }
+
+  &::before {
+    content: open-quote;
+    left: 5%;
+  }
+  &::after {
+    content: close-quote;
+    right: 5%;
+  }
+}
+
+.lib-quote {
+  max-width: 75%;
+  font-family: $heading-font;
+  font-style: italic;
+  font-size: $fs18;
+  margin: 0 auto;
+
+  cite {
+    display: inline-block;
+    position: relative;
+    font-style: initial;
     margin: 0 auto;
+    padding: $space12 $space12 0;
+    color: $warm-grey-600;
 
     &::before,
     &::after {
-      @include vert_center(-20%);
-      position: absolute;
-      font-family: $heading-font;
+      content: '\2014';
+      color: $warm-grey-700;
+      padding: 0 $space12;
     }
 
     &::before {
-      content: open-quote;
-      left: 0;
+      left: -10%;
     }
-    &::after {
-      content: close-quote;
-      right: 0;
-    }
-  }
 
-  cite {
-    display: block;
-    width: 100%;
-    font-style: initial;
-    padding-top: $space12;
+    &::after {
+      right: -10%;
+    }
   }
 }
