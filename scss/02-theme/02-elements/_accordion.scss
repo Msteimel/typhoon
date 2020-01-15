@@ -53,13 +53,11 @@
   height: auto;
   max-height: 0;
   overflow: hidden;
-  // opacity: 0;
   transition: 0.5s ease;
   text-align: left;
 
   .js-open & {
-    max-height: 5000px;
+    max-height: 100%;
     overflow: initial;
-    // opacity: 1;
   }
 }
