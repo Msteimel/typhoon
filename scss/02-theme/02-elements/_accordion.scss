@@ -4,10 +4,12 @@
 .lib-accordion--item {
   display: flex;
   flex-direction: column;
+  position: relative;
   border-radius: $br4;
   box-shadow: $vert-light-2;
   padding: $space16 $space32;
-  transition: box-shadow 0.3s ease, height 0.3s ease;
+  transition: 0.3s ease;
+  width: 100%;
 
   &:not(last-of-type) {
     margin-bottom: $space16;
@@ -18,13 +20,14 @@
   }
 
   .js-open {
-    transition: 0.3s ease;
+    // transition: 0.5s ease;
   }
 }
 
 .lib-accordion--title {
   display: flex;
-  flex-grow: 1;
+  flex-basis: 1 1 1;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 
@@ -47,13 +50,16 @@
 }
 
 .lib-accordion--content {
-  height: 0;
+  height: auto;
   max-height: 0;
   overflow: hidden;
-  transition: 0.3s ease;
+  // opacity: 0;
+  transition: 0.5s ease;
+  text-align: left;
 
   .js-open & {
-    height: auto;
-    max-height: 100%;
+    max-height: 5000px;
+    overflow: initial;
+    // opacity: 1;
   }
 }

@@ -3,10 +3,17 @@ const accordionItems = document.querySelectorAll('.lib-accordion--item');
 function handleAccordionClick(e) {
   const item = e.currentTarget;
   const content = item.querySelector('.lib-accordion--content');
-  const ariaSelected = item.getAttribute('aria-selected');
+  const ariaValue = item.getAttribute('aria-selected');
 
-  item.classList.toggle('js-open');
-  // item.setAttribute('aria-selected', true);
+  if (ariaValue === "false") {
+    item.setAttribute('aria-selected', true);
+    item.classList.add('js-open');
+    content.setAttribute('aria-expanded', true);
+  } else {
+    item.setAttribute('aria-selected', false);
+    item.classList.remove('js-open');
+    content.setAttribute('aria-expanded', false);
+  }
 }
 
 accordionItems.forEach(item => {
