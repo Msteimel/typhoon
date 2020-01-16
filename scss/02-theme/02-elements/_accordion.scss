@@ -22,7 +22,6 @@
 
 .lib-accordion--title {
   display: flex;
-  flex-basis: 1 1 1;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -53,14 +52,15 @@
 }
 
 .lib-accordion--content {
-  height: auto;
-  max-height: 0;
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
   overflow: hidden;
   transition: 0.5s ease;
   text-align: left;
 
   .js-open & {
-    max-height: 100%;
-    overflow: initial;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
