@@ -10,14 +10,15 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  */
 
+// source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
 mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   sassOptions: {
     outputStyle: 'compressed',
-    sourceMap: true,
   },
 });
 
+// browsersync
 mix.browserSync('typhoon.test');
 mix.browserSync({
   proxy: projectURL,
@@ -29,6 +30,14 @@ mix.browserSync({
   browser: "google chrome"
 });
 
+// Sourcemaps workaround
+if (!mix.inProduction()) {
+  mix.sourceMaps(true, 'source-map');
+}
+
+mix.options({
+  postCss: [require('autoprefixer')],
+})
 
 // Full API
 // mix.js(src, output);

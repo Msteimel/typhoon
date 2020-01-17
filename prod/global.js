@@ -126,6 +126,27 @@ function check_if_in_view() {
   });
 }
 
+var accordionItems = document.querySelectorAll('.lib-accordion--item');
+
+function handleAccordionClick(e) {
+  var item = e.currentTarget;
+  var content = item.querySelector('.lib-accordion--content');
+  var ariaValue = item.getAttribute('aria-selected');
+
+  if (ariaValue === "false") {
+    item.classList.add('js-open');
+    item.setAttribute('aria-selected', true);
+    content.setAttribute('aria-expanded', true);
+  } else {
+    item.classList.remove('js-open');
+    item.setAttribute('aria-selected', false);
+    content.setAttribute('aria-expanded', false);
+  }
+}
+
+accordionItems.forEach(function (item) {
+  item.addEventListener('click', handleAccordionClick);
+});
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
@@ -156,3 +177,4 @@ module.exports = __webpack_require__(/*! /Users/steimel/sites/typhoon/src/scss/g
 /***/ })
 
 /******/ });
+//# sourceMappingURL=global.js.map

@@ -45,6 +45,31 @@ function check_if_in_view() {
   });
 }
 
+const accordionItems = document.querySelectorAll('.lib-accordion--item');
+
+function handleAccordionClick(e) {
+  const item = e.currentTarget;
+  const content = item.querySelector('.lib-accordion--content');
+  const ariaValue = item.getAttribute('aria-selected');
+
+  if (ariaValue === "false") {
+    item.classList.add('js-open');
+    item.setAttribute('aria-selected', true);
+    content.setAttribute('aria-expanded', true);
+  } else {
+    item.classList.remove('js-open');
+    item.setAttribute('aria-selected', false);
+    content.setAttribute('aria-expanded', false);
+  }
+}
+
+accordionItems.forEach(item => {
+  item.addEventListener('click', handleAccordionClick);
+});
+
+
+
+
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
