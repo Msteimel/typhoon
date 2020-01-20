@@ -1,65 +1,66 @@
-.lib-accordion {}
+.lib-accordion {
+}
 
 .lib-accordion--item {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	border-radius: $br4;
-	box-shadow: $vert-light-2;
-	padding: $space16 $space32;
-	transition: 0.3s ease;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: $br4;
+  box-shadow: $vert-light-2;
+  padding: $space16 $space32;
+  transition: 0.3s ease;
+  width: 100%;
 
-	&:not(last-of-type) {
-		margin-bottom: $space16;
-	}
+  &:not(last-of-type) {
+    margin-bottom: $space16;
+  }
 
-	&:hover {
-		box-shadow: $vert-light-3;
-	}
+  &:hover {
+    box-shadow: $vert-light-3;
+  }
 }
 
 .lib-accordion--title {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	// align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  // align-items: center;
 
-	h4 {
-		display: inline-block;
-	}
+  h4 {
+    display: inline-block;
+  }
 
-	.icon {
-		display: inline-block;
-		position: relative;
-		height: rem(16);
-		width: rem(16);
-		transition: transform 0.3s ease;
+  .icon {
+    display: inline-block;
+    position: relative;
+    height: rem(16);
+    width: rem(16);
+    transition: transform 0.3s ease;
 
-		&::before {
-			@include absolute-center();
-			font-family: 'FontAwesome';
-			content: '\f078';
-			// height: rem(16);
-			// width: rem(16);
-		}
+    &::before {
+      @include absolute-center();
+      font-family: "FontAwesome";
+      content: "\f078";
+      // height: rem(16);
+      // width: rem(16);
+    }
 
-		.js-open & {
-			transform: rotateZ(180deg);
-		}
-	}
+    .js-open & {
+      transform: rotateZ(180deg);
+    }
+  }
 }
 
 .lib-accordion--content {
-	position: absolute;
-	transform: translateY(-100%);
-	opacity: 0;
-	overflow: hidden;
-	transition: 0.5s ease;
-	text-align: left;
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s ease;
+  text-align: left;
 
-	.js-open & {
-		transform: translateY(0);
-		opacity: 1;
-	}
+  .js-open & {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

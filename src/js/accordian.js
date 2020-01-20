@@ -5,7 +5,7 @@ function handleAccordionClick(e) {
   const content = item.querySelector('.lib-accordion--content');
   const ariaValue = item.getAttribute('aria-selected');
 
-  if (ariaValue === "false") {
+  if (ariaValue === 'false') {
     item.setAttribute('aria-selected', true);
     item.classList.add('js-open');
     content.setAttribute('aria-expanded', true);
@@ -19,4 +19,3 @@ function handleAccordionClick(e) {
 accordionItems.forEach(item => {
   item.addEventListener('click', handleAccordionClick);
 });
-
