@@ -1,0 +1,26 @@
+.colors--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color--info {
+  text-align: center;
+
+  div {
+    width: $space64;
+    height: $space64;
+    box-shadow: $vert-dark-1;
+    transition: 0.3s ease;
+
+    &:hover {
+      box-shadow: $vert-dark-3;
+      transform: scale(1.12);
+    }
+  }
+
+  .prime {
+    width: $space96;
+    height: $space96;
+  }
+}
