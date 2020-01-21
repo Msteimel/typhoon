@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
 
 // source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
+// mix.babel(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
 mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   sassOptions: {
     outputStyle: 'compressed',
@@ -19,15 +20,11 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
 });
 
 // browsersync
-mix.browserSync('typhoon.test');
 mix.browserSync({
   proxy: projectURL,
-  files: [
-    `${destinationDir}/*`,
-    `./index.html`
-  ],
+  files: [`${destinationDir}/*`, `./index.html`],
   injectChanges: false,
-  browser: "google chrome"
+  browser: 'google chrome',
 });
 
 // Sourcemaps workaround
@@ -37,7 +34,7 @@ if (!mix.inProduction()) {
 
 mix.options({
   postCss: [require('autoprefixer')],
-})
+});
 
 // Full API
 // mix.js(src, output);
