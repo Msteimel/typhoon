@@ -4,6 +4,8 @@ const projectURL = 'typhoon.test';
 
 const mix = require('laravel-mix');
 
+require('laravel-mix-twig-to-html');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -37,6 +39,12 @@ mix.options({
 
 // disable build notification on success
 mix.disableSuccessNotifications();
+
+// Twig compiling
+mix.twigToHtml({
+  files: 'src/templates/**/*.{twig,html}',
+  fileBase: 'src/templates',
+});
 
 // Full API
 // mix.js(src, output);

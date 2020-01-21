@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <!--[if IE 9]>   <html class="ie9" lang="en"><![endif]-->
+    {% block head %}
+        <!--[if IE 9]>   <html class="ie9" lang="en"><![endif]-->
         <!--[if (gt IE 9)|!(IE)]><!-->
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +22,8 @@
         <title>Iowa State Library Design System</title>
         <!-- <link rel="stylesheet" href="/css/iastate.min.css"> -->
         <link rel="stylesheet" href="/prod/global.css" />
-    <link href="prod/global.css?256ee9bc18604875f662" rel="stylesheet"></head>
+    {% endblock head %}
+</head>
 
 <body>
     <section class="container lib-my96 intro">
@@ -630,6 +632,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/prod/global.js"></script>
     <script src="/prod/accordian.js"></script>
-  <script type="text/javascript" src="/prod/global.js?256ee9bc18604875f662"></script></body>
+  </body>
 </html>
 <!DOCTYPE html>
