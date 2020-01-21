@@ -12,7 +12,6 @@ const mix = require('laravel-mix');
 
 // source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
-// mix.babel(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
 mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   sassOptions: {
     outputStyle: 'compressed',
