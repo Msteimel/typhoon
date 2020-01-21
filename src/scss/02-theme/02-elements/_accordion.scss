@@ -39,8 +39,8 @@
 
     &::before {
       @include absolute-center();
-      font-family: "FontAwesome";
-      content: "\f078";
+      font-family: 'FontAwesome';
+      content: '\f078';
       // height: rem(16);
       // width: rem(16);
     }
@@ -52,8 +52,8 @@
 }
 
 .lib-accordion--content {
-  position: absolute;
-  transform: translateY(-100%);
+  // transform: translateY(-100%);
+  max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: 0.5s ease;
@@ -62,5 +62,6 @@
   .js-open & {
     transform: translateY(0);
     opacity: 1;
+    max-height: 100%;
   }
 }
