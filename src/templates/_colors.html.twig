@@ -1,0 +1,79 @@
+{%
+   set colors = {
+      "Red": {
+          "100": "red-100",
+          "200": "red-200",
+          "300": "red-300",
+          "400": "red-400",
+          "500": "red-500",
+          "600": "red-600",
+          "700": "red-700",
+          "800": "red-800",
+          "900": "red-900",
+      },
+      "Yellow": {
+          "100": "yellow-100",
+          "200": "yellow-200",
+          "300": "yellow-300",
+          "400": "yellow-400",
+          "500": "yellow-500",
+          "600": "yellow-600",
+          "700": "yellow-700",
+          "800": "yellow-800",
+          "900": "yellow-900",
+      },
+      "Blue": {
+          "100": "blue-100",
+          "200": "blue-200",
+          "300": "blue-300",
+          "400": "blue-400",
+          "500": "blue-500",
+          "600": "blue-600",
+          "700": "blue-700",
+          "800": "blue-800",
+          "900": "blue-900",
+      },
+      "Warm Grey": {
+          "50": "warm-grey-50",
+          "100": "warm-grey-100",
+          "200": "warm-grey-200",
+          "300": "warm-grey-300",
+          "400": "warm-grey-400",
+          "500": "warm-grey-500",
+          "600": "warm-grey-600",
+          "700": "warm-grey-700",
+          "800": "warm-grey-800",
+          "900": "warm-grey-900",
+      },
+      "Grey": {
+          "100": "grey-100",
+          "200": "grey-200",
+          "300": "grey-300",
+          "400": "grey-400",
+          "500": "grey-500",
+          "600": "grey-600",
+          "700": "grey-700",
+          "800": "grey-800",
+          "900": "grey-900",
+      },
+    }
+%}
+
+<section class="container lib-my96">
+  <div class="lib-mb32">
+    <h2 class="lib-mb32">Colors</h2>
+    <div class="colors--display">
+      {% for color, values in colors %}
+        <h3>{{ color }}</h3>
+        <div class="colors--wrap lib-mb32">
+          {% for key, value in colors[color] %}
+            <div class="color--info lib-m8">
+              <div class="lib-br4 lib-bg-{{ value }}"></div>
+              {{ key }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
