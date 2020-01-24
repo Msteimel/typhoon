@@ -1,0 +1,25 @@
+{% set headings = {
+    "h1": "Heading One",
+    "h2": "Heading Two",
+    "h3": "Heading Three",
+    "h4": "Heading Four",
+    "h5": "Heading Five",
+    "h6": "Heading Six",
+  }
+ %}
+
+<section class="container lib-my96">
+  <div class=" lib-mb32">
+    <h2 class="lib-mb24">Typography</h2>
+    {% for heading, value in headings %}
+      <div class="row justify-content-between">
+        <{{ heading }} class="lib-ta-left">{{ value }}</{{ heading }}>
+        <{{ heading }} class="lib-ta-center">{{ value }}</{{ heading }}>
+        <{{ heading }} class="lib-ta-right">{{ value }}</{{ heading }}>
+      </div>
+    {% endfor %}
+    
+    <p class="lead">Incididunt <a href="#">pariatur</a> ea ad aliquip officia commodo nisi pariatur magna elit. <strong>Cillum exercitation proident</strong> veniam ullamco dolore excepteur fugiat aliquip anim irure fugiat ut in sit. Amet culpa et non magna duis pariatur ex aute ut pariatur excepteur sint duis. Ut magna Lorem ipsum ipsum duis sint ex adipisicing in ex dolore aute. Nisi nulla cupidatat nostrud qui id do.</<a>
+    <p>Cillum Lorem eiusmod velit in ipsum fugiat reprehenderit dolor incididunt elit non elit esse dolor. Fugiat dolore voluptate cupidatat labore mollit elit elit Lorem adipisicing elit dolore mollit eiusmod officia. Ipsum et est consectetur occaecat velit consectetur incididunt in fugiat eiusmod ut fugiat non in. Nulla cupidatat laboris ad do eiusmod. Voluptate incididunt in eiusmod ea nisi labore dolor laborum incididunt do sint cillum laborum eu. Nulla aliquip dolore exercitation magna reprehenderit do velit ullamco laboris Lorem occaecat.</p>
+  </div>
+</section>
