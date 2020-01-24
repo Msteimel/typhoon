@@ -54,8 +54,20 @@ $general-colors: (
   'black': $black,
 );
 
+$shorcut-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+);
+
 @each $color, $colors in $general-colors {
   .lib-bg-#{$color} {
     background-color: $colors;
+  }
+}
+
+@each $color, $colors in $shorcut-colors {
+  .lib-#{$color} {
+    color: $colors;
   }
 }

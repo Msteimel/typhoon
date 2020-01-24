@@ -31,10 +31,12 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
 
   &:hover {
     color: $link-hover-color;
+    text-decoration: underline;
   }
 
   &:focus {

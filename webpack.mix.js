@@ -32,6 +32,7 @@ mix.browserSync({
 if (!mix.inProduction()) {
   mix.sourceMaps(true, 'source-map');
 }
+
 // CSS vender autoprefixes
 mix.options({
   postCss: [require('autoprefixer')],
