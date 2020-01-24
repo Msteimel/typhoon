@@ -2451,6 +2451,18 @@ body {
   background-color: #212121;
 }
 
+.lib-primary {
+  color: #c6102e;
+}
+
+.lib-secondary {
+  color: #ffd438;
+}
+
+.lib-accent {
+  color: #0d87c9;
+}
+
 *,
 *::before,
 *::after {
@@ -2776,42 +2788,51 @@ h1,
   font-size: 3rem;
   line-height: 1;
   margin: 0;
+  margin-bottom: 2rem;
+}
+
+h1+h2 {
+  margin-bottom: 3rem;
 }
 
 h2,
 .h2 {
   font-family: "Merriweather",Georgia,serif;
   color: #26241c;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.1;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 h3,
 .h3 {
   font-family: "Merriweather",Georgia,serif;
   color: #26241c;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   line-height: 1.13;
   margin: 0em;
+  margin-bottom: .5rem;
 }
 
 h4,
 .h4 {
   font-family: "Merriweather",Georgia,serif;
   color: #26241c;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1.25;
   margin: 0em;
+  margin-bottom: .5rem;
 }
 
 h5,
 .h5 {
   font-family: "Merriweather",Georgia,serif;
   color: #26241c;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0em;
+  margin-bottom: .5rem;
 }
 
 h6,
@@ -2821,6 +2842,7 @@ h6,
   font-size: .875rem;
   line-height: 1.5;
   margin: 0em;
+  margin-bottom: .5rem;
 }
 
 h1+p,
@@ -2851,12 +2873,14 @@ p code {
 a {
   color: #c6102e;
   text-decoration: none;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  font-weight: 600;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 a:hover {
   color: #921127;
+  text-decoration: underline;
 }
 
 .lib-button,
@@ -3130,21 +3154,6 @@ input[type=button].lib-button-accent:active {
 
 .lib-gen-con--wrap h1 {
   margin-bottom: 3rem;
-}
-
-.lib-gen-con--wrap h2 {
-  font-size: 1.875rem;
-  margin-bottom: 1rem;
-}
-
-.lib-gen-con--wrap h3 {
-  font-size: 1.5rem;
-  margin-bottom: .5rem;
-}
-
-.lib-gen-con--wrap h4 {
-  font-size: 1.125rem;
-  margin-bottom: .5rem;
 }
 
 .lib-gen-con--wrap ul {
@@ -4265,6 +4274,18 @@ input[type=button].lib-button-accent:active {
 
 .lib-fs192 {
   font-size: 12rem;
+}
+
+.lib-ta-left {
+  text-align: left;
+}
+
+.lib-ta-center {
+  text-align: center;
+}
+
+.lib-ta-right {
+  text-align: right;
 }
 
 .lib-bg-red-100 {
