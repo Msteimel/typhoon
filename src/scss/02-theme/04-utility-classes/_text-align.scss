@@ -1,0 +1,14 @@
+$text-align: (
+  'left': left,
+  'center': center,
+  'right': right,
+);
+
+// ta == text-align
+// .lib-ta-center
+
+@each $alignment, $align in $text-align {
+  .lib-ta-#{$align} {
+    text-align: $align;
+  }
+}
