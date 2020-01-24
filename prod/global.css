@@ -2870,7 +2870,8 @@ p code {
   vertical-align: middle;
 }
 
-a {
+p>a {
+  position: relative;
   color: #c6102e;
   text-decoration: none;
   font-weight: 600;
@@ -2878,12 +2879,89 @@ a {
   transition: .3s ease;
 }
 
-a:hover {
-  color: #921127;
-  text-decoration: underline;
+p>a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #b0112c;
+  height: 2px;
+  width: 0%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
-.lib-button,
+p>a:hover,
+p>a:focus {
+  color: #921127;
+}
+
+p>a:hover::after,
+p>a:focus::after {
+  width: 100%;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  padding-left: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+ul ul {
+  list-style: initial;
+  margin-left: .5rem;
+}
+
+ul ul ul {
+  list-style: circle;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a.lib-button,
 button.lib-button,
 input[type=reset].lib-button,
 input[type=submit].lib-button,
@@ -2906,7 +2984,7 @@ input[type=button].lib-button {
   transition: .3s ease;
 }
 
-.lib-button:focus,
+a.lib-button:focus,
 button.lib-button:focus,
 input[type=reset].lib-button:focus,
 input[type=submit].lib-button:focus,
@@ -2917,7 +2995,7 @@ input[type=button].lib-button:focus {
   text-decoration: none;
 }
 
-.lib-button:hover,
+a.lib-button:hover,
 button.lib-button:hover,
 input[type=reset].lib-button:hover,
 input[type=submit].lib-button:hover,
@@ -2930,7 +3008,7 @@ input[type=button].lib-button:hover {
   text-decoration: none;
 }
 
-.lib-button:active,
+a.lib-button:active,
 button.lib-button:active,
 input[type=reset].lib-button:active,
 input[type=submit].lib-button:active,
@@ -2940,13 +3018,25 @@ input[type=button].lib-button:active {
           box-shadow: 0 1px 2px rgba(0,0,0,.34),0 1px 3px rgba(0,0,0,.22);
 }
 
-.lib-button.lib-button-icon {
+a.lib-button.lib-button-icon,
+button.lib-button.lib-button-icon,
+input[type=reset].lib-button.lib-button-icon,
+input[type=submit].lib-button.lib-button-icon,
+input[type=button].lib-button.lib-button-icon {
   padding: 1em 2em 1em 1em;
   position: relative;
 }
 
-.lib-button.lib-button-icon::before,
-.lib-button.lib-button-icon::after {
+a.lib-button.lib-button-icon::before,
+a.lib-button.lib-button-icon::after,
+button.lib-button.lib-button-icon::before,
+button.lib-button.lib-button-icon::after,
+input[type=reset].lib-button.lib-button-icon::before,
+input[type=reset].lib-button.lib-button-icon::after,
+input[type=submit].lib-button.lib-button-icon::before,
+input[type=submit].lib-button.lib-button-icon::after,
+input[type=button].lib-button.lib-button-icon::before,
+input[type=button].lib-button.lib-button-icon::after {
   font-family: "Fontawesome";
   font-size: .875rem;
   top: 50%;
@@ -2959,16 +3049,32 @@ input[type=button].lib-button:active {
   transition: right .3s;
 }
 
-.lib-button.lib-button-icon::before {
+a.lib-button.lib-button-icon::before,
+button.lib-button.lib-button-icon::before,
+input[type=reset].lib-button.lib-button-icon::before,
+input[type=submit].lib-button.lib-button-icon::before,
+input[type=button].lib-button.lib-button-icon::before {
   right: .5rem;
 }
 
-.lib-button.lib-button-icon::after {
+a.lib-button.lib-button-icon::after,
+button.lib-button.lib-button-icon::after,
+input[type=reset].lib-button.lib-button-icon::after,
+input[type=submit].lib-button.lib-button-icon::after,
+input[type=button].lib-button.lib-button-icon::after {
   right: 1rem;
 }
 
-.lib-button.lib-button-icon:hover::after,
-.lib-button.lib-button-icon:focus::after {
+a.lib-button.lib-button-icon:hover::after,
+a.lib-button.lib-button-icon:focus::after,
+button.lib-button.lib-button-icon:hover::after,
+button.lib-button.lib-button-icon:focus::after,
+input[type=reset].lib-button.lib-button-icon:hover::after,
+input[type=reset].lib-button.lib-button-icon:focus::after,
+input[type=submit].lib-button.lib-button-icon:hover::after,
+input[type=submit].lib-button.lib-button-icon:focus::after,
+input[type=button].lib-button.lib-button-icon:hover::after,
+input[type=button].lib-button.lib-button-icon:focus::after {
   right: .6em;
 }
 
@@ -2990,7 +3096,7 @@ input[type=button].lib-button:active {
   color: #b0112c;
 }
 
-.lib-button.lib-button-secondary,
+a.lib-button.lib-button-secondary,
 input[type=reset].lib-button-secondary,
 input[type=submit].lib-button-secondary,
 input[type=button].lib-button-secondary {
@@ -2999,7 +3105,7 @@ input[type=button].lib-button-secondary {
   color: #26241c;
 }
 
-.lib-button.lib-button-secondary:hover,
+a.lib-button.lib-button-secondary:hover,
 input[type=reset].lib-button-secondary:hover,
 input[type=submit].lib-button-secondary:hover,
 input[type=button].lib-button-secondary:hover {
@@ -3009,7 +3115,7 @@ input[type=button].lib-button-secondary:hover {
           box-shadow: 0 3px 6px rgba(0,0,0,.1),0 10px 20px rgba(0,0,0,.15);
 }
 
-.lib-button.lib-button-secondary:active,
+a.lib-button.lib-button-secondary:active,
 input[type=reset].lib-button-secondary:active,
 input[type=submit].lib-button-secondary:active,
 input[type=button].lib-button-secondary:active {
@@ -3018,7 +3124,7 @@ input[type=button].lib-button-secondary:active {
           box-shadow: 0 1px 2px rgba(0,0,0,.24),0 1px 3px rgba(0,0,0,.12);
 }
 
-.lib-button.lib-button-accent,
+a.lib-button.lib-button-accent,
 input[type=reset].lib-button-accent,
 input[type=submit].lib-button-accent,
 input[type=button].lib-button-accent {
@@ -3027,7 +3133,7 @@ input[type=button].lib-button-accent {
   color: #fff;
 }
 
-.lib-button.lib-button-accent:hover,
+a.lib-button.lib-button-accent:hover,
 input[type=reset].lib-button-accent:hover,
 input[type=submit].lib-button-accent:hover,
 input[type=button].lib-button-accent:hover {
@@ -3037,28 +3143,13 @@ input[type=button].lib-button-accent:hover {
           box-shadow: 0 3px 6px rgba(0,0,0,.2),0 10px 20px rgba(0,0,0,.25);
 }
 
-.lib-button.lib-button-accent:active,
+a.lib-button.lib-button-accent:active,
 input[type=reset].lib-button-accent:active,
 input[type=submit].lib-button-accent:active,
 input[type=button].lib-button-accent:active {
   background-color: #006da8;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.34),0 1px 3px rgba(0,0,0,.22);
           box-shadow: 0 1px 2px rgba(0,0,0,.34),0 1px 3px rgba(0,0,0,.22);
-}
-
-.lib-tech-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.lib-tech-item .info {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 .lib-accordion--item {
@@ -3306,11 +3397,16 @@ input[type=button].lib-button-accent:active {
   position: relative;
   width: 50%;
   margin-bottom: 1rem;
-  padding-left: 2rem;
 }
 
 .lib-block--link-list .lib-link-list--item a {
   font-family: "Merriweather",Georgia,serif;
+  font-weight: 400;
+  padding-left: 2rem;
+  color: #c6102e;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .lib-block--link-list .lib-link-list--item a::before {
@@ -3324,6 +3420,11 @@ input[type=button].lib-button-accent:active {
   font-size: 1.125rem;
   left: 0;
   color: inherit;
+}
+
+.lib-block--link-list .lib-link-list--item a:hover,
+.lib-block--link-list .lib-link-list--item a:focus {
+  color: #921127;
 }
 
 .lib-link-list--abstract {
@@ -3356,6 +3457,18 @@ input[type=button].lib-button-accent:active {
   line-height: 1.5;
   color: inherit;
   display: inline-block;
+}
+
+.lib-link-list--abstract .lib-abstract-item a {
+  color: #c6102e;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.lib-link-list--abstract .lib-abstract-item a:hover,
+.lib-link-list--abstract .lib-abstract-item a:focus {
+  color: #921127;
 }
 
 .lib-quote-block {
