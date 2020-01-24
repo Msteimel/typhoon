@@ -28,19 +28,31 @@ p {
   }
 }
 
-a {
+p > a {
+  position: relative;
   color: $link-color;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s ease;
 
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $red-600;
+    height: 2px;
+    width: 0%;
+    transition: 0.3s ease;
   }
 
+  &:hover,
   &:focus {
-    // todo
+    color: $link-hover-color;
+
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -53,48 +65,59 @@ a {
 // 	margin-top: 0em;
 // 	margin-bottom: 1em;
 // }
-// ul ul,
-// ol ol,
-// ul ol,
-// ol ul {
-// 	margin-top: 0em;
-// 	margin-bottom: 0em;
-// }
-// a {
-// 	color: $link-color;
-// }
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  padding-left: $space16;
+}
+
+ul {
+  list-style: none;
+  padding-left: $space16;
+
+  ul {
+    list-style: initial;
+    margin-left: $space8;
+  }
+
+  ul ul {
+    list-style: circle;
+  }
+}
+
+ol ol {
+  list-style: lower-alpha;
+
+  ol {
+    list-style: lower-roman;
+  }
+}
 
 // /* Let's make sure all's aligned */
-// hr,
-// .hr {
-// 	border: 1px solid;
-// 	margin: -1px 0;
-// }
-// a,
-// b,
-// i,
-// strong,
-// em,
-// small,
-// code {
-// 	line-height: 0;
-// }
-// sub,
-// sup {
-// 	line-height: 0;
-// 	position: relative;
-// 	vertical-align: baseline;
-// }
-// sup {
-// 	top: -0.5em;
-// }
-// sub {
-// 	bottom: -0.25em;
-// }
-// strong {
-// 	color: $text-color;
-// }
-// code {
-// 	background-color: $secondary-color;
-// 	color: $primary-color;
-// }
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
