@@ -137,14 +137,19 @@
     flex-wrap: wrap;
     margin: $space32 0 0 0;
   }
+
   .lib-link-list--item {
     position: relative;
     width: 50%;
     margin-bottom: $space16;
-    padding-left: $space32;
 
     a {
       font-family: $heading-font;
+      font-weight: 400;
+      padding-left: $space32;
+      color: $link-color;
+      text-decoration: none;
+      transition: 0.3s ease;
 
       &::before {
         @include vert_center();
@@ -153,6 +158,11 @@
         font-size: $fs18;
         left: 0;
         color: inherit;
+      }
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
       }
     }
   }
@@ -183,6 +193,17 @@
       line-height: 1.5;
       color: inherit;
       display: inline-block;
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
+      }
     }
   }
 }
@@ -244,6 +265,7 @@
     content: open-quote;
     left: 5%;
   }
+
   &::after {
     content: close-quote;
     right: 5%;
