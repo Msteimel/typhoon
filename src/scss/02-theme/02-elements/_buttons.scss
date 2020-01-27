@@ -82,7 +82,7 @@ input[type='button'].lib-button.lib-button-icon {
   &::before,
   &::after {
     font-family: 'Fontawesome';
-    font-size: $fs14;
+    font-size: $fs-small;
     top: 50%;
     transform: translateY(-50%);
     position: absolute;

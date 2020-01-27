@@ -2,14 +2,15 @@
 }
 
 .lib-accordion--item {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   border-radius: $br4;
   box-shadow: $vert-light-2;
+  transition: box-shadow 0.3s ease;
   padding: $space16 $space32;
-  transition: 0.3s ease;
-  width: 100%;
 
   &:not(last-of-type) {
     margin-bottom: $space16;
@@ -24,10 +25,11 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  // align-items: center;
+  background-color: $white;
 
   h4 {
     display: inline-block;
+    margin: 0;
   }
 
   .icon {
@@ -35,14 +37,12 @@
     position: relative;
     height: rem(16);
     width: rem(16);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 
     &::before {
       @include absolute-center();
       font-family: 'FontAwesome';
       content: '\f078';
-      // height: rem(16);
-      // width: rem(16);
     }
 
     .js-open & {
@@ -52,16 +52,9 @@
 }
 
 .lib-accordion--content {
-  // transform: translateY(-100%);
-  max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  transition: 0.5s ease;
   text-align: left;
-
-  .js-open & {
-    transform: translateY(0);
-    opacity: 1;
-    max-height: 100%;
-  }
+  // padding: 0 $space32;
+  transition: height 0.3s;
+  // z-index: 1;
 }

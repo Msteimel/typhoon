@@ -47,23 +47,23 @@
     </section>
     <section class="container lib-my96">
       <h2 class="lib-mb32">Components</h2>
-
-      <h3 class="lib-mb16">Accordion</h3>
+      <h3 class="lib-mb16">Hide Show</h3>
       <div class="lib-accordion" role="tablist" aria-label="Accordion Label">
-        <button
-          class="lib-accordion--item js-open"
-          role="tab"
-          aria-selected="true"
-        >
-          <div class="lib-accordion--title">
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="1" role="tab" aria-selected="false">
             <h4>Title</h4>
             <span class="icon"></span>
-          </div>
-          <div
-            class="lib-accordion--content"
-            role="tabpanel"
-            aria-expanded="true"
-          >
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="1" >
+            <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
             <p>
               Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
               eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
@@ -74,13 +74,48 @@
               cillum.
             </p>
           </div>
-        </button>
-        <button class="lib-accordion--item" role="tab" aria-selected="false">
-          <div class="lib-accordion--title">
+        </div>
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="2"  role="tab" aria-selected="false">
             <h4>Title</h4>
             <span class="icon"></span>
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="2">
+            <p>
+              Veniam culpa <a href="/test">tempor</a> amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
           </div>
-          <div class="lib-accordion--content" role="tabpanel">
+        </div>
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="3" role="tab" aria-selected="false">
+            <h4>Title</h4>
+            <span class="icon"></span>
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="3">
+            <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
+              <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
             <p>
               Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
               eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
@@ -91,24 +126,7 @@
               cillum.
             </p>
           </div>
-        </button>
-        <button class="lib-accordion--item" role="tab" aria-selected="false">
-          <div class="lib-accordion--title">
-            <h4>Title</h4>
-            <span class="icon"></span>
-          </div>
-          <div class="lib-accordion--content" role="tabpanel">
-            <p>
-              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
-              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
-              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
-              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
-              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
-              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
-              cillum.
-            </p>
-          </div>
-        </button>
+        </div>
       </div>
     </section>
     <article class="container lib-my96">
@@ -398,7 +416,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     {# <script src="/prod/global.js"></script> #}
-    <script src="/prod/accordian.js"></script>
+    {# <script src="/prod/accordion.js"></script> #}
 
 {% endblock content %}
 </html>
