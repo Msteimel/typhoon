@@ -182,7 +182,7 @@ small {
 sub,
 sup {
   position: relative;
-  font-size: $fs-xsmall;
+  font-size: $fs-x-small;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -414,7 +414,7 @@ legend {
   max-width: 100%; // 1
   padding: 0;
   margin-bottom: 0.5rem;
-  font-size: $fs-xlarge;
+  font-size: $fs-x-large;
   line-height: inherit;
   color: inherit; // 2
   white-space: normal; // 1

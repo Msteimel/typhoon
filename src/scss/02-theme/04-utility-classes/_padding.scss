@@ -4,48 +4,48 @@
 // creates classes like `.lib-pt4`
 
 $padding-list: (
-  '0': $space0,
-  '4': $space4,
-  '8': $space8,
-  '12': $space12,
-  '16': $space16,
-  '24': $space24,
-  '32': $space32,
-  '48': $space48,
-  '64': $space64,
-  '96': $space96,
-  '128': $space128,
-  '192': $space192,
+  '0': $space-zero,
+  '4': $space-2x-small,
+  '8': $space-x-small,
+  '12': $space-small,
+  '16': $space-med,
+  '24': $space-large,
+  '32': $space-2x-large,
+  '48': $space-3x-large,
+  '64': $space-4x-large,
+  '96': $space-5x-large,
+  '128': $space-6x-large,
+  '192': $space-7x-large,
 );
 
 @each $space, $spacing in $padding-list {
-  .lib-p#{$space} {
+  .lib-p_#{$space} {
     padding: $spacing;
   }
 
-  .lib-px#{$space} {
+  .lib-px_#{$space} {
     padding-left: $spacing;
     padding-right: $spacing;
   }
 
-  .lib-py#{$space} {
+  .lib-py_#{$space} {
     padding-top: $spacing;
     padding-bottom: $spacing;
   }
 
-  .lib-pt#{$space} {
+  .lib-pt_#{$space} {
     padding-top: $spacing;
   }
 
-  .lib-pr#{$space} {
+  .lib-pr_#{$space} {
     padding-right: $spacing;
   }
 
-  .lib-pb#{$space} {
+  .lib-pb_#{$space} {
     padding-bottom: $spacing;
   }
 
-  .lib-pl#{$space} {
+  .lib-pl_#{$space} {
     padding-left: $spacing;
   }
 }

@@ -2569,13 +2569,13 @@ strong {
 }
 
 small {
-  font-size: .875rem;
+  font-size: .75rem;
 }
 
 sub,
 sup {
   position: relative;
-  font-size: .75rem;
+  font-size: .5rem;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -2649,6 +2649,8 @@ label {
 
 button {
   border-radius: 0;
+  border: 0;
+  padding: 0;
 }
 
 button:focus {
@@ -2839,7 +2841,7 @@ h6,
 .h6 {
   font-family: "Merriweather",Georgia,serif;
   color: #26241c;
-  font-size: .875rem;
+  font-size: .75rem;
   line-height: 1.5;
   margin: 0em;
   margin-bottom: .5rem;
@@ -3038,7 +3040,7 @@ input[type=submit].lib-button.lib-button-icon::after,
 input[type=button].lib-button.lib-button-icon::before,
 input[type=button].lib-button.lib-button-icon::after {
   font-family: "Fontawesome";
-  font-size: .875rem;
+  font-size: .75rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -3153,6 +3155,7 @@ input[type=button].lib-button-accent:active {
 }
 
 .lib-accordion--item {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3161,13 +3164,15 @@ input[type=button].lib-button-accent:active {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  width: 100%;
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
           box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
+  -webkit-transition: -webkit-box-shadow .3s ease;
+  transition: -webkit-box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
   padding: 1rem 2rem;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  width: 100%;
 }
 
 .lib-accordion--item:not(last-of-type) {
@@ -3187,10 +3192,12 @@ input[type=button].lib-button-accent:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #fff;
 }
 
 .lib-accordion--title h4 {
   display: inline-block;
+  margin: 0;
 }
 
 .lib-accordion--title .icon {
@@ -3198,10 +3205,10 @@ input[type=button].lib-button-accent:active {
   position: relative;
   height: 1rem;
   width: 1rem;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .lib-accordion--title .icon::before {
@@ -3222,20 +3229,10 @@ input[type=button].lib-button-accent:active {
 }
 
 .lib-accordion--content {
-  max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
   text-align: left;
-}
-
-.js-open .lib-accordion--content {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-  max-height: 100%;
+  -webkit-transition: height .3s;
+  transition: height .3s;
 }
 
 .lib-gen-con--wrap {
@@ -3625,767 +3622,763 @@ input[type=button].lib-button-accent:active {
   border-radius: 14px;
 }
 
-.lib-p0 {
+.lib-p_0 {
   padding: 0;
 }
 
-.lib-px0 {
+.lib-px_0 {
   padding-left: 0;
   padding-right: 0;
 }
 
-.lib-py0 {
+.lib-py_0 {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.lib-pt0 {
+.lib-pt_0 {
   padding-top: 0;
 }
 
-.lib-pr0 {
+.lib-pr_0 {
   padding-right: 0;
 }
 
-.lib-pb0 {
+.lib-pb_0 {
   padding-bottom: 0;
 }
 
-.lib-pl0 {
+.lib-pl_0 {
   padding-left: 0;
 }
 
-.lib-p4 {
+.lib-p_4 {
   padding: .25rem;
 }
 
-.lib-px4 {
+.lib-px_4 {
   padding-left: .25rem;
   padding-right: .25rem;
 }
 
-.lib-py4 {
+.lib-py_4 {
   padding-top: .25rem;
   padding-bottom: .25rem;
 }
 
-.lib-pt4 {
+.lib-pt_4 {
   padding-top: .25rem;
 }
 
-.lib-pr4 {
+.lib-pr_4 {
   padding-right: .25rem;
 }
 
-.lib-pb4 {
+.lib-pb_4 {
   padding-bottom: .25rem;
 }
 
-.lib-pl4 {
+.lib-pl_4 {
   padding-left: .25rem;
 }
 
-.lib-p8 {
+.lib-p_8 {
   padding: .5rem;
 }
 
-.lib-px8 {
+.lib-px_8 {
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.lib-py8 {
+.lib-py_8 {
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
-.lib-pt8 {
+.lib-pt_8 {
   padding-top: .5rem;
 }
 
-.lib-pr8 {
+.lib-pr_8 {
   padding-right: .5rem;
 }
 
-.lib-pb8 {
+.lib-pb_8 {
   padding-bottom: .5rem;
 }
 
-.lib-pl8 {
+.lib-pl_8 {
   padding-left: .5rem;
 }
 
-.lib-p12 {
+.lib-p_12 {
   padding: .75rem;
 }
 
-.lib-px12 {
+.lib-px_12 {
   padding-left: .75rem;
   padding-right: .75rem;
 }
 
-.lib-py12 {
+.lib-py_12 {
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
 
-.lib-pt12 {
+.lib-pt_12 {
   padding-top: .75rem;
 }
 
-.lib-pr12 {
+.lib-pr_12 {
   padding-right: .75rem;
 }
 
-.lib-pb12 {
+.lib-pb_12 {
   padding-bottom: .75rem;
 }
 
-.lib-pl12 {
+.lib-pl_12 {
   padding-left: .75rem;
 }
 
-.lib-p16 {
+.lib-p_16 {
   padding: 1rem;
 }
 
-.lib-px16 {
+.lib-px_16 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.lib-py16 {
+.lib-py_16 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.lib-pt16 {
+.lib-pt_16 {
   padding-top: 1rem;
 }
 
-.lib-pr16 {
+.lib-pr_16 {
   padding-right: 1rem;
 }
 
-.lib-pb16 {
+.lib-pb_16 {
   padding-bottom: 1rem;
 }
 
-.lib-pl16 {
+.lib-pl_16 {
   padding-left: 1rem;
 }
 
-.lib-p24 {
+.lib-p_24 {
   padding: 1.5rem;
 }
 
-.lib-px24 {
+.lib-px_24 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.lib-py24 {
+.lib-py_24 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.lib-pt24 {
+.lib-pt_24 {
   padding-top: 1.5rem;
 }
 
-.lib-pr24 {
+.lib-pr_24 {
   padding-right: 1.5rem;
 }
 
-.lib-pb24 {
+.lib-pb_24 {
   padding-bottom: 1.5rem;
 }
 
-.lib-pl24 {
+.lib-pl_24 {
   padding-left: 1.5rem;
 }
 
-.lib-p32 {
+.lib-p_32 {
   padding: 2rem;
 }
 
-.lib-px32 {
+.lib-px_32 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-.lib-py32 {
+.lib-py_32 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.lib-pt32 {
+.lib-pt_32 {
   padding-top: 2rem;
 }
 
-.lib-pr32 {
+.lib-pr_32 {
   padding-right: 2rem;
 }
 
-.lib-pb32 {
+.lib-pb_32 {
   padding-bottom: 2rem;
 }
 
-.lib-pl32 {
+.lib-pl_32 {
   padding-left: 2rem;
 }
 
-.lib-p48 {
+.lib-p_48 {
   padding: 3rem;
 }
 
-.lib-px48 {
+.lib-px_48 {
   padding-left: 3rem;
   padding-right: 3rem;
 }
 
-.lib-py48 {
+.lib-py_48 {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.lib-pt48 {
+.lib-pt_48 {
   padding-top: 3rem;
 }
 
-.lib-pr48 {
+.lib-pr_48 {
   padding-right: 3rem;
 }
 
-.lib-pb48 {
+.lib-pb_48 {
   padding-bottom: 3rem;
 }
 
-.lib-pl48 {
+.lib-pl_48 {
   padding-left: 3rem;
 }
 
-.lib-p64 {
+.lib-p_64 {
   padding: 4rem;
 }
 
-.lib-px64 {
+.lib-px_64 {
   padding-left: 4rem;
   padding-right: 4rem;
 }
 
-.lib-py64 {
+.lib-py_64 {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-.lib-pt64 {
+.lib-pt_64 {
   padding-top: 4rem;
 }
 
-.lib-pr64 {
+.lib-pr_64 {
   padding-right: 4rem;
 }
 
-.lib-pb64 {
+.lib-pb_64 {
   padding-bottom: 4rem;
 }
 
-.lib-pl64 {
+.lib-pl_64 {
   padding-left: 4rem;
 }
 
-.lib-p96 {
+.lib-p_96 {
   padding: 6rem;
 }
 
-.lib-px96 {
+.lib-px_96 {
   padding-left: 6rem;
   padding-right: 6rem;
 }
 
-.lib-py96 {
+.lib-py_96 {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-.lib-pt96 {
+.lib-pt_96 {
   padding-top: 6rem;
 }
 
-.lib-pr96 {
+.lib-pr_96 {
   padding-right: 6rem;
 }
 
-.lib-pb96 {
+.lib-pb_96 {
   padding-bottom: 6rem;
 }
 
-.lib-pl96 {
+.lib-pl_96 {
   padding-left: 6rem;
 }
 
-.lib-p128 {
+.lib-p_128 {
   padding: 8rem;
 }
 
-.lib-px128 {
+.lib-px_128 {
   padding-left: 8rem;
   padding-right: 8rem;
 }
 
-.lib-py128 {
+.lib-py_128 {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
-.lib-pt128 {
+.lib-pt_128 {
   padding-top: 8rem;
 }
 
-.lib-pr128 {
+.lib-pr_128 {
   padding-right: 8rem;
 }
 
-.lib-pb128 {
+.lib-pb_128 {
   padding-bottom: 8rem;
 }
 
-.lib-pl128 {
+.lib-pl_128 {
   padding-left: 8rem;
 }
 
-.lib-p192 {
+.lib-p_192 {
   padding: 12rem;
 }
 
-.lib-px192 {
+.lib-px_192 {
   padding-left: 12rem;
   padding-right: 12rem;
 }
 
-.lib-py192 {
+.lib-py_192 {
   padding-top: 12rem;
   padding-bottom: 12rem;
 }
 
-.lib-pt192 {
+.lib-pt_192 {
   padding-top: 12rem;
 }
 
-.lib-pr192 {
+.lib-pr_192 {
   padding-right: 12rem;
 }
 
-.lib-pb192 {
+.lib-pb_192 {
   padding-bottom: 12rem;
 }
 
-.lib-pl192 {
+.lib-pl_192 {
   padding-left: 12rem;
 }
 
-.lib-m0 {
+.lib-m_zero {
   margin: 0;
 }
 
-.lib-mx0 {
+.lib-mx_zero {
   margin-left: 0;
   margin-right: 0;
 }
 
-.lib-my0 {
+.lib-my_zero {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.lib-mt0 {
+.lib-mt_zero {
   margin-top: 0;
 }
 
-.lib-mr0 {
+.lib-mr_zero {
   margin-right: 0;
 }
 
-.lib-mb0 {
+.lib-mb_zero {
   margin-bottom: 0;
 }
 
-.lib-ml0 {
+.lib-ml_zero {
   margin-left: 0;
 }
 
-.lib-m4 {
+.lib-m_2x-small {
   margin: .25rem;
 }
 
-.lib-mx4 {
+.lib-mx_2x-small {
   margin-left: .25rem;
   margin-right: .25rem;
 }
 
-.lib-my4 {
+.lib-my_2x-small {
   margin-top: .25rem;
   margin-bottom: .25rem;
 }
 
-.lib-mt4 {
+.lib-mt_2x-small {
   margin-top: .25rem;
 }
 
-.lib-mr4 {
+.lib-mr_2x-small {
   margin-right: .25rem;
 }
 
-.lib-mb4 {
+.lib-mb_2x-small {
   margin-bottom: .25rem;
 }
 
-.lib-ml4 {
+.lib-ml_2x-small {
   margin-left: .25rem;
 }
 
-.lib-m8 {
+.lib-m_x-small {
   margin: .5rem;
 }
 
-.lib-mx8 {
+.lib-mx_x-small {
   margin-left: .5rem;
   margin-right: .5rem;
 }
 
-.lib-my8 {
+.lib-my_x-small {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
 
-.lib-mt8 {
+.lib-mt_x-small {
   margin-top: .5rem;
 }
 
-.lib-mr8 {
+.lib-mr_x-small {
   margin-right: .5rem;
 }
 
-.lib-mb8 {
+.lib-mb_x-small {
   margin-bottom: .5rem;
 }
 
-.lib-ml8 {
+.lib-ml_x-small {
   margin-left: .5rem;
 }
 
-.lib-m12 {
+.lib-m_small {
   margin: .75rem;
 }
 
-.lib-mx12 {
+.lib-mx_small {
   margin-left: .75rem;
   margin-right: .75rem;
 }
 
-.lib-my12 {
+.lib-my_small {
   margin-top: .75rem;
   margin-bottom: .75rem;
 }
 
-.lib-mt12 {
+.lib-mt_small {
   margin-top: .75rem;
 }
 
-.lib-mr12 {
+.lib-mr_small {
   margin-right: .75rem;
 }
 
-.lib-mb12 {
+.lib-mb_small {
   margin-bottom: .75rem;
 }
 
-.lib-ml12 {
+.lib-ml_small {
   margin-left: .75rem;
 }
 
-.lib-m16 {
+.lib-m_med {
   margin: 1rem;
 }
 
-.lib-mx16 {
+.lib-mx_med {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.lib-my16 {
+.lib-my_med {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.lib-mt16 {
+.lib-mt_med {
   margin-top: 1rem;
 }
 
-.lib-mr16 {
+.lib-mr_med {
   margin-right: 1rem;
 }
 
-.lib-mb16 {
+.lib-mb_med {
   margin-bottom: 1rem;
 }
 
-.lib-ml16 {
+.lib-ml_med {
   margin-left: 1rem;
 }
 
-.lib-m24 {
+.lib-m_large {
   margin: 1.5rem;
 }
 
-.lib-mx24 {
+.lib-mx_large {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
-.lib-my24 {
+.lib-my_large {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.lib-mt24 {
+.lib-mt_large {
   margin-top: 1.5rem;
 }
 
-.lib-mr24 {
+.lib-mr_large {
   margin-right: 1.5rem;
 }
 
-.lib-mb24 {
+.lib-mb_large {
   margin-bottom: 1.5rem;
 }
 
-.lib-ml24 {
+.lib-ml_large {
   margin-left: 1.5rem;
 }
 
-.lib-m32 {
+.lib-m_2x-large {
   margin: 2rem;
 }
 
-.lib-mx32 {
+.lib-mx_2x-large {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.lib-my32 {
+.lib-my_2x-large {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.lib-mt32 {
+.lib-mt_2x-large {
   margin-top: 2rem;
 }
 
-.lib-mr32 {
+.lib-mr_2x-large {
   margin-right: 2rem;
 }
 
-.lib-mb32 {
+.lib-mb_2x-large {
   margin-bottom: 2rem;
 }
 
-.lib-ml32 {
+.lib-ml_2x-large {
   margin-left: 2rem;
 }
 
-.lib-m48 {
+.lib-m_3x-large {
   margin: 3rem;
 }
 
-.lib-mx48 {
+.lib-mx_3x-large {
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-.lib-my48 {
+.lib-my_3x-large {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.lib-mt48 {
+.lib-mt_3x-large {
   margin-top: 3rem;
 }
 
-.lib-mr48 {
+.lib-mr_3x-large {
   margin-right: 3rem;
 }
 
-.lib-mb48 {
+.lib-mb_3x-large {
   margin-bottom: 3rem;
 }
 
-.lib-ml48 {
+.lib-ml_3x-large {
   margin-left: 3rem;
 }
 
-.lib-m64 {
+.lib-m_4x-large {
   margin: 4rem;
 }
 
-.lib-mx64 {
+.lib-mx_4x-large {
   margin-left: 4rem;
   margin-right: 4rem;
 }
 
-.lib-my64 {
+.lib-my_4x-large {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-.lib-mt64 {
+.lib-mt_4x-large {
   margin-top: 4rem;
 }
 
-.lib-mr64 {
+.lib-mr_4x-large {
   margin-right: 4rem;
 }
 
-.lib-mb64 {
+.lib-mb_4x-large {
   margin-bottom: 4rem;
 }
 
-.lib-ml64 {
+.lib-ml_4x-large {
   margin-left: 4rem;
 }
 
-.lib-m96 {
+.lib-m_5x-large {
   margin: 6rem;
 }
 
-.lib-mx96 {
+.lib-mx_5x-large {
   margin-left: 6rem;
   margin-right: 6rem;
 }
 
-.lib-my96 {
+.lib-my_5x-large {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
-.lib-mt96 {
+.lib-mt_5x-large {
   margin-top: 6rem;
 }
 
-.lib-mr96 {
+.lib-mr_5x-large {
   margin-right: 6rem;
 }
 
-.lib-mb96 {
+.lib-mb_5x-large {
   margin-bottom: 6rem;
 }
 
-.lib-ml96 {
+.lib-ml_5x-large {
   margin-left: 6rem;
 }
 
-.lib-m128 {
+.lib-m_6x-large {
   margin: 8rem;
 }
 
-.lib-mx128 {
+.lib-mx_6x-large {
   margin-left: 8rem;
   margin-right: 8rem;
 }
 
-.lib-my128 {
+.lib-my_6x-large {
   margin-top: 8rem;
   margin-bottom: 8rem;
 }
 
-.lib-mt128 {
+.lib-mt_6x-large {
   margin-top: 8rem;
 }
 
-.lib-mr128 {
+.lib-mr_6x-large {
   margin-right: 8rem;
 }
 
-.lib-mb128 {
+.lib-mb_6x-large {
   margin-bottom: 8rem;
 }
 
-.lib-ml128 {
+.lib-ml_6x-large {
   margin-left: 8rem;
 }
 
-.lib-m192 {
+.lib-m_7x-large {
   margin: 12rem;
 }
 
-.lib-mx192 {
+.lib-mx_7x-large {
   margin-left: 12rem;
   margin-right: 12rem;
 }
 
-.lib-my192 {
+.lib-my_7x-large {
   margin-top: 12rem;
   margin-bottom: 12rem;
 }
 
-.lib-mt192 {
+.lib-mt_7x-large {
   margin-top: 12rem;
 }
 
-.lib-mr192 {
+.lib-mr_7x-large {
   margin-right: 12rem;
 }
 
-.lib-mb192 {
+.lib-mb_7x-large {
   margin-bottom: 12rem;
 }
 
-.lib-ml192 {
+.lib-ml_7x-large {
   margin-left: 12rem;
 }
 
-.lib-fs4 {
-  font-size: .25rem;
-}
-
-.lib-fs8 {
+.lib-fs_x-small {
   font-size: .5rem;
 }
 
-.lib-fs12 {
+.lib-fs_small {
   font-size: .75rem;
 }
 
-.lib-fs16 {
+.lib-fs_med {
   font-size: 1rem;
 }
 
-.lib-fs24 {
+.lib-fs_large {
   font-size: 1.5rem;
 }
 
-.lib-fs32 {
+.lib-fs_2x-large {
   font-size: 2rem;
 }
 
-.lib-fs48 {
+.lib-fs_3x-large {
   font-size: 3rem;
 }
 
-.lib-fs64 {
+.lib-fs_4x-large {
   font-size: 4rem;
 }
 
-.lib-fs96 {
+.lib-fs_5x-large {
   font-size: 6rem;
 }
 
-.lib-fs128 {
+.lib-fs_6x-large {
   font-size: 8rem;
 }
 
-.lib-fs192 {
+.lib-fs_7x-large {
   font-size: 12rem;
 }
 

@@ -4,48 +4,48 @@
 // creates classes like `.lib-pt4`
 
 $margin-list: (
-  '0': $space0,
-  '4': $space4,
-  '8': $space8,
-  '12': $space12,
-  '16': $space16,
-  '24': $space24,
-  '32': $space32,
-  '48': $space48,
-  '64': $space64,
-  '96': $space96,
-  '128': $space128,
-  '192': $space192,
+  'zero': $space-zero,
+  '2x-small': $space-2x-small,
+  'x-small': $space-x-small,
+  'small': $space-small,
+  'med': $space-med,
+  'large': $space-large,
+  '2x-large': $space-2x-large,
+  '3x-large': $space-3x-large,
+  '4x-large': $space-4x-large,
+  '5x-large': $space-5x-large,
+  '6x-large': $space-6x-large,
+  '7x-large': $space-7x-large,
 );
 
 @each $space, $spacing in $margin-list {
-  .lib-m#{$space} {
+  .lib-m_#{$space} {
     margin: $spacing;
   }
 
-  .lib-mx#{$space} {
+  .lib-mx_#{$space} {
     margin-left: $spacing;
     margin-right: $spacing;
   }
 
-  .lib-my#{$space} {
+  .lib-my_#{$space} {
     margin-top: $spacing;
     margin-bottom: $spacing;
   }
 
-  .lib-mt#{$space} {
+  .lib-mt_#{$space} {
     margin-top: $spacing;
   }
 
-  .lib-mr#{$space} {
+  .lib-mr_#{$space} {
     margin-right: $spacing;
   }
 
-  .lib-mb#{$space} {
+  .lib-mb_#{$space} {
     margin-bottom: $spacing;
   }
 
-  .lib-ml#{$space} {
+  .lib-ml_#{$space} {
     margin-left: $spacing;
   }
 }

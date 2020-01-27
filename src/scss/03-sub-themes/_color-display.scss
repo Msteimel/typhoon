@@ -8,8 +8,8 @@
   text-align: center;
 
   div {
-    width: $space64;
-    height: $space64;
+    width: $space-4x-large;
+    height: $space-4x-large;
     box-shadow: $vert-dark-1;
     transition: 0.3s ease;
 
@@ -20,7 +20,7 @@
   }
 
   .prime {
-    width: $space96;
-    height: $space96;
+    width: $space-5x-large;
+    height: $space-5x-large;
   }
 }

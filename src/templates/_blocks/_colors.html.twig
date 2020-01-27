@@ -59,15 +59,15 @@
     }
 %}
 
-<section class="container lib-my96">
-  <div class="lib-mb32">
-    <h2 class="lib-mb32">Colors</h2>
+<section class="container lib-my_5x-large">
+  <div class="lib-mb_2x-large">
+    <h2 class="lib-mb_2x-large">Colors</h2>
     <div class="colors--display">
       {% for color, values in colors %}
         <h5>{{ color }}</h5>
-        <div class="colors--wrap lib-mb12">
+        <div class="colors--wrap lib-mb_small">
           {% for key, value in colors[color] %}
-            <div class="color--info lib-m8">
+            <div class="color--info lib-m_x-small">
               <div class="lib-br4 lib-bg-{{ value }}"></div>
               {{ key }}
             </div>

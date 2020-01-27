@@ -4,21 +4,20 @@
 // creates classes like `.lib-fs16`
 
 $fs-list: (
-  '4': $space4,
-  '8': $space8,
-  '12': $space12,
-  '16': $space16,
-  '24': $space24,
-  '32': $space32,
-  '48': $space48,
-  '64': $space64,
-  '96': $space96,
-  '128': $space128,
-  '192': $space192,
+  'x-small': $space-x-small,
+  'small': $space-small,
+  'med': $space-med,
+  'large': $space-large,
+  '2x-large': $space-2x-large,
+  '3x-large': $space-3x-large,
+  '4x-large': $space-4x-large,
+  '5x-large': $space-5x-large,
+  '6x-large': $space-6x-large,
+  '7x-large': $space-7x-large,
 );
 
 @each $fs, $value in $fs-list {
-  .lib-fs#{$fs} {
+  .lib-fs_#{$fs} {
     font-size: $value;
   }
 }
