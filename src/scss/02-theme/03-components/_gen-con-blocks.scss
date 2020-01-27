@@ -3,7 +3,7 @@
   margin: 0 auto;
 
   h1 {
-    margin-bottom: $space48;
+    margin-bottom: $space-3x-large;
   }
 
   ul {
@@ -16,7 +16,7 @@
 // }
 
 .lib-gen-con--block {
-  margin-bottom: $space48;
+  margin-bottom: $space-3x-large;
 
   .lib-block-title {
     display: inline-block;
@@ -42,14 +42,14 @@
 .lib-text-img-right {
   .lib-gen-con--img-wrap {
     float: right;
-    margin-left: $space24;
+    margin-left: $space-large;
   }
 }
 
 .lib-text-img-left {
   .lib-gen-con--img-wrap {
     float: left;
-    margin-right: $space24;
+    margin-right: $space-large;
   }
 }
 
@@ -103,7 +103,7 @@
   }
 
   figcaption {
-    padding-top: $space12;
+    padding-top: $space-small;
     text-align: center;
     font-style: italic;
   }
@@ -135,18 +135,18 @@
   .lib-link-list {
     display: flex;
     flex-wrap: wrap;
-    margin: $space32 0 0 0;
+    margin: $space-2x-large 0 0 0;
   }
 
   .lib-link-list--item {
     position: relative;
     width: 50%;
-    margin-bottom: $space16;
+    margin-bottom: $space-med;
 
     a {
       font-family: $heading-font;
       font-weight: 400;
-      padding-left: $space32;
+      padding-left: $space-2x-large;
       color: $link-color;
       text-decoration: none;
       transition: 0.3s ease;
@@ -155,7 +155,7 @@
         @include vert_center();
         font-family: 'FontAwesome';
         content: '\f15c';
-        font-size: $fs18;
+        font-size: $fs-large;
         left: 0;
         color: inherit;
       }
@@ -169,18 +169,18 @@
 }
 
 .lib-link-list--abstract {
-  margin: $space32 0 0 0;
+  margin: $space-2x-large 0 0 0;
 
   .lib-abstract-item {
     position: relative;
-    margin-bottom: $space24;
-    padding-left: $space32;
+    margin-bottom: $space-large;
+    padding-left: $space-2x-large;
 
     &::before {
       @include vert_center(0);
       font-family: 'FontAwesome';
       content: '\f35d';
-      // font-size: $fs16;
+      // font-size: $fs-med;
       left: 0;
       color: $primary-color;
     }
@@ -211,7 +211,7 @@
 .lib-quote-block {
   position: relative;
 
-  padding: $space32 0 0;
+  padding: $space-2x-large 0 0;
   text-align: center;
 }
 
@@ -219,7 +219,7 @@
 }
 
 .lib-block--quote-alt {
-  padding: $space32 0 $space48;
+  padding: $space-2x-large 0 $space-3x-large;
   background-color: $warm-grey-100;
 
   .lib-quote {
@@ -244,7 +244,7 @@
 }
 
 .lib-block--quote-ribbon {
-  padding: $space32 0 $space32;
+  padding: $space-2x-large 0 $space-2x-large;
   background-color: $warm-grey-100;
   box-shadow: $vert-light-2;
   border-radius: $br4;
@@ -276,7 +276,7 @@
   max-width: 75%;
   font-family: $heading-font;
   font-style: italic;
-  font-size: $fs18;
+  font-size: $fs-large;
   margin: 0 auto;
 
   cite {
@@ -284,14 +284,14 @@
     position: relative;
     font-style: initial;
     margin: 0 auto;
-    padding: $space12 $space12 0;
+    padding: $space-small $space-small 0;
     color: $warm-grey-600;
 
     &::before,
     &::after {
       content: '\2014';
       color: $warm-grey-700;
-      padding: 0 $space12;
+      padding: 0 $space-small;
     }
 
     &::before {

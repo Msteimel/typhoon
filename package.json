@@ -43,5 +43,7 @@
     "> 1%",
     "ie > 8"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "animejs": "^3.1.0"
+  }
 }

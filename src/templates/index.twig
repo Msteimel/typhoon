@@ -3,8 +3,8 @@
 
 {% block title %}Test{% endblock title %}
 {% block content %}
-    <section class="container lib-my96 intro">
-      <div class=" lib-mb32">
+    <section class="container lib-my_5x-large intro">
+      <div class=" lib-mb_2x-large">
         <h1>Typoon v0.1</h1>   
         <p>
           This is the alpha version of the ISU Library Design system and content
@@ -14,56 +14,56 @@
     </section>
     {% include "./_blocks/_typography.html.twig" %}
    {% include "./_blocks/_colors.html.twig" %}
-    <section class="container lib-my96">
+    <section class="container lib-my_5x-large">
       <h2>Elements</h2>
-      <div class=" lib-mb32">
+      <div class=" lib-mb_2x-large">
         <h3>Buttons</h3>
       </div>
       <div class="">
-        <a href="#" class="lib-mr16 lib-button">Primary Button!</a>
-        <a href="#" class="lib-mr16 lib-button lib-button-icon">Icon Button</a>
+        <a href="#" class="lib-m_med lib-button">Primary Button!</a>
+        <a href="#" class="lib-m_med lib-button lib-button-icon">Icon Button</a>
       </div>
       <div class="">
-        <a href="#" class="lib-mr16 lib-button lib-button-secondary">
+        <a href="#" class="lib-m_med lib-button lib-button-secondary">
           Secondary Button!
         </a>
         <a
           href="#"
-          class="lib-mr16 lib-button lib-button-secondary lib-button-icon"
+          class="lib-m_med lib-button lib-button-secondary lib-button-icon"
         >
           Secondary Button!
         </a>
       </div>
       <div class="">
-        <a href="#" class="lib-mr16 lib-button lib-button-accent">
+        <a href="#" class="lib-m_med lib-button lib-button-accent">
           Accent Button!
         </a>
         <a
           href="#"
-          class="lib-mr16 lib-button lib-button-accent lib-button-icon"
+          class="lib-m_med lib-button lib-button-accent lib-button-icon"
           >Accent Button!
         </a>
       </div>
     </section>
-    <section class="container lib-my96">
-      <h2 class="lib-mb32">Components</h2>
-
-      <h3 class="lib-mb16">Accordion</h3>
+    <section class="container lib-my_5x-large">
+      <h2 class="lib-mb_2x-large">Components</h2>
+      <h3 class="lib-mb_med">Hide Show</h3>
       <div class="lib-accordion" role="tablist" aria-label="Accordion Label">
-        <button
-          class="lib-accordion--item js-open"
-          role="tab"
-          aria-selected="true"
-        >
-          <div class="lib-accordion--title">
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="1" role="tab" aria-selected="false">
             <h4>Title</h4>
             <span class="icon"></span>
-          </div>
-          <div
-            class="lib-accordion--content"
-            role="tabpanel"
-            aria-expanded="true"
-          >
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="1" >
+            <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
             <p>
               Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
               eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
@@ -74,13 +74,48 @@
               cillum.
             </p>
           </div>
-        </button>
-        <button class="lib-accordion--item" role="tab" aria-selected="false">
-          <div class="lib-accordion--title">
+        </div>
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="2"  role="tab" aria-selected="false">
             <h4>Title</h4>
             <span class="icon"></span>
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="2">
+            <p>
+              Veniam culpa <a href="/test">tempor</a> amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
           </div>
-          <div class="lib-accordion--content" role="tabpanel">
+        </div>
+        <div class="lib-accordion--item">
+          <button class="lib-accordion--title" data-box-toggle="3" role="tab" aria-selected="false">
+            <h4>Title</h4>
+            <span class="icon"></span>
+          </button>
+          <div class="lib-accordion--content" role="tabpanel" aria-expanded="false" data-box="3">
+            <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
+              <p>
+              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
+              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
+              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
+              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
+              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
+              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
+              cillum.
+            </p>
             <p>
               Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
               eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
@@ -91,29 +126,12 @@
               cillum.
             </p>
           </div>
-        </button>
-        <button class="lib-accordion--item" role="tab" aria-selected="false">
-          <div class="lib-accordion--title">
-            <h4>Title</h4>
-            <span class="icon"></span>
-          </div>
-          <div class="lib-accordion--content" role="tabpanel">
-            <p>
-              Veniam culpa tempor amet dolor Lorem sit deserunt proident anim
-              eiusmod enim. Pariatur culpa laboris incididunt occaecat irure
-              nulla veniam velit ullamco sint pariatur. Ut ea amet mollit
-              laboris duis non eiusmod consequat aliquip veniam nostrud Lorem
-              officia culpa. Deserunt velit amet commodo commodo sunt tempor eu
-              ipsum. Lorem ipsum culpa ea excepteur incididunt voluptate sunt
-              cillum.
-            </p>
-          </div>
-        </button>
+        </div>
       </div>
     </section>
-    <article class="container lib-my96">
-      <h2 class="lib-mb64 lib-red-500">Content Blocks</h2>
-      <h3 class="lib-mb32 lib-red-500">General Content Blocks</h3>
+    <article class="container lib-my_5x-large">
+      <h2 class="lib-mb_4x-large lib-red-500">Content Blocks</h2>
+      <h3 class="lib-mb_2x-large lib-red-500">General Content Blocks</h3>
       <div class="lib-gen-con--wrap">
         <h1 class="lib-gen-con--page-title">Page Title</h1>
         <section class="lib-gen-con--block lib-text-block">
@@ -385,8 +403,8 @@
         </section>
       </div>
     </article>
-    <section class="container lib-my96">
-      <div class=" lib-mb32">
+    <section class="container lib-my_5x-large">
+      <div class=" lib-mb_2x-large">
         <h3>Forms</h3>
         <p>//TODO</p>
       </div>
@@ -398,7 +416,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     {# <script src="/prod/global.js"></script> #}
-    <script src="/prod/accordian.js"></script>
+    {# <script src="/prod/accordion.js"></script> #}
 
 {% endblock content %}
 </html>

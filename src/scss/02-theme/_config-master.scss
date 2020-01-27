@@ -10,8 +10,8 @@ $primary-color: $red-500;
 $secondary-color: $yellow-500;
 $accent-color: $blue-600;
 
-$font-size-base: $fs16;
-$font-size-small: $fs14;
+$font-size-base: $fs-med;
+$font-size-small: $fs-small;
 $font-weight-base: 400;
 $line-height-base: 1.5;
 
@@ -23,7 +23,7 @@ $link-color: $primary-color;
 $link-hover-color: $red-700;
 
 $table-caption-color: $warm-grey-400;
-$label-margin-bottom: $space24;
+$label-margin-bottom: $space-large;
 
 $enable-pointer-cursor-for-buttons: true;
 
