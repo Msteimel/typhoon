@@ -7,7 +7,7 @@ $input-box-shadow-value: 0 0 3px rgba(0, 0, 0, 0.2);
 $border-color: trasnparent;
 $form-spacing: 0;
 $fieldset-spacing: $space-large;
-$radio-button-checked: $blue-700;
+$radio-button-checked: $red-500;
 
 form {
   // @include clearfix;
@@ -30,40 +30,40 @@ label {
   margin: $space-med 0 $space-2x-small;
   font-size: $fs-small;
   color: $warm-grey-700;
-}
 
-input[type='text'],
-input[type='password'],
-input[type='email'],
-input[type='tel'],
-input[type='number'],
-textarea,
-select {
-  @include appearance(none);
-  background-color: $warm-grey-50;
-  border: none;
-  border-radius: $br4;
-  box-sizing: border-box;
-  font-size: $fs-med;
-  color: $filled-color;
-  line-height: 1.8;
-  padding: $space-x-small $space-med;
-  outline: none;
-  width: 100%;
-  position: relative;
+  + input[type='text'],
+  + input[type='password'],
+  + input[type='email'],
+  + input[type='tel'],
+  + input[type='number'],
+  + textarea,
+  + select {
+    @include appearance(none);
+    background-color: $warm-grey-50;
+    border: none;
+    border-radius: $br4;
+    box-sizing: border-box;
+    font-size: $fs-med;
+    color: $filled-color;
+    line-height: 1.8;
+    padding: $space-x-small $space-med;
+    outline: none;
+    width: 100%;
+    position: relative;
 
-  select,
-  &::placeholder {
-    color: $place-holder-color;
-  }
+    select,
+    &::placeholder {
+      color: $place-holder-color;
+    }
 
-  &:focus {
-    border-color: $border-color;
-    color: $focus-text-color;
-    background-color: $focus-background-color;
+    &:focus {
+      border-color: $border-color;
+      color: $focus-text-color;
+      background-color: $focus-background-color;
 
-    @if $input-box-shadow {
-      box-shadow: $input-box-shadow-value;
+      @if $input-box-shadow {
+        box-shadow: $input-box-shadow-value;
+      }
     }
   }
 }
@@ -118,22 +118,23 @@ input[type='radio'] {
   + label {
     margin: $space-small $space-2x-small;
     display: inline-block;
+    font-size: $fs-med;
   }
-  // position: absolute;
+
   + label {
     &:before {
+      cursor: pointer;
       content: '';
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      top: 0.2rem;
+      width: $space-med;
+      height: $space-med;
       background: $focus-background-color;
       border-radius: 100%;
       border: 1px solid darken($focus-background-color, 25%);
-      display: inline-block;
-      width: $space-med;
-      height: $space-med;
-      position: relative;
-      top: 0.1em;
-      margin-right: 0.6em;
-      vertical-align: top;
-      cursor: pointer;
+      margin-right: $space-x-small;
       text-align: center;
       transition: background-color 250ms ease;
     }
