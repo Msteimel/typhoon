@@ -34,6 +34,6 @@
   @return ($px / $base-val) * 1rem;
 }
 
-@function em($pxval, $base: $em-base) {
-  @return ($pxval / $base) * 1em;
+@function em($px, $base-val: 16px) {
+  @return ($px, / $base-val) * 1em;
 }

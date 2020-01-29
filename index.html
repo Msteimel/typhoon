@@ -332,7 +332,71 @@
     </a>
     <a href="#" class="lib-m_med lib-button lib-button-accent lib-button-icon">Accent Button!
     </a>
-</div>    </section>
+</div>      <div class="lib-mt_2x-large">
+  <h3>
+    Inputs
+  </h3>
+  <form class="lib-form" action="">
+    <fieldset class="lib-form--fieldset">
+      <div class="lib-input--wrap">
+        <label class="lib-input--label" for="email">
+          Email Address
+        </label>
+        <input class="lib-input"
+          placeholder="email@address.com"
+          type="email"
+          name="email"
+          id="email"
+          required />
+      </div>
+      <div class="lib-input--wrap">
+        <label class="lib-input--label" for="name">
+          Name
+        </label>
+        <input class="lib-input"
+          placeholder="Bill Smith"
+          type="text"
+          name="name"
+          id="name"
+          required />
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="lib-input--wrap">
+        <input type="radio" id="kraken" name="monster" />
+        <label for="kraken">
+          Kraken
+        </label>
+      </div>
+      <div class="lib-input--wrap">
+        <input type="radio" id="mind-flayer" name="monster" />
+        <label for="mind-flayer">
+          Mind Flayer
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <label for="pet-select">
+        Choose a pet:
+      </label>
+      <select name="pets" id="pet-select">
+        <option value="">
+          --Please choose an option--
+        </option>
+        <option value="dog">
+          Dog
+        </option>
+        <option value="cat">
+          Cat
+        </option>
+      </select>
+    </fieldset>
+    <button class="lib-button lib-button-icon">
+      Submit
+    </button>
+  </form>
+</div>
+    </section>
    
     <section class="container lib-my_5x-large">
       <h2 class="lib-mb_2x-large">Components</h2>
