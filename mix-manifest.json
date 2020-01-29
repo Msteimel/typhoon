@@ -1,4 +1,4 @@
 {
-    "/prod/global.js": "/prod/global.js",
-    "/prod/global.css": "/prod/global.css"
+    "/public/global.js": "/public/global.js",
+    "/public/global.css": "/public/global.css"
 }
