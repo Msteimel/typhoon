@@ -30,41 +30,47 @@ label {
   margin: $space-med 0 $space-2x-small;
   font-size: $fs-small;
   color: $warm-grey-700;
+}
 
-  + input[type='text'],
-  + input[type='password'],
-  + input[type='email'],
-  + input[type='tel'],
-  + input[type='number'],
-  + textarea,
-  + select {
-    @include appearance(none);
-    background-color: $warm-grey-50;
-    border: none;
-    border-radius: $br4;
-    box-sizing: border-box;
-    font-size: $fs-med;
-    color: $filled-color;
-    line-height: 1.8;
-    padding: $space-x-small $space-med;
-    outline: none;
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+textarea,
+select {
+  @include appearance(none);
+  background-color: $warm-grey-50;
+  border: none;
+  border-radius: $br4;
+  box-sizing: border-box;
+  font-size: $fs-med;
+  color: $filled-color;
+  line-height: 1.8;
+  padding: $space-x-small $space-med;
+  outline: none;
+  width: 100%;
+  position: relative;
+
+  select,
+  &::placeholder {
+    color: $place-holder-color;
+  }
+
+  &:focus {
+    border-color: $border-color;
+    color: $focus-text-color;
+    background-color: $focus-background-color;
+
+    @if $input-box-shadow {
+      box-shadow: $input-box-shadow-value;
+    }
+  }
+
+  + .lib-input--focus {
+    height: 2px;
     width: 100%;
-    position: relative;
-
-    select,
-    &::placeholder {
-      color: $place-holder-color;
-    }
-
-    &:focus {
-      border-color: $border-color;
-      color: $focus-text-color;
-      background-color: $focus-background-color;
-
-      @if $input-box-shadow {
-        box-shadow: $input-box-shadow-value;
-      }
-    }
+    background-color: $red-500;
   }
 }
 
