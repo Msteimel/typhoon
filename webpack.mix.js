@@ -20,7 +20,7 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   },
 });
 
-// copy index into public folder
+// This is so it works with Zeit. This will not be final production
 mix.copy('index.html', 'public/index.html');
 mix.copy('public/global.css', 'public/public/global.css');
 mix.copy('public/global.js', 'public/public/global.js');
