@@ -68,9 +68,17 @@ select {
   }
 
   + .lib-input--focus {
+    display: block;
     height: 2px;
-    width: 100%;
+    width: 0;
     background-color: $red-500;
+    border-radius: $br4;
+    transition: width 0.3s ease-in;
+  }
+  &:focus {
+    + .lib-input--focus {
+      width: 100%;
+    }
   }
 }
 
