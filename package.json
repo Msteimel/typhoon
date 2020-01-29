@@ -2,6 +2,7 @@
   "name": "typhoon-isulib",
   "version": "1.0.0",
   "description": "Iowa State Library Design System",
+  "main": "index.js",
   "scripts": {
     "tester": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -10,7 +11,7 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "next build",
-    "dev": "node server.js",
+    "dev": "next",
     "start": "NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,6 +29,7 @@
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^6.0.3",
+    "fsevents": "^2.1.2",
     "html-webpack-plugin": "^3.2.0",
     "laravel-mix": "^5.0.1",
     "laravel-mix-twig-to-html": "^1.2.0",
