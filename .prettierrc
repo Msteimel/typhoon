@@ -11,5 +11,6 @@
   "endOfLine": "lf",
   "quoteProps": "as-needed",
   "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false
+  "insertPragma": false,
+  "plugins": ["./node_modules/prettier-plugin-twig-melody"]
 }

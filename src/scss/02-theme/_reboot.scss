@@ -182,7 +182,7 @@ small {
 sub,
 sup {
   position: relative;
-  font-size: $fs-x-small;
+  font-size: $fs-2x-small;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -288,7 +288,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: $label-margin-bottom;
+  // margin-bottom: $label-margin-bottom;
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

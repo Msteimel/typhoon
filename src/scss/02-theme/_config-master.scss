@@ -11,7 +11,7 @@ $secondary-color: $yellow-500;
 $accent-color: $blue-600;
 
 $font-size-base: $fs-med;
-$font-size-small: $fs-small;
+$font-size-small: $fs-x-small;
 $font-weight-base: 400;
 $line-height-base: 1.5;
 
@@ -33,7 +33,7 @@ $body-font: $nimbus-sans_stack;
 // to override a variable, it needs to be stated and called in a css element
 
 html {
-  font-size: $font-size-base;
+  font-size: 16px;
   line-height: 1.5;
 }
 

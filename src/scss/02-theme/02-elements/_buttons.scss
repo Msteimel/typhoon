@@ -81,11 +81,9 @@ input[type='button'].lib-button.lib-button-icon {
 
   &::before,
   &::after {
+    @include vert_center;
     font-family: 'Fontawesome';
-    font-size: $fs-small;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+    font-size: $fs-x-small;
     content: '\f054';
     transition: right 0.3s;
   }

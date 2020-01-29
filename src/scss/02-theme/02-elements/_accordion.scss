@@ -1,7 +1,7 @@
-.lib-accordion {
+.lib-show {
 }
 
-.lib-accordion--item {
+.lib-show--item {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   }
 }
 
-.lib-accordion--title {
+.lib-show--title {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -51,7 +51,7 @@
   }
 }
 
-.lib-accordion--content {
+.lib-show--content {
   overflow: hidden;
   text-align: left;
   // padding: 0 $space-2x-large;

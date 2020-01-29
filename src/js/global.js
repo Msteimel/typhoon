@@ -64,45 +64,45 @@ function check_if_in_view() {
   });
 }
 
-const accordionItems = document.querySelectorAll('.lib-accordion--item');
-let accordionShowAnimations = [];
-let accordionHideAnimations = [];
+const showItems = document.querySelectorAll('.lib-show--item');
+let showShowAnimations = [];
+let showHideAnimations = [];
 
-function handleAccordionClick(e) {
-  const accordionItem = e.currentTarget;
-  const button = accordionItem.querySelector('.lib-accordion--title');
-  const content = accordionItem.querySelector('.lib-accordion--content');
+function handleshowClick(e) {
+  const showItem = e.currentTarget;
+  const button = showItem.querySelector('.lib-show--title');
+  const content = showItem.querySelector('.lib-show--content');
   const ariaValue = button.getAttribute('aria-selected');
   const contentNum = content.dataset.box;
 
-  function showAccordion() {
-    accordionShowAnimations[contentNum].play();
+  function showshow() {
+    showShowAnimations[contentNum].play();
   }
 
-  function hideAccordion() {
-    accordionHideAnimations[contentNum].play();
+  function hideshow() {
+    showHideAnimations[contentNum].play();
   }
 
   if (ariaValue === 'false') {
-    accordionItem.classList.add('js-open');
+    showItem.classList.add('js-open');
     button.setAttribute('aria-selected', true);
     content.setAttribute('aria-expanded', true);
-    showAccordion();
+    showshow();
   } else {
-    accordionItem.classList.remove('js-open');
+    showItem.classList.remove('js-open');
     button.setAttribute('aria-selected', false);
     content.setAttribute('aria-expanded', false);
-    hideAccordion();
+    hideshow();
   }
 }
 
-accordionItems.forEach(item => {
-  const contentEl = item.querySelector('.lib-accordion--content');
+showItems.forEach(item => {
+  const contentEl = item.querySelector('.lib-show--content');
   const contentNum = contentEl.dataset.box;
   const contentHeight = anime.get(contentEl, 'height', 'px');
   anime.set(contentEl, { height: 0 });
 
-  accordionShowAnimations[contentNum] = anime({
+  showShowAnimations[contentNum] = anime({
     targets: contentEl,
     height: contentHeight,
     autoplay: false,
@@ -110,7 +110,7 @@ accordionItems.forEach(item => {
     duration: 100,
   });
 
-  accordionHideAnimations[contentNum] = anime({
+  showHideAnimations[contentNum] = anime({
     targets: contentEl,
     height: 0,
     autoplay: false,
@@ -118,7 +118,7 @@ accordionItems.forEach(item => {
     duration: 500,
   });
 
-  item.addEventListener('click', handleAccordionClick);
+  item.addEventListener('click', handleshowClick);
 });
 
 $window.on('scroll resize', check_if_in_view);
