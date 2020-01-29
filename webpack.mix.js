@@ -1,5 +1,5 @@
 const sourceDir = './src';
-const destinationDir = './prod';
+const destinationDir = './public';
 const projectURL = 'typhoon.test';
 
 const mix = require('laravel-mix');
@@ -19,6 +19,11 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
     outputStyle: 'compressed',
   },
 });
+
+// This is so it works with Zeit. This will not be final production
+mix.copy('index.html', 'public/index.html');
+mix.copy('public/global.css', 'public/public/global.css');
+mix.copy('public/global.js', 'public/public/global.js');
 
 // browsersync
 mix.browserSync({

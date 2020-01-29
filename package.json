@@ -4,12 +4,14 @@
   "description": "Iowa State Library Design System",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run development",
+    "tester": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "npm run production",
+    "start": "NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,16 +26,16 @@
   "homepage": "https://github.com/Msteimel/typhoon#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^6.0.3",
     "html-webpack-plugin": "^3.2.0",
     "laravel-mix": "^5.0.1",
     "laravel-mix-twig-to-html": "^1.2.0",
     "prettier": "^1.19.1",
-    "prettier-plugin-twig-melody": "^0.3.5",
+    "prettier-plugin-twig-melody": "^0.3.6",
     "raw-loader": "^4.0.0",
     "resolve-url-loader": "^3.1.0",
-    "sass": "^1.24.4",
+    "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "twig": "^1.14.0",
     "twig-html-loader": "^0.1.7",
@@ -45,6 +47,7 @@
     "ie > 8"
   ],
   "dependencies": {
-    "animejs": "^3.1.0"
+    "animejs": "^3.1.0",
+    "now": "^16.7.3"
   }
 }
