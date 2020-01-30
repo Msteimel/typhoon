@@ -6,7 +6,7 @@ $button-font: $heading-font;
 // primary button variables
 $button-primary-background-color: $primary-color;
 $button-primary-border-color: transparent;
-$button-primary_border-radius: $br4;
+$button-primary_border-radius: 0;
 $button-primary-text: $white;
 $button-primary-box-shadow: $vert-dark-1;
 $button-primary_hover-background-color: $red-400;
@@ -43,6 +43,7 @@ input[type='button'].lib-button {
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
+  font-size: $fs-small;
   line-height: 1rem;
   margin: 0 0 0.5em;
   padding: 1em 1.5em;
