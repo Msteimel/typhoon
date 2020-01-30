@@ -1,62 +1,83 @@
 <div class="lib-mt_2x-large">
   <h3>
-    Inputs
+    Form
   </h3>
   <form class="lib-form" action="">
     <fieldset class="lib-form--fieldset">
-      <div class="lib-input--wrap">
-        <label class="lib-input--label" for="email">
-          Email Address
-        </label>
-        <input class="lib-input"
-          placeholder="email@address.com"
-          type="email"
-          name="email"
-          id="email"
-          required />
-        <span class="lib-input--focus"></span>
-      </div>
-      <div class="lib-input--wrap">
-        <label class="lib-input--label" for="name">
-          Name
-        </label>
-        <input class="lib-input"
-          placeholder="Bill Smith"
-          type="text"
-          name="name"
-          id="name"
-          required />
-      </div>
-    </fieldset>
-    <fieldset>
-      <div class="lib-input--wrap">
-        <input type="radio" id="kraken" name="monster" />
-        <label for="kraken">
-          Kraken
-        </label>
-      </div>
-      <div class="lib-input--wrap">
-        <input type="radio" id="mind-flayer" name="monster" />
-        <label for="mind-flayer">
-          Mind Flayer
-        </label>
+      <div class="lib-input--wrap row">
+        <div class="col-sm-6 col-xs-12">
+          <div class="lib-input lib-input--field">
+            <input type="text" name="name" placeholder=" " id="name" required />
+            <label class="lib-input--label" for="name">
+              Name*
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <div class="lib-input lib-input--field">
+            <input type="tel" name="phone-number" placeholder=" " id="phone-number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+       required />
+            <label class="lib-input--label" for="phone-number">
+              Phone Number*
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <div class="lib-input lib-input--field">
+            <input type="email" name="email" placeholder=" " id="email" required />
+            <label class="lib-input--label" for="email">
+              Email Address*
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="lib-input lib-input--field">
+            <textarea placeholder=" " name="comment" id="comment" rows="5"/></textarea>
+            <label class="lib-input--label" for="name">
+              Comment
+            </label>
+          </div>
+        </div>
       </div>
     </fieldset>
     <fieldset>
-      <label for="pet-select">
-        Choose a pet:
-      </label>
-      <select name="pets" id="pet-select">
-        <option value="">
-          --Please choose an option--
-        </option>
-        <option value="dog">
-          Dog
-        </option>
-        <option value="cat">
-          Cat
-        </option>
-      </select>
+      <p>What's your favorite Monster</p>
+        <div class="lib-input lib-input--radio">
+          <input type="radio" id="kraken" name="monster" />
+          <label for="kraken">
+            Kraken
+          </label>
+        </div>
+        <div class="lib-input lib-input--radio">
+          <input type="radio" id="mind-flayer" name="monster" />
+          <label for="mind-flayer">
+            Mind Flayer
+          </label>
+        </div>
+        <div class="lib-input lib-input--radio">
+          <input type="radio" id="dragon" name="monster" />
+          <label for="dragon">
+            Dragon
+          </label>
+        </div>
+    </fieldset>
+    <fieldset>
+     <div class="lib-input--select">
+        <select name="pets" id="pet-select" required>
+          <option value="" disabled selected >
+            --Please choose an option--
+          </option>
+          <option value="dog">
+            Dog
+          </option>
+          <option value="cat">
+            Cat
+          </option>
+        </select>
+          <label for="pet-select">
+          Choose a pet:*
+        </label>
+     </div>
     </fieldset>
     <button class="lib-button lib-button-icon">
       Submit

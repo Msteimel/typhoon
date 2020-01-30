@@ -5,8 +5,9 @@
 // creates classes like `.lib-red-500`
 
 // Primary Colors
-$primary-colors: (
-  'red-100': $red-100,
+$colors: (
+  // primary
+    'red-100': $red-100,
   'red-200': $red-200,
   'red-300': $red-300,
   'red-400': $red-400,
@@ -15,21 +16,8 @@ $primary-colors: (
   'red-700': $red-700,
   'red-800': $red-800,
   'red-900': $red-900,
-);
-
-@each $color, $colors in $primary-colors {
-  .lib-bg-#{$color} {
-    background-color: $colors;
-  }
-
-  .lib-#{$color} {
-    color: $colors;
-  }
-}
-
-// Secondary Colors
-$secondary-colors: (
-  'yellow-100': $yellow-100,
+  // secondary
+    'yellow-100': $yellow-100,
   'yellow-200': $yellow-200,
   'yellow-300': $yellow-300,
   'yellow-400': $yellow-400,
@@ -38,21 +26,8 @@ $secondary-colors: (
   'yellow-700': $yellow-700,
   'yellow-800': $yellow-800,
   'yellow-900': $yellow-900,
-);
-
-@each $color, $colors in $secondary-colors {
-  .lib-bg-#{$color} {
-    background-color: $colors;
-  }
-
-  .lib-#{$color} {
-    color: $colors;
-  }
-}
-
-// Neutral Colors
-$neutral-colors: (
-  'warm-grey-50': $warm-grey-50,
+  // neutral
+    'warm-grey-50': $warm-grey-50,
   'warm-grey-100': $warm-grey-100,
   'warm-grey-200': $warm-grey-200,
   'warm-grey-300': $warm-grey-300,
@@ -71,21 +46,8 @@ $neutral-colors: (
   'grey-700': $grey-700,
   'grey-800': $grey-800,
   'grey-900': $grey-900,
-);
-
-@each $color, $colors in $neutral-colors {
-  .lib-bg-#{$color} {
-    background-color: $colors;
-  }
-
-  .lib-#{$color} {
-    color: $colors;
-  }
-}
-
-// Accent Colors
-$accent-colors: (
-  'blue-100': $blue-100,
+  // accent
+    'blue-100': $blue-100,
   'blue-200': $blue-200,
   'blue-300': $blue-300,
   'blue-400': $blue-400,
@@ -94,9 +56,19 @@ $accent-colors: (
   'blue-700': $blue-700,
   'blue-800': $blue-800,
   'blue-900': $blue-900,
+  'green-50': $green-50,
+  'green-100': $green-100,
+  'green-200': $green-200,
+  'green-300': $green-300,
+  'green-400': $green-400,
+  'green-500': $green-500,
+  'green-600': $green-600,
+  'green-700': $green-700,
+  'green-800': $green-800,
+  'green-900': $green-900
 );
 
-@each $color, $colors in $accent-colors {
+@each $color, $colors in $colors {
   .lib-bg-#{$color} {
     background-color: $colors;
   }
