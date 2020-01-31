@@ -4,17 +4,17 @@
 // creates classes like `.lib-fs16`
 
 $fs-list: (
-  '2x-small': $space-2x-small,
-  'x-small': $space-x-small,
-  'small': $space-small,
-  'med': $space-med,
-  'large': $space-large,
-  '2x-large': $space-2x-large,
-  '3x-large': $space-3x-large,
-  '4x-large': $space-4x-large,
-  '5x-large': $space-5x-large,
-  '6x-large': $space-6x-large,
-  '7x-large': $space-7x-large,
+  '2x-small': $fs-2x-small,
+  'x-small': $fs-x-small,
+  'small': $fs-small,
+  'med': $fs-med,
+  'large': $fs-large,
+  'x-large': $fs-x-large,
+  '2x-large': $fs-2x-large,
+  '3x-large': $fs-3x-large,
+  '4x-large': $fs-4x-large,
+  '5x-large': $fs-5x-large,
+  '6x-large': $fs-6x-large,
 );
 
 @each $fs, $value in $fs-list {
