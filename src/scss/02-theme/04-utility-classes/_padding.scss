@@ -4,18 +4,19 @@
 // creates classes like `.lib-pt4`
 
 $padding-list: (
-  '0': $space-zero,
-  '4': $space-2x-small,
-  '8': $space-x-small,
-  '12': $space-small,
-  '16': $space-med,
-  '24': $space-large,
-  '32': $space-2x-large,
-  '48': $space-3x-large,
-  '64': $space-4x-large,
-  '96': $space-5x-large,
-  '128': $space-6x-large,
-  '192': $space-7x-large,
+  'zero': $space-zero,
+  '2x-small': $space-2x-small,
+  'x-small': $space-x-small,
+  'small': $space-small,
+  'med': $space-med,
+  'large': $space-large,
+  'x-large': $space-x-large,
+  '2x-large': $space-2x-large,
+  '3x-large': $space-3x-large,
+  '4x-large': $space-4x-large,
+  '5x-large': $space-5x-large,
+  '6x-large': $space-6x-large,
+  '7x-large': $space-7x-large,
 );
 
 @each $space, $spacing in $padding-list {
