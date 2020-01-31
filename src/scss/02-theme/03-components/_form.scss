@@ -9,15 +9,13 @@ $form-spacing: $space-2x-large;
 $fieldset-spacing: $space-large;
 $radio-button-checked: $green-600;
 
-form {
+.lib-form {
   margin-top: $form-spacing;
 }
 
-fieldset {
+.lib-form--fieldset {
   @include clearfix;
-  // border: 1px solid $border-color;
   padding: 0;
-  margin: 0 0 $fieldset-spacing;
 
   legend {
     margin: 0 0 0 1em;
@@ -25,11 +23,6 @@ fieldset {
 }
 
 .lib-input--wrap > * {
-  margin-bottom: rem(40);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .lib-input {
@@ -135,6 +128,13 @@ select {
 .lib-input--select {
   margin-top: $space-med;
   position: relative;
+
+  &::after {
+    @include vert_center;
+    content: '\f078';
+    right: $space-x-large;
+    font-family: 'FontAwesome';
+  }
 
   label {
     position: absolute;
