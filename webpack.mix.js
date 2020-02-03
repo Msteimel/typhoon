@@ -1,6 +1,6 @@
 const sourceDir = './src';
-const destinationDir = './public';
-const projectURL = 'typhoon.test';
+const destinationDir = './public/';
+const projectURL = 'typhoon.test/public';
 
 const mix = require('laravel-mix');
 
