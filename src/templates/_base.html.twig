@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% block head %}
-      {% include '_head.html.twig' %}
-    {% endblock %}
+    <!-- [if IE 9]> <html class="ie9" lang="en"><![endif] -->
+    <!-- [if (gt IE 9)|!(IE)]><! -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/91b7cf6753.js"
+      crossorigin="anonymous"></script>
+
+    <!-- End Font Awesome -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans"
+      rel="stylesheet" />
+
+    <title>
+      {% block title %}
+
+      {% endblock %}Typhoon Design System
+    </title>
   </head>
 
   <body>
