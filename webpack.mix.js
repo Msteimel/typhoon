@@ -1,5 +1,5 @@
 const sourceDir = './src';
-const destinationDir = './public';
+const destinationDir = './public/';
 const projectURL = 'typhoon.test';
 
 const mix = require('laravel-mix');
@@ -28,7 +28,7 @@ mix.copy('public/global.js', 'public/public/global.js');
 // browsersync
 mix.browserSync({
   proxy: projectURL,
-  files: [`${destinationDir}/*`, `./index.html`],
+  files: [`${destinationDir}/*`, `public/index.html`],
   injectChanges: false,
   browser: 'google chrome',
 });

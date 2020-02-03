@@ -1,42 +1,51 @@
+{% extends '_base.html.twig' %}
 
-{% extends "_base.twig" %}
-
-{% block title %}Test{% endblock title %}
 {% block content %}
-    <section class="container lib-my_5x-large intro">
-      <div class=" lib-mb_2x-large">
-        <h1>Typoon v0.1</h1>   
-        <p>
-          This is the alpha version of the ISU Library Design system and content
-          guide.
-        </p>
+  <section class="container lib-my_5x-large intro">
+    <div class="lib-mb_2x-large">
+      <div class="lib-special-header--wrap">
+        <div class="lib-header-special">
+          <div class="lib-header-special--slash-top"></div>
+          <h1 class="lib-header-special--text">
+            Typhoon Design
+          </h1>
+          <div class="lib-header-special--slash-bottom"></div>
+        </div>
       </div>
-    </section>
-    {% include "./_blocks/_typography.html.twig" %}
-    {% include "./_blocks/_colors.html.twig" %}
-    <section class="container lib-my_5x-large">
-      <h2>Elements</h2>
-      {% include "./_elements/_buttons.html.twig" %}
-      {% include "./_elements/_input.html.twig" %}
-    </section>
-   
-    <section class="container lib-my_5x-large">
-      <h2 class="lib-mb_2x-large">Components</h2>
-      {% include "./_components/_show.html.twig" %}
-    </section>
-    <section class="container lib-my_5x-large">
-      <h2 class="lib-mb_4x-large lib-red-500">General Content Blocks</h2>
-      {% include "./_blocks/_gen-con.html.twig" %}
-      </section>
+      <p class="lead">
+        This is the alpha version of the ISU Library Design system and content
+        guide.
+      </p>
+    </div>
+  </section>
+  {% include './_blocks/_typography.html.twig' %}
+  {% include './_blocks/_colors.html.twig' %}
+  <section class="container lib-my_5x-large">
+    <h2>
+      Elements
+    </h2>
+    {% include './_elements/_buttons.html.twig' %}
+    {% include './_elements/_input.html.twig' %}
+  </section>
 
-    <!-- <div class="footer-wrap">
+  <section class="container lib-my_5x-large">
+    <h2 class="lib-mb_2x-large">
+      Components
+    </h2>
+    {% include './_components/_show.html.twig' %}
+  </section>
+  <section class="container lib-my_5x-large">
+    <h2 class="lib-mb_4x-large lib-red-500">
+      General Content Blocks
+    </h2>
+    {% include './_blocks/_gen-con.html.twig' %}
+  </section>
 
-	</div> -->
+  <!--        <div class="footer-wrap">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    {# <script src="/prod/global.js"></script> #}
-    {# <script src="/prod/accordion.js"></script> #}
+	</div>        -->
 
-{% endblock content %}
-</html>
-<!DOCTYPE html>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  {# <script src="/prod/global.js"></script> #}
+  {# <script src="/prod/accordion.js"></script> #}
+{% endblock %}
