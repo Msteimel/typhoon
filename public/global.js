@@ -1390,38 +1390,55 @@ anime.random = function (min, max) { return Math.floor(Math.random() * (max - mi
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
 // elements animation
-
-$('.stagger-fade').children().addClass('stagger fade');
-$('.stagger-fade-in').children().addClass('stagger fade');
-$('.stagger-fade-up').children().addClass('stagger fade');
-$('.stagger-fade-up-reverse').children().addClass('stagger fade');
-$('.stagger-fade-down').children().addClass('stagger fade');
-$('.stagger-fade-down-reverse').children().addClass('stagger fade');
-$('.stagger-fade-left').children().addClass('stagger fade');
-$('.stagger-fade-right').children().addClass('stagger fade');
-var $window = $(window);
-
-function check_if_in_view() {
-  var $fade = $('.fade');
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = window_top_position + window_height;
-  $.each($fade, function () {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = element_top_position + element_height; //check to see if this current container is within viewport
-
-    if (element_bottom_position >= window_top_position && element_top_position + 50 <= window_bottom_position) {
-      $element.addClass('in-view');
-    }
-  });
-  $('.in-view').css({
-    opacity: '1',
-    transform: 'translate(0, 0)',
-    visibility: 'visible'
-  });
-}
+ // $('.stagger-fade')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-in')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-up')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-up-reverse')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-down')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-down-reverse')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-left')
+//   .children()
+//   .addClass('stagger fade');
+// $('.stagger-fade-right')
+//   .children()
+//   .addClass('stagger fade');
+// var $window = $(window);
+// function check_if_in_view() {
+//   var $fade = $('.fade');
+//   var window_height = $window.height();
+//   var window_top_position = $window.scrollTop();
+//   var window_bottom_position = window_top_position + window_height;
+//   $.each($fade, function() {
+//     var $element = $(this);
+//     var element_height = $element.outerHeight();
+//     var element_top_position = $element.offset().top;
+//     var element_bottom_position = element_top_position + element_height;
+//     //check to see if this current container is within viewport
+//     if (
+//       element_bottom_position >= window_top_position &&
+//       element_top_position + 50 <= window_bottom_position
+//     ) {
+//       $element.addClass('in-view');
+//     }
+//   });
+//   $('.in-view').css({
+//     opacity: '1',
+//     transform: 'translate(0, 0)',
+//     visibility: 'visible',
+//   });
+// }
 
 var showItems = document.querySelectorAll('.lib-show--item');
 var showShowAnimations = [];

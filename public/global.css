@@ -2969,26 +2969,17 @@ sub {
   z-index: 1;
 }
 
-.lib-special-header--wrap .lib-header-special .lib-header-special--slash-top {
-  position: absolute;
-  top: -5%;
-  left: -2%;
-  background-color: #f1be46;
-  width: .5rem;
-  height: 2.5rem;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: rotate(45deg) scaleY(2) translateY(0);
-      -ms-transform: rotate(45deg) scaleY(2) translateY(0);
-          transform: rotate(45deg) scaleY(2) translateY(0);
-  z-index: 5;
+.lib-special-header--wrap .lib-header-special--text {
+  color: #c6102e;
+  font-size: 64px;
+  position: relative;
+  margin: 0;
 }
 
-.lib-special-header--wrap .lib-header-special .lib-header-special--slash-bottom {
+.lib-special-header--wrap .lib-header-special--text::before,
+.lib-special-header--wrap .lib-header-special--text::after {
+  content: "";
   position: absolute;
-  bottom: -5%;
-  right: -4%;
   background-color: #f1be46;
   width: .5rem;
   height: 2.5rem;
@@ -3001,11 +2992,14 @@ sub {
   z-index: 5;
 }
 
-.lib-special-header--wrap .lib-header-special--text {
-  color: #c6102e;
-  font-size: 64px;
-  position: relative;
-  margin: 0;
+.lib-special-header--wrap .lib-header-special--text::before {
+  top: -10%;
+  left: -2%;
+}
+
+.lib-special-header--wrap .lib-header-special--text::after {
+  bottom: -5%;
+  right: -4%;
 }
 
 a.lib-button,
@@ -4748,6 +4742,36 @@ input:not(:focus):valid~.floating-label {
   margin-left: 12rem;
 }
 
+.lib-m_auto {
+  margin: auto;
+}
+
+.lib-mx_auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lib-my_auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.lib-mt_auto {
+  margin-top: auto;
+}
+
+.lib-mr_auto {
+  margin-right: auto;
+}
+
+.lib-mb_auto {
+  margin-bottom: auto;
+}
+
+.lib-ml_auto {
+  margin-left: auto;
+}
+
 .lib-fs_2x-small {
   font-size: .5rem;
 }
@@ -5284,6 +5308,22 @@ input:not(:focus):valid~.floating-label {
   color: #05420a;
 }
 
+.lib-bg-white {
+  background-color: #fff;
+}
+
+.lib-white {
+  color: #fff;
+}
+
+.lib-bg-black {
+  background-color: #212121;
+}
+
+.lib-black {
+  color: #212121;
+}
+
 .clearfix {
   *zoom: 1;
   clear: both;
@@ -5339,6 +5379,22 @@ input:not(:focus):valid~.floating-label {
 .color--info .prime {
   width: 6rem;
   height: 6rem;
+}
+
+.typhoon-top-nav--home {
+  text-decoration: none;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.typhoon-top-nav--home:hover {
+  color: #e9e7e2;
+}
+
+.typhoon-side-nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 230px;
+          flex: 0 0 230px;
 }
 
 
