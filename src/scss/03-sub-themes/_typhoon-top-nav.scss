@@ -1,0 +1,8 @@
+.typhoon-top-nav--home {
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $warm-grey-100;
+  }
+}
