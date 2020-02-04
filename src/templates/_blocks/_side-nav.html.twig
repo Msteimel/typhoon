@@ -1,0 +1,24 @@
+{% set nav = {
+  'Writing Guide': {
+    voice: '#voice'
+  },
+  About: {
+    'More Info': '#more-info',
+    Contact: '#contact'
+  }
+} %}
+
+<nav>
+  <ul>
+    {% for page1, link1 in nav %}
+      <li>
+        <a href="/{{ link1 }}">{{ page1 }}</a>
+        <ul>
+          {% for page2, link2 in nav[page1] %}
+            <li><a href="{{ link2 }}">{{ page2 }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
