@@ -121,5 +121,5 @@ showItems.forEach(item => {
   item.addEventListener('click', handleshowClick);
 });
 
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+// $window.on('scroll resize', check_if_in_view);
+// $window.trigger('scroll');
