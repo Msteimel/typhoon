@@ -6,6 +6,8 @@
 
       This should rarely be changed, if at all.
 ==================================================*/
+$debug: true;
+
 $primary-color: $red-500;
 $secondary-color: $yellow-500;
 $accent-color: $blue-600;
@@ -30,8 +32,10 @@ $enable-pointer-cursor-for-buttons: true;
 $heading-font: $merriweather_stack;
 $body-font: $nimbus-sans_stack;
 
+@if ($debug == true) {
+  @include screen-width;
+}
 // to override a variable, it needs to be stated and called in a css element
-
 html {
   line-height: 1.5;
 }
@@ -40,8 +44,12 @@ body {
   font-size: $font-size-base;
   font-family: $body-font;
   background-color: $white;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.lib-page-wrap {
 }
 
 .grid {

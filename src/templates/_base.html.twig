@@ -23,28 +23,22 @@
   </head>
 
   <body>
-    {% block topNav %}
+    {% block body %}
+      {% block topNav %}
 
-    {% endblock %}
+      {% endblock %}
 
-    <div class="container-fuild">
-      <div class="row">
-        <aside class="col typhoon-side-nav lib-bg-warm-grey-100">
-          {% block sideNav %}
+      {% block sideNav %}
 
-          {% endblock %}
-        </aside>
+      {% endblock %}
 
-        <main class="col lib-mx_large">
-          {% block content %}
+      {% block content %}
 
-          {% endblock %}
-        </main>
-      </div>
-    </div>
+      {% endblock %}
 
-    {% block footer %}
+      {% block footer %}
 
+      {% endblock %}
     {% endblock %}
   </body>
 </html>

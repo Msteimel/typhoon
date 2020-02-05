@@ -15,6 +15,49 @@
   }
 }
 
+@mixin screen-width {
+  @if ($debug == true) {
+    $xs: 0;
+    $sm: 576px;
+    $md: 768px;
+    $lg: 992px;
+    $xl: 1200px;
+
+    body::before {
+      color: red;
+      position: fixed;
+      left: 2rem;
+      bottom: 2rem;
+      z-index: 9999;
+    }
+
+    @media (min-width: $xs) {
+      body::before {
+        content: 'Extra Small';
+      }
+    }
+    @media (min-width: $sm) {
+      body::before {
+        content: 'Small';
+      }
+    }
+    @media (min-width: $md) {
+      body::before {
+        content: 'Medium';
+      }
+    }
+    @media (min-width: $lg) {
+      body::before {
+        content: 'Large';
+      }
+    }
+    @media (min-width: $xl) {
+      body::before {
+        content: 'Extra Large';
+      }
+    }
+  }
+}
 /*================================================
 			Responsive Typography
 ==================================================*/
