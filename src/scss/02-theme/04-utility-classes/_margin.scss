@@ -17,6 +17,7 @@ $margin-list: (
   '5x-large': $space-5x-large,
   '6x-large': $space-6x-large,
   '7x-large': $space-7x-large,
+  'auto': auto,
 );
 
 @each $space, $spacing in $margin-list {

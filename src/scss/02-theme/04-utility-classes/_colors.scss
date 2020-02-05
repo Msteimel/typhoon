@@ -69,7 +69,10 @@ $colors: (
   'green-600': $green-600,
   'green-700': $green-700,
   'green-800': $green-800,
-  'green-900': $green-900
+  'green-900': $green-900,
+  // defaults
+    'white': $white,
+  'black': $black
 );
 
 @each $color, $colors in $colors {

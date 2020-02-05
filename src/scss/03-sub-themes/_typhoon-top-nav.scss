@@ -1,0 +1,15 @@
+.typhoon-top-nav--wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.typhoon-top-nav--home {
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $warm-grey-100;
+  }
+}

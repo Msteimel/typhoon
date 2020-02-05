@@ -1,0 +1,28 @@
+{% extends './_base.html.twig' %}
+{% block body %}
+  {% block topNav %}
+    {% include '/_blocks/_top-nav.html.twig' %}
+  {% endblock %}
+
+  <div class="container-fluid typhoon-page-wrap">
+    <div class="row justify-content-start">
+      {% block sideNav %}
+        <aside class="col typhoon-side-nav--wrap lib-bg-warm-grey-100">
+          {% include '/_blocks/_side-nav.html.twig' %}
+        </aside>
+      {% endblock %}
+
+      <main class="col lib-mx_large">
+        <div class="row">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+      </main>
+    </div>
+  </div>
+
+  {% block footer %}
+    {% include '/_blocks/_footer.html.twig' %}
+  {% endblock %}
+{% endblock %}
