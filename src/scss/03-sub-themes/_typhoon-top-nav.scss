@@ -13,3 +13,14 @@
     color: $warm-grey-100;
   }
 }
+
+#s-lc-eq-p-navform {
+  position: relative;
+  &::before {
+    content: 'Laptops and iPads are in a seperate location';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+  }
+}
