@@ -63,3 +63,16 @@ showItems.forEach(item => {
 
 // $window.on('scroll resize', check_if_in_view);
 // $window.trigger('scroll');
+const navItems = document.querySelectorAll('.typhoon-side-nav--main-link');
+
+navItems.forEach(link => {
+  const currentURL = window.location.pathname;
+  const getHREF = link.getAttribute('href');
+
+  const cleanURL = currentURL.replace(/^\/|\/$/g, '');
+  const cleanHREF = getHREF.replace(/^\/|\/$/g, '');
+
+  if (cleanURL === cleanHREF) {
+    link.classList.add('js-current');
+  }
+});
