@@ -1,28 +1,94 @@
+{% set menu =
+  [
+    {
+      topPage: 'Introduction',
+      topSlug: '/intro',
+      subPages: []
+    },
+    {
+      topPage: 'Writing Guide',
+      topSlug: '/writing-guide',
+      subPages: []
+    },
+    {
+      topPage: 'Color',
+      topSlug: '/color',
+      subPages: [
+        {
+          subPage: 'Primary',
+          subSlug: '#primary-colors'
+        },
+        {
+          subPage: 'Secondary',
+          subSlug: '#secondary-colors'
+        },
+        {
+          subPage: 'Accent',
+          subSlug: '#accent-colors'
+        },
+        {
+          subPage: 'Neutral',
+          subSlug: '#neutral-colors'
+        },
+        {
+          subPage: 'Support',
+          subSlug: '#support-colors'
+        }
+      ]
+    },
+    {
+      topPage: 'Typography',
+      topSlug: '/typography',
+      subPages: []
+    },
+    {
+      topPage: 'Spacing',
+      topSlug: '/spacing',
+      subPages: [
+        {
+          subPage: 'Margin',
+          subSlub: '#margin'
+        },
+        {
+          subPage: 'Padding',
+          subSlub: '#padding'
+        }
+      ]
+    },
+    {
+      topPage: 'Components',
+      topSlug: '/components',
+      subPages: []
+    },
+    {
+      topPage: 'General Content',
+      topSlug: '/general-content',
+      subPages: []
+    }
+  ]
+%}
+
 <nav class="typhoon-side-nav lib-mt_x-large">
-  <ul>
-    <li><a href="/intoduction">Introduction</a></li>
-    <li>
-      <a href="/writing-guide">Writing Guide</a>
-      <ul>
-        <li><a href="#voice">Voice and Tone</a></li>
-        <li><a href="#writing-style">Writing Style</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="/spacing">Spacing</a>
-      <ul>
-        <li><a href="#padding">Padding</a></li>
-        <li><a href="#margin">Writing Style</a></li>
-      </ul>
-    </li>
-    <li><a href="/colors">Colors</a></li>
-    <li>
-      <a href="/components">Components</a>
-      <ul>
-        <li><a data-scroll href="#buttons">Buttons</a></li>
-        <li><a href="#show">Hide Show</a></li>
-        <li><a href="#form">form</a></li>
-      </ul>
-    </li>
-  </ul>
+  {% for menuItem in menu %}
+    <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
+      <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
+        <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
+          href="{{ menuItem.topSlug }}">
+          <span>{{ menuItem.topPage }}</span>
+        </a>
+      </li>
+      {% if menuItem.subPages is empty %}
+
+      {% else %}
+        {% for subpage in menuItem.subPages %}
+          <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+              href="{{ subpage.subSlug }}">
+              <span>{{ subpage.subPage }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  {% endfor %}
 </nav>
