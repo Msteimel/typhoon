@@ -1497,15 +1497,16 @@ showItems.forEach(function (item) {
 }); // $window.on('scroll resize', check_if_in_view);
 // $window.trigger('scroll');
 
-var navItems = document.querySelectorAll('.typhoon-side-nav--main-link');
-navItems.forEach(function (link) {
+var navList = document.querySelectorAll('.typhoon-side-nav--list');
+navList.forEach(function (navCol) {
+  var link = navCol.querySelector('.typhoon-side-nav--main-link');
   var currentURL = window.location.pathname;
   var getHREF = link.getAttribute('href');
   var cleanURL = currentURL.replace(/^\/|\/$/g, '');
   var cleanHREF = getHREF.replace(/^\/|\/$/g, '');
 
   if (cleanURL === cleanHREF) {
-    link.classList.add('js-current');
+    navCol.classList.add('js-current');
   }
 });
 

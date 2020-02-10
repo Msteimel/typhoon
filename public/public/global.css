@@ -2541,7 +2541,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212121;
+  color: #212529;
   text-align: left;
   background-color: #fff;
 }
@@ -5454,11 +5454,99 @@ input:not(:focus):valid~.floating-label {
 
 .typhoon-side-nav {
   position: fixed;
+  width: 230px;
 }
 
-.typhoon-side-nav--list {
-  margin: 0;
-  padding: 0;
+.typhoon-side-nav--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 2.5rem;
+}
+
+.typhoon-side-nav--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212121;
+}
+
+.typhoon-side-nav--link span {
+  vertical-align: middle;
+}
+
+.js-current .typhoon-side-nav--main-page {
+  position: relative;
+  background-color: #d4d0c4;
+}
+
+.js-current .typhoon-side-nav--main-page::before,
+.js-current .typhoon-side-nav--main-page::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: .25rem;
+  background-color: #26241c;
+}
+
+.js-current .typhoon-side-nav--main-page::before {
+  top: 0;
+  left: 0;
+}
+
+.js-current .typhoon-side-nav--main-page::after {
+  top: 0;
+  right: 0;
+}
+
+.typhoon-side-nav--main-link {
+  position: relative;
+}
+
+.typhoon-side-nav--main-link::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "\F078";
+  font-family: "FontAwesome";
+  right: 0;
+  font-size: .875rem;
+}
+
+.js-current .typhoon-side-nav--main-link::after {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(-50%) rotate(0.5turn);
+      -ms-transform: translateY(-50%) rotate(0.5turn);
+          transform: translateY(-50%) rotate(0.5turn);
+}
+
+.typhoon-side-nav--sub-page {
+  display: none;
+}
+
+.js-current .typhoon-side-nav--sub-page {
+  display: block;
+}
+
+.typhoon-side-nav--sub-link {
+  font-weight: 400;
 }
 
 .typhoon-page-wrap {

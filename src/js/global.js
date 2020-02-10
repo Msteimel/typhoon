@@ -63,9 +63,11 @@ showItems.forEach(item => {
 
 // $window.on('scroll resize', check_if_in_view);
 // $window.trigger('scroll');
-const navItems = document.querySelectorAll('.typhoon-side-nav--main-link');
+const navList = document.querySelectorAll('.typhoon-side-nav--list');
 
-navItems.forEach(link => {
+navList.forEach(navCol => {
+  const link = navCol.querySelector('.typhoon-side-nav--main-link');
+
   const currentURL = window.location.pathname;
   const getHREF = link.getAttribute('href');
 
@@ -73,6 +75,6 @@ navItems.forEach(link => {
   const cleanHREF = getHREF.replace(/^\/|\/$/g, '');
 
   if (cleanURL === cleanHREF) {
-    link.classList.add('js-current');
+    navCol.classList.add('js-current');
   }
 });
