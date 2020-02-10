@@ -1,0 +1,25 @@
+{% extends '../_typhoon.html.twig' %}
+
+{% block title %}
+  Components -
+{% endblock %}
+
+{% block content %}
+  <h1>
+    Components
+  </h1>
+  <section class="lib-my_5x-large">
+    <h2>
+      Elements
+    </h2>
+    {% include '../_elements/_buttons.html.twig' %}
+    {% include '../_elements/_input.html.twig' %}
+  </section>
+
+  <section class="lib-my_5x-large">
+    <h2 class="lib-mb_2x-large">
+      Components
+    </h2>
+    {% include '../_components/_show.html.twig' %}
+  </section>
+{% endblock %}

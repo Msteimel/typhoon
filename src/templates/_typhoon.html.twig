@@ -5,18 +5,20 @@
   {% endblock %}
 
   <div class="container-fluid typhoon-page-wrap">
-    <div class="row justify-content-start">
+    <div class="row justify-content-start typhoon-full-height">
       {% block sideNav %}
-        <aside class="col typhoon-side-nav--wrap lib-bg-warm-grey-100">
+        <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg-warm-grey-100">
           {% include '/_blocks/_side-nav.html.twig' %}
         </aside>
       {% endblock %}
 
       <main class="col lib-mx_large">
         <div class="row">
-          {% block content %}
+          <div class="container lib-my_3x-large">
+            {% block content %}
 
-          {% endblock %}
+            {% endblock %}
+          </div>
         </div>
       </main>
     </div>

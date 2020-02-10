@@ -17,7 +17,7 @@ $font-size-small: $fs-x-small;
 $font-weight-base: 400;
 $line-height-base: 1.5;
 
-$body-color: $black;
+$text-color: $black;
 $body-bg: $white;
 
 $font-weight-bolder: 600;
@@ -38,6 +38,7 @@ $body-font: $nimbus-sans_stack;
 // to override a variable, it needs to be stated and called in a css element
 html {
   line-height: 1.5;
+  height: 100%;
 }
 
 body {
@@ -47,6 +48,9 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .lib-page-wrap {

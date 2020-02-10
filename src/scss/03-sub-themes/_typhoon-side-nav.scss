@@ -4,4 +4,82 @@
 
 .typhoon-side-nav {
   position: fixed;
+  width: 230px;
+}
+
+.typhoon-side-nav--item {
+  display: flex;
+  flex-direction: column;
+  height: $space-2x-large;
+}
+
+.typhoon-side-nav--link {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: $fs-med;
+  font-weight: 600;
+  color: $text-color;
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.typhoon-side-nav--main-page {
+  .js-current & {
+    position: relative;
+    background-color: $warm-grey-200;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: $space-2x-small;
+      background-color: $warm-grey-900;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.typhoon-side-nav--main-link {
+  position: relative;
+
+  &::after {
+    @include vert_center;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    right: 0;
+    font-size: $fs-small;
+
+    .js-current & {
+      transform-origin: center;
+      transform: translateY(-50%) rotate(0.5turn);
+    }
+  }
+}
+
+.typhoon-side-nav--sub-page {
+  display: none;
+
+  .js-current & {
+    display: block;
+  }
+}
+
+.typhoon-side-nav--sub-link {
+  font-weight: 400;
 }
