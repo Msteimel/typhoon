@@ -11,6 +11,7 @@ require('laravel-mix-twig-to-html');
  | Mix Asset Management
  |--------------------------------------------------------------------------
  */
+mix.setPublicPath('./public/');
 
 // source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
@@ -20,15 +21,20 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   },
 });
 
+// Only cache bust if production
+if (mix.inProduction()) {
+  mix.version();
+}
+
 // This is so it works with Zeit. This will not be final production
-mix.copy('index.html', 'public/index.html');
-mix.copy('public/global.css', 'public/public/global.css');
-mix.copy('public/global.js', 'public/public/global.js');
+// mix.copy('index.html', 'public/index.html');
+// mix.copy('public/global.css', 'public/public/global.css');
+// mix.copy('public/global.js', 'public/public/global.js');
 
 // browsersync
 mix.browserSync({
   proxy: projectURL,
-  files: [`${destinationDir}/*`, `public/index.html`],
+  files: [`${destinationDir}/*`, `${destinationDir}/index.html`],
   injectChanges: false,
   browser: 'google chrome',
 });
