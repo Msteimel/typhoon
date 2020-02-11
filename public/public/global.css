@@ -5424,11 +5424,6 @@ input:not(:focus):valid~.floating-label {
           transform: scale(1.12);
 }
 
-.color--info .prime {
-  width: 6rem;
-  height: 6rem;
-}
-
 .typhoon-top-nav--wrap {
   position: fixed;
   top: 0;

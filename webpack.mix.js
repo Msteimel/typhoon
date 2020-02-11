@@ -11,12 +11,11 @@ require('laravel-mix-twig-to-html');
  | Mix Asset Management
  |--------------------------------------------------------------------------
  */
-mix.setPublicPath('./public');
-mix.setResourceRoot('./public');
+mix.setPublicPath('./public/');
 
 // source ==> production
-mix.js(`${sourceDir}/js/global.js`, `/global.js`);
-mix.sass(`${sourceDir}/scss/global.scss`, `/global.css`, {
+mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
+mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
   sassOptions: {
     outputStyle: 'compressed',
   },
