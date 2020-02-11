@@ -34,7 +34,7 @@ if (mix.inProduction()) {
 // browsersync
 mix.browserSync({
   proxy: projectURL,
-  files: [`${destinationDir}/*`, `${destinationDir}/index.html`],
+  files: [`${destinationDir}/*/**`, `${destinationDir}/index.html`],
   injectChanges: false,
   browser: 'google chrome',
 });
