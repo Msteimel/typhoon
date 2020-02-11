@@ -5,6 +5,17 @@
   z-index: 100;
 }
 
+.typhoon-top-nav--title {
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $warm-grey-100;
+    }
+  }
+}
+
 .typhoon-top-nav--home {
   text-decoration: none;
   transition: color 0.3s ease;
