@@ -1,7 +1,9 @@
 {
     "/global.js": "/global.js",
-    "/../../../../global.css": "/../../../../global.css",
+    "/global.css": "/global.css",
     "/global.js.map": "/global.js.map",
-    "/../../../../global.css.map": "/../../../../global.css.map",
-    "/index.html": "/index.html"
+    "/global.css.map": "/global.css.map",
+    "/index.html": "/index.html",
+    "/public/global.css": "/public/global.css",
+    "/public/global.js": "/public/global.js"
 }
