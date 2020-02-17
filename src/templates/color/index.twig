@@ -1,12 +1,12 @@
 {% extends '../_typhoon.html.twig' %}
 
+{% set pageTitle = 'Color' %}
+{% set pageDesc = 'Typhoon Color Palette' %}
+
 {% block title %}
-  Colors -
+  {{ pageTitle }} -
 {% endblock %}
 
 {% block content %}
-  <h1>
-    Colors
-  </h1>
   {% include '../_blocks/_colors.html.twig' %}
 {% endblock %}
