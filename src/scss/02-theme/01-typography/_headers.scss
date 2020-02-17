@@ -4,6 +4,7 @@ $body-font: $nimbus-sans_stack;
 $h1-color: $warm-grey-900;
 $h1-fs: $fs-4x-large;
 $h1-lh: 1;
+$h1-ls: -0.5;
 
 $h2-color: $warm-grey-900;
 $h2-fs: $fs-2x-large;
@@ -36,6 +37,7 @@ h1,
   color: $h1-color;
   font-size: $h1-fs;
   line-height: $h1-lh;
+  letter-spacing: $h1-ls;
   margin: 0;
   margin-bottom: $space-2x-large;
 }
