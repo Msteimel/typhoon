@@ -1,4 +1,5 @@
 {% extends './_base.html.twig' %}
+
 {% block body %}
   {% block topNav %}
     {% include '/_blocks/_top-nav.html.twig' %}
@@ -12,13 +13,16 @@
         </aside>
       {% endblock %}
 
-      <main class="col lib-mx_large">
-        <div class="row">
-          <div class="container lib-my_3x-large">
-            {% block content %}
-
-            {% endblock %}
+      <main class="col">
+        <div class="lib-hero--wrap">
+          <div class="lib-hero">
+            {% include '/_elements/_header-special.html.twig' %}
           </div>
+        </div>
+        <div class="row lib-mx_large">
+          {% block content %}
+
+          {% endblock %}
         </div>
       </main>
     </div>

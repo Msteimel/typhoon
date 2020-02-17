@@ -1,0 +1,13 @@
+{% set heroHeader = pageTitle %}
+{% set subHeader = pageDesc %}
+
+{% block heroText %}
+  <div class="lib-header-special">
+    <h1 class="lib-header-special--text lib-white">
+      {{ heroHeader }}
+    </h1>
+    <p class="lib-header-special--sub lib-yellow-400">
+      {{ subHeader }}
+    </p>
+  </div>
+{% endblock %}
