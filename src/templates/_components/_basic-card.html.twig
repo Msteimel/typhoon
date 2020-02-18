@@ -1,4 +1,36 @@
-{% include './_basic-card-data.html.twig' %}
+{# {% include './_basic-card-data.html.twig' %} #}
+
+{% set basicCards =
+  [
+    {
+      cardClass: '',
+      title: 'Card Title',
+      category: 'Category',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      linkText: 'Link words',
+      pageLink: '#',
+      ariaText: 'Readable by screen readers'
+    },
+    {
+      cardClass: 'lib-basic-card--yellow',
+      title: 'Card Title',
+      category: 'Category',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '#',
+      ariaText: 'Readable by screen readers'
+    },
+    {
+      cardClass: 'lib-basic-card--blue',
+      title: 'Card Title',
+      category: 'Category',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '#',
+      ariaText: 'Readable by screen readers'
+    }
+  ]
+%}
 
 <section class="row flex-wrap">
   {% for card in basicCards %}
