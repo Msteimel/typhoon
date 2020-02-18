@@ -1,3 +1,7 @@
 .typhoon-overview--wrap {
   margin: 0 rem(-15);
 }
+
+.typhoon-overview--wrap + .typhoon-content--wrap {
+  margin-top: -$space-3x-large;
+}
