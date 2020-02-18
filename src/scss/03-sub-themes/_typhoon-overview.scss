@@ -1,7 +1,9 @@
 .typhoon-overview--wrap {
   margin: 0 rem(-15);
+  padding-left: rem(15);
+  padding-right: rem(15);
 }
 
-.typhoon-overview--wrap + .typhoon-content--wrap {
-  margin-top: -$space-3x-large;
+.tyhpoon-overview-overlap {
+  margin-top: -$space-2x-large;
 }
