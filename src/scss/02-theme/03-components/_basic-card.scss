@@ -1,0 +1,50 @@
+$card-width: rem(375);
+
+.lib-basic-card {
+  position: relative;
+  width: $card-width;
+  box-shadow: $vert-light-2;
+  border-left: 4px solid $red-400;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    width: rem(88);
+    height: rem(50);
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    top: $card-width * -0.03;
+    right: $card-width * -0.08;
+    background-color: $red-400;
+  }
+
+  &::after {
+    top: $card-width * -0.06;
+    right: $card-width * -0.11;
+    background-color: $red-500;
+  }
+}
+
+.lib-basic-card--text-wrap {
+  padding: $space-x-large $space-large $space-2x-large $space-2x-large;
+}
+
+.lib-basic-card--category {
+  display: block;
+  font-size: $fs-small;
+  color: $red-600;
+}
+
+.lib-basic-card--title {
+}
+
+.lib-basic-card--desc {
+}
+
+.lib-basic-card--link {
+}
