@@ -22,16 +22,15 @@ Typhoon Design System
   <link href="/global.css" rel="stylesheet"></head>
 
   <body>
-          
-<header class="typhoon-top-nav--wrap lib-bg-warm-grey-300">
+          <header class="typhoon-top-nav--wrap lib-bg_white">
   <div class="lib-mx_2x-large">
     <nav class="typhoon-top-nav d-flex justify-content-between">
       <span class="typhoon-top-nav--title lib-py_med lib-fs_x-large"
         role="titles">
-        <a class="lib-white" href="/">Typhoon v0.1</a>
+        <a class="typhoon-top-nav--link lib-red-500" href="/">Typhoon</a>
       </span>
       <a href="/"
-        class="typhoon-top-nav--home lib-my_auto lib-p_med lib-fs_x-large lib-white"
+        class="typhoon-top-nav--home lib-my_auto lib-p_med lib-fs_x-large lib-red-500"
         role="link"
         aria-label="Home Page">
         <div>
@@ -44,7 +43,7 @@ Typhoon Design System
   
   <div class="container-fluid typhoon-page-wrap">
     <div class="row justify-content-start typhoon-full-height">
-              <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg-warm-grey-100">
+              <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg_warm-grey-50">
           
 <nav class="typhoon-side-nav lib-mt_x-large">
       <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
@@ -153,21 +152,36 @@ Typhoon Design System
   </nav>
         </aside>
       
-      <main class="col">
+      <div class="col">
         <div class="lib-hero--wrap">
           <div class="lib-hero">
             
   <div class="lib-header-special">
-    <h1 class="lib-header-special--text lib-white">
-      General Content
-    </h1>
-    <p class="lib-header-special--sub lib-yellow-400">
+    <div>
+      <h1 class="lib-header-special--text lib-white">
+        General Content
+      </h1>
+    </div>
+    <span class="lib-header-special--sub lib-mt_x-small lib-yellow-400">
       Building Blocks for general content pages
-    </p>
+    </span>
   </div>
           </div>
         </div>
-        <div class="row lib-mx_large">
+        <section class="typhoon-overview--wrap lib-bg_red-50 lib-pt_3x-large lib-pb_5x-large">
+          <div class="typhoon-overview-text--wrap lib-px_3x-large">
+            <h2 class="lib-heading-underline">
+              Overview
+            </h2>
+                          <p>
+                Non minim anim cupidatat nostrud Lorem enim esse sit qui sint
+                ullamco nulla enim adipisicing. Nulla cillum veniam exercitation
+                ex sunt exercitation mollit. Elit irure nulla irure pariatur
+                adipisicing ex quis eiusmod ipsum nisi laboris.
+              </p>
+                      </div>
+        </section>
+        <main class="row lib-mx_large">
             <section class="lib-my_5x-large">
     <div class="lib-gen-con--wrap">
         <h1 class="lib-gen-con--page-title">Page Title</h1>
@@ -440,8 +454,8 @@ Typhoon Design System
         </section>
       </div>
     </article>  </section>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </div>
 
