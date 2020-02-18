@@ -2,17 +2,17 @@
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 2px solid $yellow-500;
   z-index: 100;
 }
 
-.typhoon-top-nav--title {
-  a {
-    text-decoration: none;
-    transition: color 0.3s ease;
+.typhoon-top-nav--link {
+  font-family: $heading-font;
+  text-decoration: none;
+  transition: color 0.3s ease;
 
-    &:hover {
-      color: $warm-grey-100;
-    }
+  &:hover {
+    color: $red-700;
   }
 }
 
@@ -21,6 +21,6 @@
   transition: color 0.3s ease;
 
   &:hover {
-    color: $warm-grey-100;
+    color: $red-700;
   }
 }

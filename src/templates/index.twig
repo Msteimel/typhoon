@@ -1,34 +1,98 @@
 {% extends './_typhoon.html.twig' %}
 
+{% set pageTitle = 'Typhoon Design' %}
+{% set pageDesc = 'Iowa State University Library Design System' %}
+
+{% set basicCards =
+  [
+    {
+      cardClass: '',
+      title: 'Introduction',
+      category: 'Content',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      linkText: 'Link words',
+      pageLink: '/intro'
+    },
+    {
+      cardClass: '',
+      title: 'Writing-Guide',
+      category: 'Content',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/writing-guide'
+    },
+    {
+      cardClass: 'lib-basic-card--yellow',
+      title: 'Colors',
+      category: 'Design & Dev',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/colors'
+    },
+    {
+      cardClass: '',
+      title: 'Typography',
+      category: 'Content',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/typography',
+      ariaText: 'Readable by screen readers'
+    },
+    {
+      cardClass: 'lib-basic-card--yellow',
+      title: 'Spacing',
+      category: 'Design & Dev',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/spacing'
+    },
+    {
+      cardClass: 'lib-basic-card--yellow',
+      title: 'Components',
+      category: 'Design & Dev',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/components',
+      ariaText: 'Readable by screen readers'
+    },
+    {
+      cardClass: '',
+      title: 'General Content',
+      category: 'Content',
+      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+      linkText: 'Link words',
+      pageLink: '/general-content',
+      ariaText: 'Readable by screen readers'
+    }
+  ]
+%}
+
 {% block content %}
-  <section class="intro">
-    <div class="lib-mb_2x-large">
-      <p class="lead">
-        This is the alpha version of the ISU Library Design system and content
-        guide.
-      </p>
-      <div class="lib-header-special">
-        <h1 class="lib-header-special--text">
-          Typhoon Design
-        </h1>
-      </div>
-    </div>
+  <section class="row flex-wrap">
+    {% for card in basicCards %}
+      <article class="lib-basic-card {{ card.cardClass }}">
+        <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text">{{ card.ariaText }}</span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb_x-small">
+              {{ card.category }}
+            </span>
+            <h3 class="lib-basic-card--title">
+              {{ card.title }}
+            </h3>
+            <p class="lib-basic-card--desc">
+              {{ card.desc }}
+            </p>
+            <div>
+              <p class="lib-basic-card--cta">
+                {{ card.linkText }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
   </section>
-  <p>
-    Eu ipsum est officia aliqua veniam deserunt. Duis velit magna culpa labore
-    anim Lorem ex dolor sit incididunt nisi ullamco. Anim ut exercitation
-    consequat consectetur laborum. Sit dolore nulla consequat velit ipsum amet
-    dolor consectetur.
 
-    Elit elit magna culpa qui pariatur ut consequat proident qui deserunt. Velit
-    labore nisi et proident. Ullamco dolor ut anim nisi velit. Quis
-    reprehenderit fugiat in tempor nostrud eu. Consectetur reprehenderit nisi
-    cillum consequat velit ea id incididunt dolore velit labore magna culpa
-    minim.
-  </p>
   {# <div class="footer-wrap"></div> #}
-
-  {# <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> #}
-  {# <script src="/prod/global.js"></script> #}
-  {# <script src="/prod/accordion.js"></script> #}
 {% endblock %}

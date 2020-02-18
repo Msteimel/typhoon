@@ -1,0 +1,27 @@
+{% include './_basic-card-data.html.twig' %}
+
+<section class="row flex-wrap">
+  {% for card in basicCards %}
+    <article class="lib-basic-card {{ card.cardClass }}">
+      <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
+        <span class="lib-aria-text">{{ card.ariaText }}</span>
+        <div class="lib-basic-card--text-wrap">
+          <span class="lib-basic-card--category lib-mb_x-small">
+            {{ card.category }}
+          </span>
+          <h3 class="lib-basic-card--title">
+            {{ card.title }}
+          </h3>
+          <p class="lib-basic-card--desc">
+            {{ card.desc }}
+          </p>
+          <div>
+            <p class="lib-basic-card--cta">
+              {{ card.linkText }}
+            </p>
+          </div>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</section>

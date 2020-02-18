@@ -53,30 +53,21 @@ body {
   height: 100%;
 }
 
-.lib-page-wrap {
+.typhoon-page-wrap {
+  p {
+    max-width: 800px;
+  }
 }
 
 .grid {
   font-size: $font-size-base;
 }
 
-// General Background Colors
-$general-colors: (
-  'white': $white,
-  'black': $black,
-);
-
 $shorcut-colors: (
   'primary': $primary-color,
   'secondary': $secondary-color,
   'accent': $accent-color,
 );
-
-@each $color, $colors in $general-colors {
-  .lib-bg-#{$color} {
-    background-color: $colors;
-  }
-}
 
 @each $color, $colors in $shorcut-colors {
   .lib-#{$color} {

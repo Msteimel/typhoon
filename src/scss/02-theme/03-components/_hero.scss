@@ -1,0 +1,13 @@
+.lib-hero--wrap {
+  position: relative;
+  height: rem(375);
+  margin: 0 rem(-15);
+}
+
+.lib-hero {
+  background-image: url('../../../img/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}

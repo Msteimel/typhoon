@@ -22,3 +22,8 @@
   margin-left: calc(50% - 49vw);
   margin-right: calc(50% - 49vw);
 }
+
+.lib-aria-text {
+  position: absolute;
+  visibility: hidden;
+}

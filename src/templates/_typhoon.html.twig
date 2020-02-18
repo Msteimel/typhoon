@@ -1,4 +1,5 @@
 {% extends './_base.html.twig' %}
+
 {% block body %}
   {% block topNav %}
     {% include '/_blocks/_top-nav.html.twig' %}
@@ -7,20 +8,38 @@
   <div class="container-fluid typhoon-page-wrap">
     <div class="row justify-content-start typhoon-full-height">
       {% block sideNav %}
-        <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg-warm-grey-100">
+        <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg_warm-grey-50">
           {% include '/_blocks/_side-nav.html.twig' %}
         </aside>
       {% endblock %}
 
-      <main class="col lib-mx_large">
-        <div class="row">
-          <div class="container lib-my_3x-large">
-            {% block content %}
-
-            {% endblock %}
+      <div class="col">
+        <div class="lib-hero--wrap">
+          <div class="lib-hero">
+            {% include '/_elements/_header-special.html.twig' %}
           </div>
         </div>
-      </main>
+        <section class="typhoon-overview--wrap lib-bg_red-50 lib-pt_3x-large lib-pb_5x-large">
+          <div class="typhoon-overview-text--wrap lib-px_3x-large">
+            <h2 class="lib-heading-underline">
+              Overview
+            </h2>
+            {% block overview %}
+              <p>
+                Non minim anim cupidatat nostrud Lorem enim esse sit qui sint
+                ullamco nulla enim adipisicing. Nulla cillum veniam exercitation
+                ex sunt exercitation mollit. Elit irure nulla irure pariatur
+                adipisicing ex quis eiusmod ipsum nisi laboris.
+              </p>
+            {% endblock %}
+          </div>
+        </section>
+        <main class="container typhoon-content--wrap lib-mx_large">
+          {% block content %}
+
+          {% endblock %}
+        </main>
+      </div>
     </div>
   </div>
 

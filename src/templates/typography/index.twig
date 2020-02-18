@@ -1,13 +1,12 @@
 {% extends '../_typhoon.html.twig' %}
 
+{% set pageTitle = 'Typography' %}
+{% set pageDesc = 'Typhoon typography guide' %}
+
 {% block title %}
-  Typography -
+  {{ pageTitle }} -
 {% endblock %}
 
 {% block content %}
-  <h1>
-    Typography
-  </h1>
-
   {% include '../_blocks/_typography.html.twig' %}
 {% endblock %}

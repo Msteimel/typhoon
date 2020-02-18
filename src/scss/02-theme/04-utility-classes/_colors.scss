@@ -1,7 +1,7 @@
 /*================================================
 			color classes
 ==================================================*/
-// creates classes like `.lib-bg-red-500`
+// creates classes like `.lib-bg_red-500`
 // creates classes like `.lib-red-500`
 
 // Primary Colors
@@ -76,7 +76,7 @@ $colors: (
 );
 
 @each $color, $colors in $colors {
-  .lib-bg-#{$color} {
+  .lib-bg_#{$color} {
     background-color: $colors;
   }
 

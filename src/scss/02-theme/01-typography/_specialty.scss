@@ -1,12 +1,14 @@
 .lib-header-special {
   position: relative;
   display: inline-block;
+  margin-top: $space-7x-large;
+  margin-left: $space-5x-large;
   z-index: 1;
 }
 
 .lib-header-special--text {
-  color: $red-500;
-  font-size: 64px;
+  display: inline-block;
+  font-size: $space-4x-large;
   position: relative;
   margin: 0;
 
@@ -28,7 +30,13 @@
   }
 
   &::after {
-    bottom: -5%;
-    right: -4%;
+    bottom: -6%;
+    right: -5%;
   }
+}
+
+.lib-header-special--sub {
+  display: inline-block;
+  font-size: $space-large;
+  max-width: 100%;
 }
