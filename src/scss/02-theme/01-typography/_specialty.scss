@@ -7,6 +7,7 @@
 }
 
 .lib-header-special--text {
+  display: inline-block;
   font-size: $space-4x-large;
   position: relative;
   margin: 0;
@@ -29,8 +30,8 @@
   }
 
   &::after {
-    bottom: -5%;
-    right: -4%;
+    bottom: -6%;
+    right: -5%;
   }
 }
 
