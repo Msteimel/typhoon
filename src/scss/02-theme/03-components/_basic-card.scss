@@ -37,6 +37,11 @@ $blue-basic-card-dark-tri-hover: $blue-700;
 $blue-basic-card-text-color-hover: $white;
 $blue-basic-card-text-blue: $blue-600;
 
+.lib-basic-card--wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .lib-basic-card {
   width: $card-width;
 
