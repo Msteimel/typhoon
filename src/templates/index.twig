@@ -27,7 +27,7 @@
       category: 'Design & Dev',
       desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
       linkText: 'Link words',
-      pageLink: '/colors'
+      pageLink: '/color'
     },
     {
       cardClass: '',
@@ -68,7 +68,7 @@
 %}
 
 {% block content %}
-  <section class="row flex-wrap">
+  <section class="row flex-wrap tyhpoon-overview-overlap">
     {% for card in basicCards %}
       <article class="lib-basic-card {{ card.cardClass }}">
         <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">

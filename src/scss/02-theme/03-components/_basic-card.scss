@@ -2,7 +2,8 @@ $card-width: rem(375);
 
 // defualt card is red
 $basic-card-box-shadow: $vert-light-2;
-$basic-card-box-shadow-hover: $vert-dark-4;
+$basic-card-dark-shadow-hover: $vert-dark-4;
+$basic-card-light-shadow-hover: $vert-light-4;
 $basic-card-border-color: $red-400;
 $basic-card-border-color-hover: $red-700;
 $basic-card-background-hover: $red-500;
@@ -83,7 +84,7 @@ $blue-basic-card-text-blue: $blue-600;
     &:focus {
       background-color: $basic-card-background-hover;
       border-color: $basic-card-border-color-hover;
-      box-shadow: $basic-card-box-shadow-hover;
+      box-shadow: $basic-card-dark-shadow-hover;
 
       &::before {
         background-color: $basic-card-light-tri-hover;
@@ -187,7 +188,7 @@ $blue-basic-card-text-blue: $blue-600;
     &:focus {
       background-color: $yellow-basic-card-background-hover;
       border-color: $yellow-basic-card-border-color-hover;
-      box-shadow: $basic-card-box-shadow-hover;
+      box-shadow: $basic-card-light-shadow-hover;
 
       &::before {
         background-color: $yellow-basic-card-light-tri-hover;
@@ -243,7 +244,7 @@ $blue-basic-card-text-blue: $blue-600;
     &:focus {
       background-color: $blue-basic-card-background-hover;
       border-color: $blue-basic-card-border-color-hover;
-      box-shadow: $basic-card-box-shadow-hover;
+      box-shadow: $basic-card-light-shadow-hover;
 
       &::before {
         background-color: $blue-basic-card-light-tri-hover;
