@@ -1,5 +1,6 @@
 {% extends './_typhoon.html.twig' %}
 
+{% set pageClass = 'home' %}
 {% set pageTitle = 'Typhoon Design' %}
 {% set pageDesc = 'Iowa State University Library Design System' %}
 
@@ -68,7 +69,7 @@
 %}
 
 {% block content %}
-  <section class="row flex-wrap tyhpoon-overview-overlap">
+  <section class="lib-basic-card--wrap tyhpoon-overview-overlap">
     {% for card in basicCards %}
       <article class="lib-basic-card {{ card.cardClass }}">
         <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
