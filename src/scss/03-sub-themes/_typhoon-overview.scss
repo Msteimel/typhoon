@@ -4,6 +4,16 @@
   padding-right: rem(15);
 }
 
+.typhoon-overview-text--wrap {
+  padding-left: rem(48);
+  padding-right: rem(48);
+}
+
+.typoon-main-content-wrap {
+  padding: 0 rem(35) 0;
+}
+
 .tyhpoon-overview-overlap {
-  margin-top: -$space-2x-large;
+  margin-top: -$space-4x-large;
+  max-width: 1250px;
 }

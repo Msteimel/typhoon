@@ -1,5 +1,6 @@
 {% extends '../_typhoon.html.twig' %}
 
+{% set pageClass = 'intro' %}
 {% set pageTitle = 'Introduction' %}
 {% set pageDesc = 'Learn more about Typhoon' %}
 
@@ -8,11 +9,14 @@
 {% endblock %}
 
 {% block overview %}
-  Learn some things
+  Donec sollicitudin. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. aliquet elit, eget tincidunt nibh
+  pulvinar a.Praesent sapien massa, convallis a pellentesque nec, egestas non
+  nisi.
 {% endblock %}
 
 {% block content %}
-  <section class="lib-gen-con--block lib-text-block">
+  <section id="content" class="lib-gen-con--block lib-text-block">
     <h2 class="lib-block-title">
       Content
     </h2>
@@ -26,7 +30,7 @@
       <a href="/writing-guide/index.html" class="lib-button">Writing Guide</a>
     </div>
   </section>
-  <section class="lib-gen-con--block lib-text-block">
+  <section id="design" class="lib-gen-con--block lib-text-block">
     <h2 class="lib-block-title">
       Design
     </h2>
@@ -41,7 +45,7 @@
       <a href="#" class="lib-button lib-button-secondary">Sketch Library</a>
     </div>
   </section>
-  <section class="lib-gen-con--block lib-text-block">
+  <section id="dev" class="lib-gen-con--block lib-text-block">
     <h2 class="lib-block-title">
       Develop
     </h2>
