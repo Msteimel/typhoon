@@ -1,11 +1,13 @@
 {% extends './_base.html.twig' %}
 
+{% set page = pageClass %}
+
 {% block body %}
   {% block topNav %}
     {% include '/_blocks/_top-nav.html.twig' %}
   {% endblock %}
 
-  <div class="container-fluid typhoon-page-wrap">
+  <div class="container-fluid typhoon-page-wrap typhoon-page-{{ page }}">
     <div class="row justify-content-start typhoon-full-height">
       {% block sideNav %}
         <aside class="col typhoon-side-nav--wrap lib-p_zero lib-bg_warm-grey-50">
@@ -19,25 +21,30 @@
             {% include '/_elements/_header-special.html.twig' %}
           </div>
         </div>
-        <section class="typhoon-overview--wrap lib-bg_red-50 lib-pt_3x-large lib-pb_4x-large">
-          <div class="typhoon-overview-text--wrap lib-mx_2x-large">
-            <h2 class="lib-heading-underline">
-              Overview
-            </h2>
-            <p class="lead">
-              {% block overview %}
-                Non minim anim cupidatat nostrud Lorem enim esse sit qui sint
-                ullamco nulla enim adipisicing. Nulla cillum veniam exercitation
-                ex sunt exercitation mollit. Elit irure nulla irure pariatur
-                adipisicing ex quis eiusmod ipsum nisi laboris.
-              {% endblock %}
-            </p>
-          </div>
-        </section>
-        <main class="lib-mx_2x-large">
-          {% block content %}
+        <main>
+          <section class="typhoon-overview--wrap lib-bg_red-50 lib-pt_3x-large lib-py_4x-large">
+            <div class="typhoon-overview-text--wrap">
+              <div class="row flex-column">
+                <h2 class="lib-heading-underline">
+                  Overview
+                </h2>
+                <p class="lead">
+                  {% block overview %}
+                    Non minim anim cupidatat nostrud Lorem enim esse sit qui
+                    sint ullamco nulla enim adipisicing. Nulla cillum veniam
+                    exercitation ex sunt exercitation mollit. Elit irure nulla
+                    irure pariatur adipisicing ex quis eiusmod ipsum nisi
+                    laboris.
+                  {% endblock %}
+                </p>
+              </div>
+            </div>
+          </section>
+          <div class="typoon-main-content-wrap">
+            {% block content %}
 
-          {% endblock %}
+            {% endblock %}
+          </div>
         </main>
       </div>
     </div>
