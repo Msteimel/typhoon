@@ -10,11 +10,12 @@
   div {
     width: $space-4x-large;
     height: $space-4x-large;
-    box-shadow: $vert-dark-1;
+    box-shadow: $vert-light-1;
+    border-radius: 4px;
     transition: 0.3s ease;
 
     &:hover {
-      box-shadow: $vert-dark-3;
+      box-shadow: $vert-light-2;
       transform: scale(1.12);
     }
   }

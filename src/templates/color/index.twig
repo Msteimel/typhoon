@@ -3,10 +3,56 @@
 {% set pageTitle = 'Color' %}
 {% set pageDesc = 'Typhoon Color Palette' %}
 
+{% set colorsMain =
+  [
+    {
+      name: 'Red-500',
+      pantone: 'Pantone: 186C',
+      tokenValue: 'red-500',
+      hsla: 'hsla(0, 0, 90, 1)'
+    },
+    {
+      name: 'Yellow-500',
+      pantone: 'Pantone: 142C',
+      tokenValue: 'yellow-500',
+      hsla: 'hsla(42, 86, 61, 1)'
+    },
+    {
+      name: 'Blue-700',
+      pantone: 'Pantone: 307C',
+      tokenValue: 'blue-700',
+      hsla: 'hsla(201, 100, 33, 1)'
+    }
+  ]
+%}
+
 {% block title %}
   {{ pageTitle }} -
 {% endblock %}
 
 {% block content %}
+  <section class="tyhpoon-overview-overlap typhoon-main-color--wrap">
+    <ul class="typhoon-main-color--list">
+      {% for color in colorsMain %}
+        <li class="typhoon-main-color--display lib-mr_2x-large lib-br_2">
+          <div class="color-display lib-bg_{{ color.tokenValue }}"></div>
+          <div class="text-wrap lib-p_large">
+            <p class="lead lib-mt_zero">
+              <strong>{{ color.name }}</strong>
+            </p>
+            <p>
+              {{ color.pantone }}
+            </p>
+            <p>
+              {{ color.hsla }}
+            </p>
+            <p>
+              ${{ color.tokenValue }}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
   {% include '../_blocks/_colors.html.twig' %}
 {% endblock %}
