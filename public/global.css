@@ -3051,7 +3051,10 @@ sub {
 
 .lib-header-special--sub {
   display: inline-block;
+<<<<<<< HEAD
   padding-left: .5rem;
+=======
+>>>>>>> 74cc7149fb2024f8a02b2f802d2945c6db668b46
   font-size: 1.5rem;
   max-width: 100%;
 }
@@ -4168,8 +4171,13 @@ input:not(:focus):valid~.floating-label {
 .lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus {
   background-color: #fcda69;
   border-color: #efa70b;
+<<<<<<< HEAD
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
           box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
+=======
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
+          box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
+>>>>>>> 74cc7149fb2024f8a02b2f802d2945c6db668b46
 }
 
 .lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover::before,
@@ -4228,8 +4236,13 @@ input:not(:focus):valid~.floating-label {
 .lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus {
   background-color: #14a0e6;
   border-color: #006da8;
+<<<<<<< HEAD
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
           box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
+=======
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
+          box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
+>>>>>>> 74cc7149fb2024f8a02b2f802d2945c6db668b46
 }
 
 .lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover::before,
@@ -5895,6 +5908,7 @@ input:not(:focus):valid~.floating-label {
 
 .typhoon-overview--wrap {
   margin: 0 -0.9375rem;
+<<<<<<< HEAD
   padding-left: .9375rem;
   padding-right: .9375rem;
 }
@@ -5905,3 +5919,13 @@ input:not(:focus):valid~.floating-label {
 
 
 /*# sourceMappingURL=global.css.map*/
+=======
+}
+
+.typhoon-overview--wrap+.typhoon-content--wrap {
+  margin-top: -3rem;
+}
+
+
+/*# sourceMappingURL=global.css.map*/
+>>>>>>> 74cc7149fb2024f8a02b2f802d2945c6db668b46
