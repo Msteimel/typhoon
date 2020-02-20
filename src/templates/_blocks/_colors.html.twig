@@ -1,40 +1,267 @@
+{% set colorPalette =
+  [
+    {
+      colorStatus: 'Primary',
+      linkID: 'primary-colors',
+      colors: [
+        {
+          name: 'Red-50',
+          tokenValue: 'red-50',
+          hsla: 'hsla(360, 94, 98, 1)',
+          text: '.lib-red-50',
+          background: '.lib-bg_red-50',
+          textColor: ''
+        },
+        {
+          name: 'Red-100',
+          tokenValue: 'red-100',
+          hsla: 'hsla(360, 94, 95, 1)',
+          text: '.lib-red-100',
+          background: '.lib-bg_red-100',
+          textColor: ''
+        },
+        {
+          name: 'Red-200',
+          tokenValue: 'red-200',
+          hsla: 'hsla(358, 86, 82, 1)',
+          text: '.lib-red-200',
+          background: '.lib-bg_red-200',
+          textColor: ''
+        },
+        {
+          name: 'Red-300',
+          tokenValue: 'red-300',
+          hsla: 'hsla(358, 82, 67, 1)',
+          text: '.lib-red-300',
+          background: '.lib-bg_red-300',
+          textColor: ''
+        },
+        {
+          name: 'Red-400',
+          tokenValue: 'red-400',
+          hsla: 'hsla(357, 74, 56, 1)',
+          text: '.lib-red-400',
+          background: '.lib-bg_red-400',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Red-500',
+          tokenValue: 'red-500',
+          hsla: 'hsla(350, 85, 42, 1)',
+          text: '.lib-red-500',
+          background: '.lib-bg_red-500',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Red-600',
+          tokenValue: 'red-600',
+          hsla: 'hsla(350, 82, 38, 1)',
+          text: '.lib-red-600',
+          background: '.lib-bg_red-600',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Red-700',
+          tokenValue: 'red-700',
+          hsla: 'hsla(350, 79, 32, 1)',
+          text: '.lib-red-700',
+          background: '.lib-bg_red-700',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Red-800',
+          tokenValue: 'red-800',
+          hsla: 'hsla(350, 85, 26, 1)',
+          text: '.lib-red-800',
+          background: '.lib-bg_red-800',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Red-900',
+          tokenValue: 'red-900',
+          hsla: 'hsla(348, 90, 20, 1)',
+          text: '.lib-red-900',
+          background: '.lib-bg_red-900',
+          textColor: 'lib-white'
+        }
+      ]
+    },
+    {
+      colorStatus: 'Secondary',
+      linkID: 'secondary-colors',
+      colors: [
+        {
+          name: 'Yellow-50',
+          tokenValue: 'yellow-50',
+          hsla: 'hsla(50, 99, 96, 1)',
+          text: '.lib-yellow-50',
+          background: '.lib-bg_yellow-50',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-100',
+          tokenValue: 'yellow-100',
+          hsla: 'hsla(50, 99, 92, 1)',
+          text: '.lib-yellow-100',
+          background: '.lib-bg_yellow-100',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-200',
+          tokenValue: 'yellow-200',
+          hsla: 'hsla(52, 96, 85, 1)',
+          text: '.lib-yellow-200',
+          background: '.lib-bg_yellow-200',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-300',
+          tokenValue: 'yellow-300',
+          hsla: 'hsla(50, 96, 75, 1)',
+          text: '.lib-yellow-300',
+          background: '.lib-bg_yellow-300',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-400',
+          tokenValue: 'yellow-400',
+          hsla: 'hsla(46, 96, 70, 1)',
+          text: '.lib-yellow-400',
+          background: '.lib-bg_yellow-400',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-500',
+          tokenValue: 'yellow-500',
+          hsla: 'hsla(42, 86, 61, 1)',
+          text: '.lib-yellow-500',
+          background: '.lib-bg_yellow-500',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-600',
+          tokenValue: 'yellow-600',
+          hsla: 'hsla(41, 91, 49, 1)',
+          text: '.lib-yellow-600',
+          background: '.lib-bg_yellow-600',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-700',
+          tokenValue: 'yellow-700',
+          hsla: 'hsla(30, 98, 41, 1)',
+          text: '.lib-yellow-700',
+          background: '.lib-bg_yellow-700',
+          textColor: ''
+        },
+        {
+          name: 'Yellow-800',
+          tokenValue: 'yellow-800',
+          hsla: 'hsla(26, 97, 30, 1)',
+          text: '.lib-yellow-800',
+          background: '.lib-bg_yellow-800',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Yellow-900',
+          tokenValue: 'yellow-900',
+          hsla: 'hsla(15, 96, 19, 1)',
+          text: '.lib-yellow-900',
+          background: '.lib-bg_yellow-900',
+          textColor: 'lib-white'
+        }
+      ]
+    },
+    {
+      colorStatus: 'Accent',
+      linkID: 'accent-colors',
+      colors: [
+        {
+          name: 'Blue-50',
+          tokenValue: 'blue-50',
+          hsla: 'hsla(50, 99, 96, 1)',
+          text: '.lib-blue-50',
+          background: '.lib-bg_blue-50',
+          textColor: ''
+        },
+        {
+          name: 'Blue-100',
+          tokenValue: 'blue-100',
+          hsla: 'hsla(50, 99, 92, 1)',
+          text: '.lib-blue-100',
+          background: '.lib-bg_blue-100',
+          textColor: ''
+        },
+        {
+          name: 'Blue-200',
+          tokenValue: 'blue-200',
+          hsla: 'hsla(52, 96, 85, 1)',
+          text: '.lib-blue-200',
+          background: '.lib-bg_blue-200',
+          textColor: ''
+        },
+        {
+          name: 'Blue-300',
+          tokenValue: 'blue-300',
+          hsla: 'hsla(50, 96, 75, 1)',
+          text: '.lib-blue-300',
+          background: '.lib-bg_blue-300',
+          textColor: ''
+        },
+        {
+          name: 'Blue-400',
+          tokenValue: 'blue-400',
+          hsla: 'hsla(46, 96, 70, 1)',
+          text: '.lib-blue-400',
+          background: '.lib-bg_blue-400',
+          textColor: ''
+        },
+        {
+          name: 'Blue-500',
+          tokenValue: 'blue-500',
+          hsla: 'hsla(42, 86, 61, 1)',
+          text: '.lib-blue-500',
+          background: '.lib-bg_blue-500',
+          textColor: ''
+        },
+        {
+          name: 'Blue-600',
+          tokenValue: 'blue-600',
+          hsla: 'hsla(41, 91, 49, 1)',
+          text: '.lib-blue-600',
+          background: '.lib-bg_blue-600',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Blue-700',
+          tokenValue: 'blue-700',
+          hsla: 'hsla(30, 98, 41, 1)',
+          text: '.lib-blue-700',
+          background: '.lib-bg_blue-700',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Blue-800',
+          tokenValue: 'blue-800',
+          hsla: 'hsla(26, 97, 30, 1)',
+          text: '.lib-blue-800',
+          background: '.lib-bg_blue-800',
+          textColor: 'lib-white'
+        },
+        {
+          name: 'Blue-900',
+          tokenValue: 'blue-900',
+          hsla: 'hsla(15, 96, 19, 1)',
+          text: '.lib-blue-900',
+          background: '.lib-bg_blue-900',
+          textColor: 'lib-white'
+        }
+      ]
+    }
+  ]
+%}
+
 {% set colors = {
-  Red: {
-    '50': 'red-50',
-    '100': 'red-100',
-    '200': 'red-200',
-    '300': 'red-300',
-    '400': 'red-400',
-    '500': 'red-500',
-    '600': 'red-600',
-    '700': 'red-700',
-    '800': 'red-800',
-    '900': 'red-900'
-  },
-  Yellow: {
-    '50': 'yellow-50',
-    '100': 'yellow-100',
-    '200': 'yellow-200',
-    '300': 'yellow-300',
-    '400': 'yellow-400',
-    '500': 'yellow-500',
-    '600': 'yellow-600',
-    '700': 'yellow-700',
-    '800': 'yellow-800',
-    '900': 'yellow-900'
-  },
-  Blue: {
-    '50': 'blue-50',
-    '100': 'blue-100',
-    '200': 'blue-200',
-    '300': 'blue-300',
-    '400': 'blue-400',
-    '500': 'blue-500',
-    '600': 'blue-600',
-    '700': 'blue-700',
-    '800': 'blue-800',
-    '900': 'blue-900'
-  },
   'Warm Grey': {
     '50': 'warm-grey-50',
     '100': 'warm-grey-100',
@@ -72,6 +299,41 @@
     '900': 'green-900'
   }
 } %}
+
+{% for colors in colorPalette %}
+  <h3 id="{{ colors.linkID }}">
+    {{ colors.colorStatus }}
+  </h3>
+  <ul class="lib-color-palette--list">
+    {% for color in colors.colors %}
+      <li class="lib-color-palette--item lib-bg_{{ color.tokenValue }} {{
+        color.textColor
+        }} lib-px_3x-large lib-py_x-small lib-br_4">
+        <div>
+          <p>
+            <strong>{{ color.name }}</strong>
+          </p>
+        </div>
+        <div>
+          <p>
+            ${{ color.tokenValue }}
+          </p>
+          <p>
+            {{ color.hsla }}
+          </p>
+        </div>
+        <div class="lib-ta-right">
+          <p>
+            {{ color.text }}
+          </p>
+          <p>
+            {{ color.background }}
+          </p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
 <section class="">
   <div class="lib-mb_2x-large">
