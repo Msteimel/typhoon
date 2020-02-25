@@ -9,19 +9,22 @@
       name: 'Red-500',
       pantone: 'Pantone: 186C',
       tokenValue: 'red-500',
-      hsla: 'hsla(0, 0, 90, 1)'
+      hsla: 'hsla(0, 0, 90, 1)',
+      hex: '#c6102e'
     },
     {
       name: 'Yellow-500',
       pantone: 'Pantone: 142C',
       tokenValue: 'yellow-500',
-      hsla: 'hsla(42, 86, 61, 1)'
+      hsla: 'hsla(42, 86, 61, 1)',
+      hex: '#f1be46'
     },
     {
       name: 'Blue-700',
       pantone: 'Pantone: 307C',
       tokenValue: 'blue-700',
-      hsla: 'hsla(201, 100, 33, 1)'
+      hsla: 'hsla(201, 100, 33, 1)',
+      hex: '#006da8'
     }
   ]
 %}
@@ -44,7 +47,7 @@
               {{ color.pantone }}
             </p>
             <p>
-              {{ color.hsla }}
+              {{ color.hex }}
             </p>
             <p>
               ${{ color.tokenValue }}
