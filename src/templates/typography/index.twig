@@ -7,6 +7,17 @@
   {{ pageTitle }} -
 {% endblock %}
 
+{% block overview %}
+  Typhoon uses two font types consistent with university brand standards,
+  Merriweather and Nimbus Sans. Merriweather is used for all the headers within
+  Typhoon and in specific situations. Nimbus Sans is used for the body font of
+  Typhoon for its clean appeereance and easy reading. Visit <a href="https://www.brandmarketing.iastate.edu/digital-standards/web-typography/">
+    university brand guidelines
+  </a> and <a href="https://www.theme.iastate.edu/typography/">
+    Iowa States Web Theme
+  </a> for more information.
+{% endblock %}
+
 {% block content %}
   {% include '../_blocks/_typography.html.twig' %}
 {% endblock %}
