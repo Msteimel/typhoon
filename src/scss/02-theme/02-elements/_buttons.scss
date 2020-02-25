@@ -6,7 +6,7 @@ $button-font: $heading-font;
 // primary button variables
 $button-primary-background-color: $primary-color;
 $button-primary-border-color: transparent;
-$button-primary_border-radius: 0;
+$button-primary_border-radius: 2px;
 $button-primary-text: $white;
 $button-primary-box-shadow: $vert-dark-1;
 $button-primary_hover-background-color: $red-400;
@@ -129,6 +129,7 @@ input[type='button'].lib-button.lib-button-icon {
 }
 
 a.lib-button.lib-button-secondary,
+button.lib-button.lib-button-secondary,
 input[type='reset'].lib-button-secondary,
 input[type='submit'].lib-button-secondary,
 input[type='button'].lib-button-secondary {
@@ -149,6 +150,7 @@ input[type='button'].lib-button-secondary {
 }
 
 a.lib-button.lib-button-accent,
+button.lib-button.lib-button-accent,
 input[type='reset'].lib-button-accent,
 input[type='submit'].lib-button-accent,
 input[type='button'].lib-button-accent {

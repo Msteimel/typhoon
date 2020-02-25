@@ -52,7 +52,16 @@
     {
       topPage: 'Typography',
       topSlug: '/typography/index.html',
-      subPages: []
+      subPages: [
+        {
+          subPage: 'Headers',
+          subSlug: '#headers'
+        },
+        {
+          subPage: 'Body Font',
+          subSlug: '#body-font'
+        }
+      ]
     },
     {
       topPage: 'Spacing',
@@ -87,7 +96,7 @@
       <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
         <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
           href="{{ menuItem.topSlug }}">
-          <span>{{ menuItem.topPage }}</span>
+          <span class="lib-white">{{ menuItem.topPage }}</span>
         </a>
       </li>
       {% if menuItem.subPages is empty %}
@@ -97,7 +106,7 @@
           <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
             <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
               href="{{ subpage.subSlug }}">
-              <span>{{ subpage.subPage }}</span>
+              <span class="lib-white">{{ subpage.subPage }}</span>
             </a>
           </li>
         {% endfor %}
