@@ -50,18 +50,11 @@ input[type='button'].lib-button {
   text-decoration: none;
   transition: 0.3s ease;
 
-  &:focus {
-    color: $white;
-    outline: 2px solid $white;
-    outline-offset: -7px;
-    text-decoration: none;
-  }
-
+  &:focus,
   &:hover {
     color: $white;
     background-color: $button-primary_hover-background-color;
     box-shadow: $button-primary_hover-box-shadow;
-    outline: 0;
     text-decoration: none;
   }
 
