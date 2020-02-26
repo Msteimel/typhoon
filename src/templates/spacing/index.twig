@@ -1,21 +1,196 @@
 {% extends '../_typhoon.html.twig' %}
 
 {% set pageTitle = 'Spacing' %}
-{% set pageDesc = 'Typhoon spacing suide' %}
+{% set pageDesc = 'Typhoon spacing guide' %}
 
 {% block title %}
-  {{ pageTitle }} -
+{{ pageTitle }} -
+{% endblock %}
+
+{% set utilityClass = [
+  {
+    utilityClass: 'lib-m_med',
+    displayClass: 'margin-all',
+    desc: 'Adds margins on all side of an element'
+  },
+  {
+    utilityClass: 'lib-mx_med',
+    displayClass: 'margin-x',
+    desc: 'Adds margins on the x-axis of an element'
+  },
+  {
+    utilityClass: 'lib-my_med',
+    displayClass: 'margin-y',
+    desc: 'Adds margins on the y-axis of an element'
+  },
+  {
+    utilityClass: 'lib-mt_med',
+    displayClass: 'margin-t',
+    desc: 'Adds margins on the top side of an element'
+  },
+  {
+    utilityClass: 'lib-mr_med',
+    displayClass: 'margin-r',
+    desc: 'Adds margins on the right side of an element'
+  },
+  {
+    utilityClass: 'lib-mb_med',
+    displayClass: 'margin-b',
+    desc: 'Adds margins on the bottom side of an element'
+  },
+  {
+    utilityClass: 'lib-ml_med',
+    displayClass: 'margin-l',
+    desc: 'Adds margins on the left side of an element'
+  },
+  {
+    utilityClass: 'lib-m_auto',
+    displayClass: 'margin-auto',
+    desc: 'Sets x-axis margins to auto to horizontally center element'
+  },
+] %}
+
+{% set spaceToken =  [
+  {
+    modifier: '2x-small',
+    rem: '0.25',
+    px: '4',
+  },
+  {
+    modifier: 'x-small',
+    rem: '0.5',
+    px: '8',
+  },
+  {
+    modifier: 'small',
+    rem: '0.75',
+    px: '12',
+  },
+  {
+    modifier: 'med',
+    rem: '1',
+    px: '16',
+  },
+  {
+    modifier: 'large',
+    rem: '1.5',
+    px: '24',
+  },
+  {
+    modifier: 'x-large',
+    rem: '2',
+    px: '32',
+  },
+  {
+    modifier: '2x-large',
+    rem: '2.5',
+    px: '40',
+  },
+  {
+    modifier: '3x-large',
+    rem: '3',
+    px: '48',
+  },
+  {
+    modifier: '4x-large',
+    rem: '4',
+    px: '64',
+  },
+  {
+    modifier: '5x-large',
+    rem: '6',
+    px: '96',
+  },
+  {
+    modifier: '6x-large',
+    rem: '8',
+    px: '128',
+  },
+  {
+    modifier: '7x-large',
+    rem: '12',
+    px: '192',
+  },
+] %}
+
+{% block overview %}
+Typhoon uses pre-set spacing design tokens and utility classes to streamling
+design and speed up development. Both tokens and utility classes use a
+descriptive naming convition instead of numeric values to improve flexibility.
 {% endblock %}
 
 {% block content %}
-  <article class="">
-    <h2 id="primary-colors">
-      Padding
-    </h2>
-  </article>
-  <article>
-    <h2 id="secondary-colors">
-      Margin
-    </h2>
-  </article>
+<article class="lib-mb_4x-large">
+  <h2 id="primary-colors">
+    Spacing Utility Classes
+  </h2>
+  <p>There are utility classes for both padding and margins in Typhoon. Each follows the same structure of the library
+    prefix, the type of spacing and which part of the element, and the size. For example <code>lib-pt_med</code>
+    provides padding (p) to the top (t) of the element. The amount of spacing is the medium spacing token. If you wanted
+    to do margins, you would use <code>lib-mt_med</code> instead. Padding and margin have the same class except margin,
+    which has an <code>lib-m_auto</code>, which set the x-axis margins to auto for horizontal centering.</p>
+  <table class="typhoon-spacing-table utility-spacing lib-mt_2x-large">
+    <thead>
+      <tr>
+        <th class="example">
+          Class Example
+        </th>
+        <th class="display">
+          Display
+        </th>
+        <th class="description">
+          Description
+        </th>
+      </tr>
+    </thead>
+     <tbody>
+    {% for space in utilityClass %}
+      <tr>
+        <td class="example">
+          <span>{{space.utilityClass}} </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="{{space.displayClass}}"></div>
+          </div>
+        </td>
+        <td class="description">
+          {{space.desc}}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody> 
+  </table>
+</article>
+<article>
+  <h2 id="primary-colors">
+    Spacing Sizes
+  </h2>
+  <p>The spacing modifiers are preset to improve the design process. The <code>med</code> from the abouve exmaple can be replaced with any of the below values.</p>
+  <table class="typhoon-spacing-table spacing-tokens lib-mt_2x-large">
+    <thead>
+      <tr>
+        <th class="modifier">
+          Spacing Modifier
+        </th>
+        <th class="value">
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for token in spaceToken %}
+      <tr>
+        <td class="modifier">
+          <span>{{token.modifier}}</spa>
+        </td>
+        <td class="value">
+        <span>{{token.rem}} rem</span><span>{{token.px}} px</span>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</article>
 {% endblock %}
