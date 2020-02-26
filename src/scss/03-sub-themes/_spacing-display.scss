@@ -1,0 +1,99 @@
+.typhoon-spacing-table {
+  width: 100%;
+  max-width: 1000px;
+
+  thead {
+    border-bottom: 1px solid $warm-grey-200;
+  }
+
+  tr {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $warm-grey-200;
+    }
+
+    td {
+      padding: 1rem 0;
+    }
+
+    .spacing-display {
+      background-color: $blue-100;
+      display: inline-block;
+      border-radius: $br2;
+      line-height: 0;
+
+      div {
+        width: $space-2x-large;
+        height: $space-2x-large;
+        background-color: $red-500;
+        border-radius: $br2;
+      }
+    }
+
+    &:last-of-type {
+      .spacing-display {
+        display: block;
+      }
+    }
+  }
+}
+
+.utility-spacing {
+  .example {
+    width: $space-4x-large;
+  }
+
+  .display {
+    width: $space-5x-large;
+    text-align: center;
+  }
+
+  .description {
+    width: 17rem;
+    padding-left: 2rem;
+  }
+
+  .margin-all {
+    margin: $space-med;
+  }
+
+  .margin-x {
+    margin: 0 $space-med;
+  }
+
+  .margin-y {
+    margin: $space-med 0;
+  }
+
+  .margin-t {
+    margin-top: $space-med;
+  }
+
+  .margin-r {
+    margin-right: $space-med;
+  }
+
+  .margin-b {
+    margin-bottom: $space-med;
+  }
+
+  .margin-l {
+    margin-left: $space-med;
+  }
+
+  .margin-auto {
+    margin: 0 auto;
+  }
+}
+
+.spacing-tokens {
+  max-width: 50%;
+  .modifier {
+    width: 15rem;
+  }
+
+  .value {
+    span {
+      display: block;
+    }
+  }
+}

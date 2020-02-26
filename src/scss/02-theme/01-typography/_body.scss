@@ -24,6 +24,9 @@ p {
   line-height: $p-lh;
 
   code {
+    padding: $space-2x-small;
+    background-color: $yellow-200;
+    color: $red-700;
     vertical-align: middle;
   }
 }
