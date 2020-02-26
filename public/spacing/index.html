@@ -16,10 +16,10 @@
       rel="stylesheet" />
 
     <title>
-        Spacing -
+      Spacing -
 Typhoon Design System
     </title>
-  <link href="/global.css?047fca3abf3fc2e40454" rel="stylesheet"></head>
+  <link href="/global.css?aba295e3cad09589d5ed" rel="stylesheet"></head>
 
   <body>
           <header class="typhoon-top-nav--wrap lib-bg_white">
@@ -146,19 +146,8 @@ Typhoon Design System
           <span class="lib-white">Spacing</span>
         </a>
       </li>
-                        <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
-            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
-              href="">
-              <span class="lib-white">Margin</span>
-            </a>
-          </li>
-                  <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
-            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
-              href="">
-              <span class="lib-white">Padding</span>
-            </a>
-          </li>
-                  </ul>
+      
+          </ul>
       <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
       <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
         <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
@@ -166,8 +155,31 @@ Typhoon Design System
           <span class="lib-white">Components</span>
         </a>
       </li>
-      
-          </ul>
+                        <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+              href="#buttons">
+              <span class="lib-white">Buttons</span>
+            </a>
+          </li>
+                  <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+              href="#form">
+              <span class="lib-white">Form</span>
+            </a>
+          </li>
+                  <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+              href="#accordion">
+              <span class="lib-white">Accordion</span>
+            </a>
+          </li>
+                  <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+              href="#basic-cards">
+              <span class="lib-white">Basic Cards</span>
+            </a>
+          </li>
+                  </ul>
       <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
       <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
         <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
@@ -191,7 +203,7 @@ Typhoon Design System
       </h1>
     </div>
     <span class="lib-header-special--sub lib-mt_x-small lib-yellow-400">
-      Typhoon spacing suide
+      Typhoon spacing guide
     </span>
   </div>
           </div>
@@ -204,26 +216,273 @@ Typhoon Design System
                   Overview
                 </h2>
                 <p class="lead">
-                                      Non minim anim cupidatat nostrud Lorem enim esse sit qui
-                    sint ullamco nulla enim adipisicing. Nulla cillum veniam
-                    exercitation ex sunt exercitation mollit. Elit irure nulla
-                    irure pariatur adipisicing ex quis eiusmod ipsum nisi
-                    laboris.
-                                  </p>
+                  Typhoon uses pre-set spacing design tokens and utility classes to streamling
+design and speed up development. Both tokens and utility classes use a
+descriptive naming convition instead of numeric values to improve flexibility.
+                </p>
               </div>
             </div>
           </section>
           <div class="typoon-main-content-wrap">
-              <article class="">
-    <h2 id="primary-colors">
-      Padding
-    </h2>
-  </article>
-  <article>
-    <h2 id="secondary-colors">
-      Margin
-    </h2>
-  </article>
+            <article class="lib-mb_4x-large">
+  <h2 id="primary-colors">
+    Spacing Utility Classes
+  </h2>
+  <p>There are utility classes for both padding and margins in Typhoon. Each follows the same structure of the library
+    prefix, the type of spacing and which part of the element, and the size. For example <code>lib-pt_med</code>
+    provides padding (p) to the top (t) of the element. The amount of spacing is the medium spacing token. If you wanted
+    to do margins, you would use <code>lib-mt_med</code> instead. Padding and margin have the same class except margin,
+    which has an <code>lib-m_auto</code>, which set the x-axis margins to auto for horizontal centering.</p>
+  <table class="typhoon-spacing-table utility-spacing lib-mt_2x-large">
+    <thead>
+      <tr>
+        <th class="example">
+          Class Example
+        </th>
+        <th class="display">
+          Display
+        </th>
+        <th class="description">
+          Description
+        </th>
+      </tr>
+    </thead>
+     <tbody>
+          <tr>
+        <td class="example">
+          <span>lib-m_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-all"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on all side of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-mx_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-x"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the x-axis of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-my_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-y"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the y-axis of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-mt_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-t"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the top side of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-mr_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-r"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the right side of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-mb_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-b"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the bottom side of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-ml_med </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-l"></div>
+          </div>
+        </td>
+        <td class="description">
+          Adds margins on the left side of an element
+        </td>
+      </tr>
+          <tr>
+        <td class="example">
+          <span>lib-m_auto </span>
+        </td>
+        <td class="display">
+          <div class="spacing-display">
+            <div class="margin-auto"></div>
+          </div>
+        </td>
+        <td class="description">
+          Sets x-axis margins to auto to horizontally center element
+        </td>
+      </tr>
+        </tbody> 
+  </table>
+</article>
+<article>
+  <h2 id="primary-colors">
+    Spacing Sizes
+  </h2>
+  <p>The spacing modifiers are preset to improve the design process. The <code>med</code> from the abouve exmaple can be replaced with any of the below values.</p>
+  <table class="typhoon-spacing-table spacing-tokens lib-mt_2x-large">
+    <thead>
+      <tr>
+        <th class="modifier">
+          Spacing Modifier
+        </th>
+        <th class="value">
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+        <td class="modifier">
+          <span>2x-small</spa>
+        </td>
+        <td class="value">
+        <span>0.25 rem</span><span>4 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>x-small</spa>
+        </td>
+        <td class="value">
+        <span>0.5 rem</span><span>8 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>small</spa>
+        </td>
+        <td class="value">
+        <span>0.75 rem</span><span>12 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>med</spa>
+        </td>
+        <td class="value">
+        <span>1 rem</span><span>16 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>large</spa>
+        </td>
+        <td class="value">
+        <span>1.5 rem</span><span>24 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>x-large</spa>
+        </td>
+        <td class="value">
+        <span>2 rem</span><span>32 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>2x-large</spa>
+        </td>
+        <td class="value">
+        <span>2.5 rem</span><span>40 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>3x-large</spa>
+        </td>
+        <td class="value">
+        <span>3 rem</span><span>48 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>4x-large</spa>
+        </td>
+        <td class="value">
+        <span>4 rem</span><span>64 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>5x-large</spa>
+        </td>
+        <td class="value">
+        <span>6 rem</span><span>96 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>6x-large</spa>
+        </td>
+        <td class="value">
+        <span>8 rem</span><span>128 px</span>
+          </div>
+        </td>
+      </tr>
+          <tr>
+        <td class="modifier">
+          <span>7x-large</spa>
+        </td>
+        <td class="value">
+        <span>12 rem</span><span>192 px</span>
+          </div>
+        </td>
+      </tr>
+        </tbody>
+  </table>
+</article>
           </div>
         </main>
       </div>
@@ -233,6 +492,6 @@ Typhoon Design System
       <footer>
   footer
 </footer>
-    <script type="text/javascript" src="/global.js?047fca3abf3fc2e40454"></script></body>
+    <script type="text/javascript" src="/global.js?aba295e3cad09589d5ed"></script></body>
 </html>
 <!DOCTYPE html>
