@@ -8,16 +8,28 @@
 {% endblock %}
 
 {% block content %}
-  <section class="lib-my_5x-large">
+  <section id="buttons" class="lib-mb_5x-large">
+    <h3>
+      Buttons
+    </h3>
     {% include '../_elements/_buttons.html.twig' %}
+  </section>
+  <section id="form" class="lib-my_5x-large">
+    <h3>
+      Form
+    </h3>
     {% include '../_elements/_input.html.twig' %}
   </section>
-
-  <section class="lib-my_5x-large">
-    <h2 class="lib-mb_2x-large">
-      Components
-    </h2>
-    {% include '../_components/_show.html.twig' %}
+  <section id="accordion" class="lib-my_5x-large">
+    <h3>
+      Accordian
+    </h3>
+    {% include '../_components/_accordion.html.twig' %}
+  </section>
+  <section id="basic-cards" class="lib-my_5x-large">
+    <h3>
+      Basic Cards
+    </h3>
     {% include '../_components/_basic-card.html.twig' %}
   </section>
 {% endblock %}
