@@ -30,7 +30,6 @@
     "cross-env": "^6.0.3",
     "html-webpack-plugin": "^3.2.0",
     "laravel-mix": "^5.0.1",
-    "laravel-mix-purgecss": "^5.0.0-rc.1",
     "laravel-mix-twig-to-html": "^1.2.0",
     "prettier": "^1.19.1",
     "prettier-plugin-twig-melody": "^0.3.7",
