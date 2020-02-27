@@ -5,6 +5,7 @@ const projectURL = 'typhoon.test';
 const mix = require('laravel-mix');
 
 require('laravel-mix-twig-to-html');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,11 +16,13 @@ mix.setPublicPath('./public/');
 
 // source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
-mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
-  sassOptions: {
-    outputStyle: 'compressed',
-  },
-});
+mix
+  .sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
+    sassOptions: {
+      outputStyle: 'compressed',
+    },
+  })
+  .purgeCss();
 
 // Only cache bust if production
 if (mix.inProduction()) {
