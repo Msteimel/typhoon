@@ -1,7 +1,7 @@
 /*================================================
 			margin classes
 ==================================================*/
-// creates classes like `.lib-pt4`
+// creates classes like `.lib-mt_med`
 
 $margin-list: (
   'zero': $space-zero,
@@ -21,6 +21,165 @@ $margin-list: (
 );
 
 @each $space, $spacing in $margin-list {
+  @include media-breakpoint-down(xs) {
+    .lib-m_#{$space}--xs {
+      margin: $spacing;
+    }
+
+    .lib-mx_#{$space}--xs {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lib-my_#{$space}--xs {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lib-mt_#{$space}--xs {
+      margin-top: $spacing;
+    }
+
+    .lib-mr_#{$space}--xs {
+      margin-right: $spacing;
+    }
+
+    .lib-mb_#{$space}--xs {
+      margin-bottom: $spacing;
+    }
+
+    .lib-ml_#{$space}--xs {
+      margin-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .lib-m_#{$space}--sm {
+      margin: $spacing;
+    }
+
+    .lib-mx_#{$space}--sm {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lib-my_#{$space}--sm {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lib-mt_#{$space}--sm {
+      margin-top: $spacing;
+    }
+
+    .lib-mr_#{$space}--sm {
+      margin-right: $spacing;
+    }
+
+    .lib-mb_#{$space}--sm {
+      margin-bottom: $spacing;
+    }
+
+    .lib-ml_#{$space}--sm {
+      margin-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .lib-m_#{$space}--md {
+      margin: $spacing;
+    }
+
+    .lib-mx_#{$space}--md {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lib-my_#{$space}--md {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lib-mt_#{$space}--md {
+      margin-top: $spacing;
+    }
+
+    .lib-mr_#{$space}--md {
+      margin-right: $spacing;
+    }
+
+    .lib-mb_#{$space}--md {
+      margin-bottom: $spacing;
+    }
+
+    .lib-ml_#{$space}--md {
+      margin-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .lib-m_#{$space}--lg {
+      margin: $spacing;
+    }
+
+    .lib-mx_#{$space}--lg {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lib-my_#{$space}--lg {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lib-mt_#{$space}--lg {
+      margin-top: $spacing;
+    }
+
+    .lib-mr_#{$space}--lg {
+      margin-right: $spacing;
+    }
+
+    .lib-mb_#{$space}--lg {
+      margin-bottom: $spacing;
+    }
+
+    .lib-ml_#{$space}--lg {
+      margin-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .lib-m_#{$space}--xl {
+      margin: $spacing;
+    }
+    .lib-mx_#{$space}--xl {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lib-my_#{$space}--xl {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lib-mt_#{$space}--xl {
+      margin-top: $spacing;
+    }
+
+    .lib-mr_#{$space}--xl {
+      margin-right: $spacing;
+    }
+
+    .lib-mb_#{$space}--xl {
+      margin-bottom: $spacing;
+    }
+
+    .lib-ml_#{$space}--xl {
+      margin-left: $spacing;
+    }
+  }
+
   .lib-m_#{$space} {
     margin: $spacing;
   }

@@ -2,6 +2,7 @@
 
 {% set pageTitle = 'Color' %}
 {% set pageDesc = 'Typhoon Color Palette' %}
+{% set pageClass = 'color' %}
 
 {% set colorsMain =
   [
@@ -33,11 +34,19 @@
   {{ pageTitle }} -
 {% endblock %}
 
+{% block overview %}
+  Typhoon uses a color pallete generated from three university markting approved
+  colors. Due to the complexities of the web design these colors were expanded
+  to create a variety of colors needed for good web design. The main colors are
+  red and yellow with a blue for accent. Additionally there are a neural colors
+  for general use and support colors for alerts and form confirmations.
+{% endblock %}
+
 {% block content %}
-  <section class="tyhpoon-overview-overlap typhoon-main-color--wrap">
+  <section class="tyhpoon-overview-overlap">
     <ul class="typhoon-main-color--list">
       {% for color in colorsMain %}
-        <li class="typhoon-main-color--display lib-mr_2x-large lib-br_2">
+        <li class="typhoon-main-color--display lib-mr_2x-large lib-mb_2x-large lib-br_2">
           <div class="color-display lib-bg_{{ color.tokenValue }}"></div>
           <div class="text-wrap lib-p_large">
             <p class="lead lib-mt_zero">

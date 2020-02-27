@@ -1,6 +1,10 @@
 .typhoon-page-wrap {
-  padding-top: rem(66);
+  padding-top: rem(70);
   flex: 1;
+
+  p {
+    max-width: 800px;
+  }
 }
 
 .typoon-main-content-wrap {

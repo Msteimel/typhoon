@@ -20,6 +20,165 @@ $padding-list: (
 );
 
 @each $space, $spacing in $padding-list {
+  @include media-breakpoint-down(xs) {
+    .lib-p_#{$space}--xs {
+      padding: $spacing;
+    }
+
+    .lib-px_#{$space}--xs {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lib-py_#{$space}--xs {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lib-pt_#{$space}--xs {
+      padding-top: $spacing;
+    }
+
+    .lib-pr_#{$space}--xs {
+      padding-right: $spacing;
+    }
+
+    .lib-pb_#{$space}--xs {
+      padding-bottom: $spacing;
+    }
+
+    .lib-pl_#{$space}--xs {
+      padding-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .lib-p_#{$space}--sm {
+      padding: $spacing;
+    }
+
+    .lib-px_#{$space}--sm {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lib-py_#{$space}--sm {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lib-pt_#{$space}--sm {
+      padding-top: $spacing;
+    }
+
+    .lib-pr_#{$space}--sm {
+      padding-right: $spacing;
+    }
+
+    .lib-pb_#{$space}--sm {
+      padding-bottom: $spacing;
+    }
+
+    .lib-pl_#{$space}--sm {
+      padding-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .lib-p_#{$space}--md {
+      padding: $spacing;
+    }
+
+    .lib-px_#{$space}--md {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lib-py_#{$space}--md {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lib-pt_#{$space}--md {
+      padding-top: $spacing;
+    }
+
+    .lib-pr_#{$space}--md {
+      padding-right: $spacing;
+    }
+
+    .lib-pb_#{$space}--md {
+      padding-bottom: $spacing;
+    }
+
+    .lib-pl_#{$space}--md {
+      padding-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .lib-p_#{$space}--lg {
+      padding: $spacing;
+    }
+
+    .lib-px_#{$space}--lg {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lib-py_#{$space}--lg {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lib-pt_#{$space}--lg {
+      padding-top: $spacing;
+    }
+
+    .lib-pr_#{$space}--lg {
+      padding-right: $spacing;
+    }
+
+    .lib-pb_#{$space}--lg {
+      padding-bottom: $spacing;
+    }
+
+    .lib-pl_#{$space}--lg {
+      padding-left: $spacing;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .lib-p_#{$space}--xl {
+      padding: $spacing;
+    }
+    .lib-px_#{$space}--xl {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lib-py_#{$space}--xl {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lib-pt_#{$space}--xl {
+      padding-top: $spacing;
+    }
+
+    .lib-pr_#{$space}--xl {
+      padding-right: $spacing;
+    }
+
+    .lib-pb_#{$space}--xl {
+      padding-bottom: $spacing;
+    }
+
+    .lib-pl_#{$space}--xl {
+      padding-left: $spacing;
+    }
+  }
+
   .lib-p_#{$space} {
     padding: $spacing;
   }
