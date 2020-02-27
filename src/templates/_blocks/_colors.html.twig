@@ -3,107 +3,120 @@
     {
       status: 'Primary',
       id: 'primary-colors',
-      color: 'Red',
-      hue: [
+      color: [
         {
-          '50': 'red-50',
-          '100': 'red-100',
-          '200': 'red-200',
-          '300': 'red-300',
-          '400': 'red-400',
-          '500': 'red-500',
-          '600': 'red-600',
-          '700': 'red-700',
-          '800': 'red-800',
-          '900': 'red-900'
+          name: 'Red',
+          hue: {
+            '50': 'red-50',
+            '100': 'red-100',
+            '200': 'red-200',
+            '300': 'red-300',
+            '400': 'red-400',
+            '500': 'red-500',
+            '600': 'red-600',
+            '700': 'red-700',
+            '800': 'red-800',
+            '900': 'red-900'
+          }
         }
       ]
     },
     {
       status: 'Secondary',
       id: 'secondary-colors',
-      color: 'Yellow',
-      hue: [
+      color: [
         {
-          '50': 'yellow-50',
-          '100': 'yellow-100',
-          '200': 'yellow-200',
-          '300': 'yellow-300',
-          '400': 'yellow-400',
-          '500': 'yellow-500',
-          '600': 'yellow-600',
-          '700': 'yellow-700',
-          '800': 'yellow-800',
-          '900': 'yellow-900'
+          name: 'Yellow',
+          hue: {
+            '50': 'yellow-50',
+            '100': 'yellow-100',
+            '200': 'yellow-200',
+            '300': 'yellow-300',
+            '400': 'yellow-400',
+            '500': 'yellow-500',
+            '600': 'yellow-600',
+            '700': 'yellow-700',
+            '800': 'yellow-800',
+            '900': 'yellow-900'
+          }
         }
       ]
     },
     {
       status: 'Accent',
       id: 'accent-colors',
-      color: 'Blue',
-      hue: [
+      color: [
         {
-          '50': 'blue-50',
-          '100': 'blue-100',
-          '200': 'blue-200',
-          '300': 'blue-300',
-          '400': 'blue-400',
-          '500': 'blue-500',
-          '600': 'blue-600',
-          '700': 'blue-700',
-          '800': 'blue-800',
-          '900': 'blue-900'
+          name: 'Blue',
+          hue: {
+            '50': 'blue-50',
+            '100': 'blue-100',
+            '200': 'blue-200',
+            '300': 'blue-300',
+            '400': 'blue-400',
+            '500': 'blue-500',
+            '600': 'blue-600',
+            '700': 'blue-700',
+            '800': 'blue-800',
+            '900': 'blue-900'
+          }
         }
       ]
     },
     {
       status: 'Neutral',
       id: 'neutral-colors',
-      color: 'Greys',
-      hue: [
+      color: [
         {
-          '50': 'warm-grey-50',
-          '100': 'warm-grey-100',
-          '200': 'warm-grey-200',
-          '300': 'warm-grey-300',
-          '400': 'warm-grey-400',
-          '500': 'warm-grey-500',
-          '600': 'warm-grey-600',
-          '700': 'warm-grey-700',
-          '800': 'warm-grey-800',
-          '900': 'warm-grey-900'
+          name: 'Warm grey',
+          hue: {
+            '50': 'warm-grey-50',
+            '100': 'warm-grey-100',
+            '200': 'warm-grey-200',
+            '300': 'warm-grey-300',
+            '400': 'warm-grey-400',
+            '500': 'warm-grey-500',
+            '600': 'warm-grey-600',
+            '700': 'warm-grey-700',
+            '800': 'warm-grey-800',
+            '900': 'warm-grey-900'
+          }
         },
         {
-          '50': 'grey-50',
-          '100': 'grey-100',
-          '200': 'grey-200',
-          '300': 'grey-300',
-          '400': 'grey-400',
-          '500': 'grey-500',
-          '600': 'grey-600',
-          '700': 'grey-700',
-          '800': 'grey-800',
-          '900': 'grey-900'
+          name: 'Grey',
+          hue: {
+            '50': 'grey-50',
+            '100': 'grey-100',
+            '200': 'grey-200',
+            '300': 'grey-300',
+            '400': 'grey-400',
+            '500': 'grey-500',
+            '600': 'grey-600',
+            '700': 'grey-700',
+            '800': 'grey-800',
+            '900': 'grey-900'
+          }
         }
       ]
     },
     {
       status: 'Support',
       id: 'support-colors',
-      color: 'Green',
-      hue: [
+      color: [
         {
-          '50': 'green-50',
-          '100': 'green-100',
-          '200': 'green-200',
-          '300': 'green-300',
-          '400': 'green-400',
-          '500': 'green-500',
-          '600': 'green-600',
-          '700': 'green-700',
-          '800': 'green-800',
-          '900': 'green-900'
+          name: 'Green',
+          hue: {
+            '50': 'green-50',
+            '100': 'green-100',
+            '200': 'green-200',
+            '300': 'green-300',
+            '400': 'green-400',
+            '500': 'green-500',
+            '600': 'green-600',
+            '700': 'green-700',
+            '800': 'green-800',
+            '900': 'green-900'
+          }
         }
       ]
     }
@@ -112,14 +125,17 @@
 
 <section class="lib-mt_5x-large">
   <div class="lib-mb_2x-large">
-    {% for colors in colorPalette %}
-      <div id="{{ colors.id }}" class="colors--display lib-mb_3x-large">
-        <h3>
-          {{ colors.status }}
+    {% for spectrum in colorPalette %}
+      <div id="{{ spectrum.id }}" class="colors--display lib-mb_4x-large">
+        <h3 class="lib-mb_x-large">
+          {{ spectrum.status }}
         </h3>
-        {% for shade in colors.hue %}
-          <div class="colors--wrap lib-mb_small">
-            {% for key, value in shade %}
+        {% for shade in spectrum.color %}
+          <h4>
+            {{ shade.name }}
+          </h4>
+          <div class="colors--wrap lib-mb_large">
+            {% for key, value in shade.hue %}
               <div class="color--info lib-m_x-small">
                 <div class="lib-bg_{{ value }}"></div>
                 {{ key }}

@@ -22,9 +22,9 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
 });
 
 // Only cache bust if production
-// if (mix.inProduction()) {
-//   mix.version();
-// }
+if (mix.inProduction()) {
+  mix.version();
+}
 
 // This is so it works with Zeit. This will not be final production
 // mix.copy('index.html', 'public/index.html');
