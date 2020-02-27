@@ -93,32 +93,90 @@
     {
       topPage: 'General Content',
       topSlug: '/general-content/index.html',
-      subPages: []
+      subPages: [
+        {
+          subPage: 'Text Block',
+          subSlug: '#text-block'
+        },
+        {
+          subPage: 'Image Right',
+          subSlug: '#image-right'
+        },
+        {
+          subPage: 'Image Left',
+          subSlug: '#image-left'
+        },
+        {
+          subPage: 'Large Image',
+          subSlug: '#large-image'
+        },
+        {
+          subPage: 'Two Images',
+          subSlug: '#two-images'
+        },
+        {
+          subPage: 'Three Images',
+          subSlug: '#three-images'
+        },
+        {
+          subPage: 'Link List',
+          subSlug: '#link-list'
+        },
+        {
+          subPage: 'Link List Abstract',
+          subSlug: '#link-list-abstract'
+        },
+        {
+          subPage: 'Quote Block',
+          subSlug: '#quote-block'
+        },
+        {
+          subPage: 'Quote Block Banner',
+          subSlug: '#quote-block-banner'
+        },
+        {
+          subPage: 'Quote Block Ribbon',
+          subSlug: '#quote-block-banner'
+        }
+      ]
     }
   ]
 %}
 
-<nav class="typhoon-side-nav lib-mt_x-large">
-  {% for menuItem in menu %}
-    <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
-      <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
-        <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
-          href="{{ menuItem.topSlug }}">
-          <span class="lib-white">{{ menuItem.topPage }}</span>
-        </a>
-      </li>
-      {% if menuItem.subPages is empty %}
-
-      {% else %}
-        {% for subpage in menuItem.subPages %}
-          <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
-            <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
-              href="{{ subpage.subSlug }}">
-              <span class="lib-white">{{ subpage.subPage }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      {% endif %}
-    </ul>
-  {% endfor %}
+<div class="typhoon-side-nav lib-mt_x-large">
+  <button 
+    class="typhoon-top-nav--mobile lib-my_auto lib-p_med lib-fs_x-large"
+    role="navigation"
+    aria-label="Mobile Nav Menu"
+    aria-expanded="false">
+    <div class="typhoon-mobile-btn">
+      <span class="top lib-bg_yellow-600"></span>
+      <span class="middle lib-bg_yellow-600"></span>
+      <span class="bottom lib-bg_yellow-600"></span>
+    </div>
+  </button>
+ <div class="typhoon-side-menu--wrap">
+    {% for menuItem in menu %}
+      <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
+        <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
+          <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
+            href="{{ menuItem.topSlug }}">
+            <span class="lib-white">{{ menuItem.topPage }}</span>
+          </a>
+        </li>
+        {% if menuItem.subPages is empty %}
+  
+        {% else %}
+          {% for subpage in menuItem.subPages %}
+            <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+              <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+                href="{{ subpage.subSlug }}">
+                <span class="lib-white">{{ subpage.subPage }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    {% endfor %}
+ </div>
 </nav>
