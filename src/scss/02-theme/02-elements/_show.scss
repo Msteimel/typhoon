@@ -10,10 +10,10 @@
   // border-radius: $br4;
   box-shadow: $vert-light-2;
   transition: box-shadow 0.3s ease;
-  padding: $space-med $space-2x-large;
+  padding: $space-md $space-2xl;
 
   &:not(last-of-type) {
-    margin-bottom: $space-med;
+    margin-bottom: $space-md;
   }
 
   &:hover {
@@ -54,7 +54,7 @@
 .lib-show--content {
   overflow: hidden;
   text-align: left;
-  // padding: 0 $space-2x-large;
+  // padding: 0 $space-2xl;
   transition: height 0.3s;
   // z-index: 1;
 }

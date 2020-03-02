@@ -28,14 +28,14 @@ $bw-list: (
 // creates classes like `.lib-br4`
 
 $br-list: (
-  'br_0': $br0,
-  'br_2': $br2,
-  'br_4': $br4,
-  'br_6': $br6,
-  'br_8': $br8,
-  'br_10': $br10,
-  'br_12': $br12,
-  'br_14': $br14,
+  'br0': $br0,
+  'br2': $br2,
+  'br4': $br4,
+  'br6': $br6,
+  'br8': $br8,
+  'br10': $br10,
+  'br12': $br12,
+  'br14': $br14,
 );
 
 @each $br, $radius in $br-list {

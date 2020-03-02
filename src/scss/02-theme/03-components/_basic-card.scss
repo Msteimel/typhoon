@@ -46,7 +46,7 @@ $blue-basic-card-text-blue: $blue-600;
   width: $card-width;
 
   &:not(last-of-type) {
-    margin: 0 $space-2x-large $space-2x-large 0;
+    margin: 0 $space-2xl $space-2xl 0;
   }
 
   .lib-basic-card--link {
@@ -125,13 +125,13 @@ $blue-basic-card-text-blue: $blue-600;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: $space-x-large $space-large $space-2x-large $space-2x-large;
+    padding: $space-xl $space-lg $space-2xl $space-2xl;
   }
 
   .lib-basic-card--category {
     display: block;
     line-height: 1.5;
-    font-size: $fs-small;
+    font-size: $fs-sm;
     color: $basic-card-text-red;
     transition: color 0.3s ease-in;
   }
@@ -149,7 +149,7 @@ $blue-basic-card-text-blue: $blue-600;
     display: inline-block;
     position: relative;
     text-decoration: none;
-    padding-right: $space-x-large;
+    padding-right: $space-xl;
     padding-bottom: 0.1rem;
     margin: 0;
     color: $basic-card-text-red;
@@ -159,7 +159,7 @@ $blue-basic-card-text-blue: $blue-600;
     &::after {
       @include vert_center;
       font-family: 'Fontawesome';
-      font-size: $fs-x-small;
+      font-size: $fs-xs;
       content: '\f054';
       transition: right 0.3s;
     }

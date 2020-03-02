@@ -143,35 +143,35 @@
   ]
 %}
 
-<div class="typhoon-side-nav lib-mt_x-large">
+<div class="typhoon-side-nav md:lib-mt-xl sm:lib-my-xs">
   <button 
-    class="typhoon-top-nav--mobile lib-my_auto lib-p_med lib-fs_x-large"
+    class="typhoon-top-nav--mobile lib-my-auto lib-p-med lib$space-0xl"
     role="navigation"
     aria-label="Mobile Nav Menu"
     aria-expanded="false">
     <div class="typhoon-mobile-btn">
-      <span class="top lib-bg_yellow-600"></span>
-      <span class="middle lib-bg_yellow-600"></span>
-      <span class="bottom lib-bg_yellow-600"></span>
+      <span class="top lib-bg-yellow-600"></span>
+      <span class="middle lib-bg-yellow-600"></span>
+      <span class="bottom lib-bg-yellow-600"></span>
     </div>
   </button>
  <div class="typhoon-side-menu--wrap">
     {% for menuItem in menu %}
-      <ul class="typhoon-side-nav--list lib-m_zero lib-p_zero">
-        <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px_med">
+      <ul class="typhoon-side-nav--list lib-m-0 lib-p-0">
+        <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px-md">
           <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
             href="{{ menuItem.topSlug }}">
-            <span class="lib-white">{{ menuItem.topPage }}</span>
+            <span class="lib-text-white">{{ menuItem.topPage }}</span>
           </a>
         </li>
         {% if menuItem.subPages is empty %}
   
         {% else %}
           {% for subpage in menuItem.subPages %}
-            <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl_large">
+            <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl-lg">
               <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
                 href="{{ subpage.subSlug }}">
-                <span class="lib-white">{{ subpage.subPage }}</span>
+                <span class="lib-text-white">{{ subpage.subPage }}</span>
               </a>
             </li>
           {% endfor %}
