@@ -4040,33 +4040,33 @@ input:not(:focus):valid~.floating-label {
   padding-left: 0;
 }
 
-.lib-p_2x-small {
+.lib-p_2xs {
   padding: .25rem;
 }
 
-.lib-px_2x-small {
+.lib-px_2xs {
   padding-left: .25rem;
   padding-right: .25rem;
 }
 
-.lib-py_2x-small {
+.lib-py_2xs {
   padding-top: .25rem;
   padding-bottom: .25rem;
 }
 
-.lib-pt_2x-small {
+.lib-pt_2xs {
   padding-top: .25rem;
 }
 
-.lib-pr_2x-small {
+.lib-pr_2xs {
   padding-right: .25rem;
 }
 
-.lib-pb_2x-small {
+.lib-pb_2xs {
   padding-bottom: .25rem;
 }
 
-.lib-pl_2x-small {
+.lib-pl_2xs {
   padding-left: .25rem;
 }
 
@@ -4430,33 +4430,33 @@ input:not(:focus):valid~.floating-label {
   margin-left: 0;
 }
 
-.lib-m_2x-small {
+.lib-m_2xs {
   margin: .25rem;
 }
 
-.lib-mx_2x-small {
+.lib-mx_2xs {
   margin-left: .25rem;
   margin-right: .25rem;
 }
 
-.lib-my_2x-small {
+.lib-my_2xs {
   margin-top: .25rem;
   margin-bottom: .25rem;
 }
 
-.lib-mt_2x-small {
+.lib-mt_2xs {
   margin-top: .25rem;
 }
 
-.lib-mr_2x-small {
+.lib-mr_2xs {
   margin-right: .25rem;
 }
 
-.lib-mb_2x-small {
+.lib-mb_2xs {
   margin-bottom: .25rem;
 }
 
-.lib-ml_2x-small {
+.lib-ml_2xs {
   margin-left: .25rem;
 }
 
@@ -4820,7 +4820,7 @@ input:not(:focus):valid~.floating-label {
   margin-left: auto;
 }
 
-.lib-fs_2x-small {
+.lib-fs_2xs {
   font-size: .5rem;
 }
 
