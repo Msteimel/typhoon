@@ -20,7 +20,37 @@ $padding-list: (
 );
 
 @each $space, $spacing in $padding-list {
-  @include media-breakpoint-down(xs) {
+  .lib-p-#{$space} {
+    padding: $spacing;
+  }
+
+  .lib-px-#{$space} {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+
+  .lib-py-#{$space} {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  .lib-pt-#{$space} {
+    padding-top: $spacing;
+  }
+
+  .lib-pr-#{$space} {
+    padding-right: $spacing;
+  }
+
+  .lib-pb-#{$space} {
+    padding-bottom: $spacing;
+  }
+
+  .lib-pl-#{$space} {
+    padding-left: $spacing;
+  }
+
+  @include media-breakpoint-only(xs) {
     .xs\:lib-p-#{$space} {
       padding: $spacing;
     }
@@ -52,7 +82,7 @@ $padding-list: (
     }
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-only(sm) {
     .sm\:lib-p-#{$space} {
       padding: $spacing;
     }
@@ -84,7 +114,7 @@ $padding-list: (
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-only(md) {
     .md\:lib-p-#{$space} {
       padding: $spacing;
     }
@@ -116,7 +146,7 @@ $padding-list: (
     }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-only(lg) {
     .lg\:lib-p-#{$space} {
       padding: $spacing;
     }
@@ -148,7 +178,7 @@ $padding-list: (
     }
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-only(xl) {
     .xl\:lib-p-#{$space} {
       padding: $spacing;
     }
@@ -177,35 +207,5 @@ $padding-list: (
     .xl\:lib-pl-#{$space} {
       padding-left: $spacing;
     }
-  }
-
-  .lib-p-#{$space} {
-    padding: $spacing;
-  }
-
-  .lib-px-#{$space} {
-    padding-left: $spacing;
-    padding-right: $spacing;
-  }
-
-  .lib-py-#{$space} {
-    padding-top: $spacing;
-    padding-bottom: $spacing;
-  }
-
-  .lib-pt-#{$space} {
-    padding-top: $spacing;
-  }
-
-  .lib-pr-#{$space} {
-    padding-right: $spacing;
-  }
-
-  .lib-pb-#{$space} {
-    padding-bottom: $spacing;
-  }
-
-  .lib-pl-#{$space} {
-    padding-left: $spacing;
   }
 }

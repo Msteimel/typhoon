@@ -21,7 +21,37 @@ $margin-list: (
 );
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-down(xs) {
+  .lib-m-#{$space} {
+    margin: $spacing;
+  }
+
+  .lib-mx-#{$space} {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
+
+  .lib-my-#{$space} {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+  }
+
+  .lib-mt-#{$space} {
+    margin-top: $spacing;
+  }
+
+  .lib-mr-#{$space} {
+    margin-right: $spacing;
+  }
+
+  .lib-mb-#{$space} {
+    margin-bottom: $spacing;
+  }
+
+  .lib-ml-#{$space} {
+    margin-left: $spacing;
+  }
+
+  @include media-breakpoint-only(xs) {
     .xs\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -53,7 +83,7 @@ $margin-list: (
     }
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-only(sm) {
     .sm\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -85,7 +115,7 @@ $margin-list: (
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-only(md) {
     .md\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -117,7 +147,7 @@ $margin-list: (
     }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-only(lg) {
     .lg\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -149,7 +179,7 @@ $margin-list: (
     }
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-only(xl) {
     .xl\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -178,35 +208,5 @@ $margin-list: (
     .xl\:lib-ml-#{$space} {
       margin-left: $spacing;
     }
-  }
-
-  .lib-m-#{$space} {
-    margin: $spacing;
-  }
-
-  .lib-mx-#{$space} {
-    margin-left: $spacing;
-    margin-right: $spacing;
-  }
-
-  .lib-my-#{$space} {
-    margin-top: $spacing;
-    margin-bottom: $spacing;
-  }
-
-  .lib-mt-#{$space} {
-    margin-top: $spacing;
-  }
-
-  .lib-mr-#{$space} {
-    margin-right: $spacing;
-  }
-
-  .lib-mb-#{$space} {
-    margin-bottom: $spacing;
-  }
-
-  .lib-ml-#{$space} {
-    margin-left: $spacing;
   }
 }
