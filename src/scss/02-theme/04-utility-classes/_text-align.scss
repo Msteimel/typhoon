@@ -8,7 +8,9 @@ $text-align: (
 // .lib-ta-center
 
 @each $alignment, $align in $text-align {
-  .lib-ta-#{$align} {
+  // todo add breakpoints
+
+  .lib-text-#{$align} {
     text-align: $align;
   }
 }
