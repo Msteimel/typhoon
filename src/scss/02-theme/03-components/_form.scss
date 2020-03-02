@@ -5,8 +5,8 @@ $focus-background-color: $warm-grey-50;
 $input-box-shadow: false;
 $input-box-shadow-value: 0 0 3px rgba(0, 0, 0, 0.2);
 $border-color: trasnparent;
-$form-spacing: $space-2x-large;
-$fieldset-spacing: $space-large;
+$form-spacing: $space-2xl;
+$fieldset-spacing: $space-lg;
 $radio-button-checked: $green-600;
 
 .lib-form {
@@ -31,14 +31,14 @@ $radio-button-checked: $green-600;
   label {
     @include vert_center;
     display: block;
-    padding-left: $space-large;
-    font-size: $fs-med;
+    padding-left: $space-lg;
+    font-size: $fs-md;
     color: $warm-grey-500;
     transition: 0.3s ease-in-out;
   }
 
   textarea + label {
-    top: $space-med;
+    top: $space-md;
     transform: translateY(0);
   }
 }
@@ -55,10 +55,10 @@ select {
   border: none;
   border-bottom: 2px solid $black;
   box-sizing: border-box;
-  font-size: $fs-med;
+  font-size: $fs-md;
   color: $filled-color;
   line-height: 1.8;
-  padding: $space-x-small $space-large;
+  padding: $space-xs $space-lg;
   outline: none;
   width: 100%;
   position: relative;
@@ -74,10 +74,10 @@ select {
     }
 
     + label {
-      top: -$space-large;
-      font-size: $fs-small;
+      top: -$space-lg;
+      font-size: $fs-sm;
       color: $black;
-      padding-left: $space-large;
+      padding-left: $space-lg;
       transform: translateY(0);
     }
   }
@@ -86,16 +86,16 @@ select {
     &:valid,
     &:invalid {
       + label {
-        top: -$space-large;
-        font-size: $fs-small;
-        padding-left: $space-large;
+        top: -$space-lg;
+        font-size: $fs-sm;
+        padding-left: $space-lg;
         transform: translateY(0);
 
         &::after {
           @include vert_center;
-          left: $space-2x-small;
+          left: $space-2xs;
           font-family: 'FontAwesome';
-          font-size: $fs-med;
+          font-size: $fs-md;
         }
       }
     }
@@ -126,13 +126,13 @@ select {
 }
 
 .lib-input--select {
-  margin-top: $space-med;
+  margin-top: $space-md;
   position: relative;
 
   &::after {
     @include vert_center;
     content: '\f078';
-    right: $space-x-large;
+    right: $space-xl;
     font-family: 'FontAwesome';
   }
 
@@ -162,17 +162,17 @@ select {
 }
 
 input[type='radio'] {
-  margin: $space-small $space-2x-small;
+  margin: $space-sm $space-2xs;
   opacity: 0;
   position: absolute;
 
   + label {
     position: relative;
-    margin: $space-small $space-2x-small 0;
+    margin: $space-sm $space-2xs 0;
     padding: 0;
     color: $focus-text-color;
     display: inline-block;
-    font-size: $fs-med;
+    font-size: $fs-md;
 
     &:before {
       cursor: pointer;
@@ -181,12 +181,12 @@ input[type='radio'] {
       position: relative;
       vertical-align: top;
       top: 0.2rem;
-      width: $space-med;
-      height: $space-med;
+      width: $space-md;
+      height: $space-md;
       background: $focus-background-color;
       border-radius: 100%;
       border: 1px solid darken($focus-background-color, 25%);
-      margin-right: $space-x-small;
+      margin-right: $space-xs;
       text-align: center;
       transition: background-color 250ms ease;
     }

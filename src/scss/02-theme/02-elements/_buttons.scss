@@ -43,7 +43,7 @@ input[type='button'].lib-button {
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
-  font-size: $fs-med;
+  font-size: $fs-md;
   line-height: 1rem;
   padding: 1em 1.5em;
   text-align: center;
@@ -76,7 +76,7 @@ input[type='button'].lib-button.lib-button-icon {
   &::after {
     @include vert_center;
     font-family: 'Fontawesome';
-    font-size: $fs-x-small;
+    font-size: $fs-xs;
     content: '\f054';
     transition: right 0.3s;
   }
