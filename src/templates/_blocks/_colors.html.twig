@@ -123,21 +123,21 @@
   ]
 %}
 
-<section class="lib-mt_6x-large">
-  <div class="lib-mb_2x-large">
+<section class="lib-mt-4xl">
+  <div class="lib-mb-2xl">
     {% for spectrum in colorPalette %}
-      <div id="{{ spectrum.id }}" class="colors--display lib-mb_5x-large">
-        <h3 class="lib-mb_x-large">
+      <div id="{{ spectrum.id }}" class="colors--display lib-mb-5xl">
+        <h3 class="lib-mb-xl">
           {{ spectrum.status }}
         </h3>
         {% for shade in spectrum.color %}
           <h4>
             {{ shade.name }}
           </h4>
-          <div class="colors--wrap lib-mb_large">
+          <div class="colors--wrap lib-mb-lg">
             {% for key, value in shade.hue %}
-              <div class="color--info lib-m_x-small">
-                <div class="lib-bg_{{ value }}"></div>
+              <div class="color--info lib-m-xs">
+                <div class="lib-bg-{{ value }}"></div>
                 {{ key }}
               </div>
             {% endfor %}

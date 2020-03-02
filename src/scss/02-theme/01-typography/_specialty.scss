@@ -1,14 +1,14 @@
 .lib-header-special {
   position: relative;
   display: inline-block;
-  margin-top: $space-7x-large;
-  margin-left: $space-5x-large;
+  margin-top: $space-7xl;
+  margin-left: $space-5xl;
   z-index: 1;
 }
 
 .lib-header-special--text {
   display: inline-block;
-  font-size: $space-4x-large;
+  font-size: $space-4xl;
   position: relative;
   margin: 0;
 
@@ -37,7 +37,7 @@
 
 .lib-header-special--sub {
   display: inline-block;
-  padding-left: $space-x-small;
-  font-size: $space-large;
+  padding-left: $space-xs;
+  font-size: $space-lg;
   max-width: 100%;
 }

@@ -61,6 +61,25 @@ showItems.forEach(item => {
   item.addEventListener('click', handleshowClick);
 });
 
+// mobile trigger
+const sideNav = document.querySelector('.typhoon-side-nav--wrap');
+const mobileNavBtn = sideNav.querySelector('.typhoon-side-nav--mobile');
+
+function handleMobileNavClick(e) {
+  const mobileNavEl = sideNav.querySelector('.typhoon-side-menu--wrap');
+  const getAriaValue = mobileNavBtn.getAttribute('aria-expanded');
+
+  if (getAriaValue === 'false') {
+    sideNav.classList.add('js-nav-open');
+    mobileNavBtn.setAttribute('aria-expanded', true);
+  } else {
+    sideNav.classList.remove('js-nav-open');
+    mobileNavBtn.setAttribute('aria-expanded', false);
+  }
+}
+
+mobileNavBtn.addEventListener('click', handleMobileNavClick);
+
 // $window.on('scroll resize', check_if_in_view);
 // $window.trigger('scroll');
 const navList = document.querySelectorAll('.typhoon-side-nav--list');

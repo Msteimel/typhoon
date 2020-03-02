@@ -9,7 +9,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease-in;
 
   &:not(:last-of-type) {
-    margin-bottom: $space-x-small;
+    margin-bottom: $space-xs;
   }
 
   &:hover,
@@ -34,8 +34,8 @@
   text-align: center;
 
   div {
-    width: $space-4x-large;
-    height: $space-4x-large;
+    width: $space-4xl;
+    height: $space-4xl;
     box-shadow: $vert-light-1;
     border-radius: 4px;
     transition: 0.3s ease;
@@ -47,7 +47,7 @@
   }
 
   .prime {
-    width: $space-5x-large;
-    height: $space-5x-large;
+    width: $space-5xl;
+    height: $space-5xl;
   }
 }

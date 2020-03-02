@@ -12,8 +12,8 @@ $primary-color: $red-500;
 $secondary-color: $yellow-500;
 $accent-color: $blue-600;
 
-$font-size-base: $fs-med;
-$font-size-small: $fs-x-small;
+$font-size-base: $fs-md;
+$font-size-sm: $fs-xs;
 $font-weight-base: 400;
 $line-height-base: 1.5;
 
@@ -25,7 +25,7 @@ $link-color: $primary-color;
 $link-hover-color: $red-700;
 
 $table-caption-color: $warm-grey-400;
-$label-margin-bottom: $space-large;
+$label-margin-bottom: $space-lg;
 
 $enable-pointer-cursor-for-buttons: true;
 

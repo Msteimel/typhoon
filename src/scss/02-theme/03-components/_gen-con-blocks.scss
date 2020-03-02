@@ -3,7 +3,7 @@
   margin: 0;
 
   h1 {
-    margin-bottom: $space-3x-large;
+    margin-bottom: $space-3xl;
   }
 
   ul {
@@ -16,14 +16,14 @@
 // }
 
 .lib-gen-con--block {
-  margin-bottom: $space-3x-large;
+  margin-bottom: $space-3xl;
 
   .lib-block-title {
     display: inline-block;
   }
 
   p + h3 {
-    margin-top: $space-large;
+    margin-top: $space-lg;
   }
 
   p {
@@ -46,18 +46,18 @@
 .lib-text-img-right {
   .lib-gen-con--img-wrap {
     float: right;
-    margin-left: $space-large;
+    margin-left: $space-lg;
   }
 }
 
 .lib-text-img-left {
   .lib-gen-con--img-wrap {
     float: left;
-    margin-right: $space-large;
+    margin-right: $space-lg;
   }
 }
 
-.lib-block--large-img {
+.lib-block--lg-img {
   .lib-gen-con--img-wrap {
     max-width: rem(850);
 
@@ -107,7 +107,7 @@
   }
 
   figcaption {
-    padding-top: $space-small;
+    padding-top: $space-sm;
     text-align: center;
     font-style: italic;
   }
@@ -139,18 +139,18 @@
   .lib-link-list {
     display: flex;
     flex-wrap: wrap;
-    margin: $space-2x-large 0 0 0;
+    margin: $space-2xl 0 0 0;
   }
 
   .lib-link-list--item {
     position: relative;
     width: 50%;
-    margin-bottom: $space-med;
+    margin-bottom: $space-md;
 
     a {
       font-family: $heading-font;
       font-weight: 400;
-      padding-left: $space-2x-large;
+      padding-left: $space-2xl;
       color: $link-color;
       text-decoration: none;
       transition: 0.3s ease;
@@ -159,7 +159,7 @@
         @include vert_center();
         font-family: 'FontAwesome';
         content: '\f15c';
-        font-size: $fs-large;
+        font-size: $fs-lg;
         left: 0;
         color: inherit;
       }
@@ -173,18 +173,18 @@
 }
 
 .lib-link-list--abstract {
-  margin: $space-2x-large 0 0 0;
+  margin: $space-2xl 0 0 0;
 
   .lib-abstract-item {
     position: relative;
-    margin-bottom: $space-large;
-    padding-left: $space-2x-large;
+    margin-bottom: $space-lg;
+    padding-left: $space-2xl;
 
     &::before {
       @include vert_center(0);
       font-family: 'FontAwesome';
       content: '\f35d';
-      // font-size: $fs-med;
+      // font-size: $fs-md;
       left: 0;
       color: $primary-color;
     }
@@ -215,7 +215,7 @@
 .lib-quote-block {
   position: relative;
 
-  padding: $space-2x-large 0 0;
+  padding: $space-2xl 0 0;
   text-align: center;
 }
 
@@ -223,7 +223,7 @@
 }
 
 .lib-block--quote-alt {
-  padding: $space-2x-large 0 $space-3x-large;
+  padding: $space-2xl 0 $space-3xl;
   background-color: $warm-grey-100;
 
   .lib-quote {
@@ -248,7 +248,7 @@
 }
 
 .lib-block--quote-ribbon {
-  padding: $space-2x-large 0 $space-2x-large;
+  padding: $space-2xl 0 $space-2xl;
   background-color: $warm-grey-100;
   box-shadow: $vert-light-2;
   // border-radius: $br4;
@@ -280,7 +280,7 @@
   max-width: 75%;
   font-family: $heading-font;
   font-style: italic;
-  font-size: $fs-large;
+  font-size: $fs-lg;
   margin: 0 auto;
 
   cite {
@@ -288,14 +288,14 @@
     position: relative;
     font-style: initial;
     margin: 0 auto;
-    padding: $space-small $space-small 0;
+    padding: $space-sm $space-sm 0;
     color: $warm-grey-600;
 
     &::before,
     &::after {
       content: '\2014';
       color: $warm-grey-700;
-      padding: 0 $space-small;
+      padding: 0 $space-sm;
     }
 
     &::before {

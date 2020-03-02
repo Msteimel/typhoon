@@ -171,7 +171,7 @@ strong {
 }
 
 small {
-  font-size: $font-size-small; // Add the correct font size in all browsers
+  font-size: $fs-xs; // Add the correct font size in all browsers
 }
 
 //
@@ -182,7 +182,7 @@ small {
 sub,
 sup {
   position: relative;
-  font-size: $fs-2x-small;
+  font-size: $fs-2xs;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -415,7 +415,7 @@ legend {
   max-width: 100%; // 1
   padding: 0;
   margin-bottom: 0.5rem;
-  font-size: $fs-x-large;
+  font-size: $fs-xl;
   line-height: inherit;
   color: inherit; // 2
   white-space: normal; // 1
