@@ -76,11 +76,11 @@ $colors: (
 );
 
 @each $color, $colors in $colors {
-  .lib-bg_#{$color} {
+  .lib-bg-#{$color} {
     background-color: $colors;
   }
 
-  .lib-#{$color} {
+  .lib-text-#{$color} {
     color: $colors;
   }
 }
