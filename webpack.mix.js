@@ -12,17 +12,21 @@ require('laravel-mix-purgecss');
  | Mix Asset Management
  |--------------------------------------------------------------------------
  */
-mix.setPublicPath('./public/');
+// mix.setPublicPath(`${destinationDir}`);
 
 // source ==> production
-mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`);
 mix
+  .js(`${sourceDir}/js/global.js`, `${destinationDir}/global.js`)
   .sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/global.css`, {
     sassOptions: {
       outputStyle: 'compressed',
     },
   })
-  .purgeCss();
+  .purgeCss({
+    content: [`public/*/**.html`],
+    css: [`public/global.css`],
+  })
+  .setPublicPath(`${destinationDir}`);
 
 // Only cache bust if production
 if (mix.inProduction()) {
