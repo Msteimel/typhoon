@@ -4,7 +4,9 @@
   z-index: 1;
 
   @include media-breakpoint-down(sm) {
+    position: relative;
     flex: 0 0 100%;
+    z-index: 2;
   }
 }
 
@@ -14,12 +16,67 @@
 
   @include media-breakpoint-down(sm) {
     display: flex;
-    flex-direction: row-reverse;
-    position: relative;
+    flex-direction: column;
+    position: absolute;
+    height: auto;
     width: 100%;
+  }
+}
 
-    .js-nav-open & {
-      flex-direction: column;
+.typhoon-side-nav--mobile {
+  position: relative;
+  text-decoration: none;
+  background: transparent;
+  transition: color 0.3s ease;
+
+  @include media-breakpoint-up(med) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .typhoon-mobile-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: rem(26);
+    width: $space-2xl;
+
+    .top,
+    .middle,
+    .bottom {
+      display: block;
+      width: 90%;
+      height: 4px;
+      margin: 0 auto;
+      border-radius: $br8;
+    }
+
+    &:hover {
+      color: $red-700;
+    }
+  }
+}
+
+.typhoon-side-menu--wrap {
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.typhoon-side-nav--list {
+  @include media-breakpoint-down(sm) {
+    &:first-of-type {
+      margin-top: $space-sm;
+    }
+
+    &:last-of-type {
+      margin-bottom: $space-lg;
     }
   }
 }
@@ -28,6 +85,10 @@
   display: flex;
   flex-direction: column;
   height: $space-2xl;
+
+  @include media-breakpoint-down(sm) {
+    height: $space-3xl;
+  }
 }
 
 .typhoon-side-nav--link {
@@ -106,53 +167,4 @@
 
 .typhoon-side-nav--sub-link {
   font-weight: 400;
-}
-
-// trigger for mobile nav
-.typhoon-side-nav--mobile {
-  position: relative;
-  text-decoration: none;
-  background: transparent;
-  transition: color 0.3s ease;
-
-  @include media-breakpoint-up(med) {
-    display: none;
-  }
-
-  @include media-breakpoint-down(sm) {
-    display: inline-block;
-    align-self: flex-end;
-  }
-
-  .typhoon-mobile-btn {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: rem(26);
-    width: $space-2xl;
-
-    .top,
-    .middle,
-    .bottom {
-      display: block;
-      width: 100%;
-      height: 4px;
-      border-radius: $br8;
-    }
-
-    &:hover {
-      color: $red-700;
-    }
-  }
-}
-
-.typhoon-side-menu--wrap {
-  @include media-breakpoint-down(sm) {
-    display: none;
-
-    .js-nav-open & {
-      display: block;
-    }
-  }
 }
