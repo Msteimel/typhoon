@@ -5,34 +5,34 @@ import SmoothScroll from 'smooth-scroll';
 var scroll = new SmoothScroll('a[href*="#"]');
 
 const showItems = document.querySelectorAll('.lib-show--item');
-let showShowAnimations = [];
-let showHideAnimations = [];
+let showAccordionAnimations = [];
+let hideAccordionAnimations = [];
 
-function handleshowClick(e) {
+function handleAccordionClick(e) {
   const showItem = e.currentTarget;
   const button = showItem.querySelector('.lib-show--title');
   const content = showItem.querySelector('.lib-show--content');
   const ariaValue = button.getAttribute('aria-selected');
   const contentNum = content.dataset.box;
 
-  function showshow() {
-    showShowAnimations[contentNum].play();
+  function showAccordion() {
+    showAccordionAnimations[contentNum].play();
   }
 
-  function hideshow() {
-    showHideAnimations[contentNum].play();
+  function hideAccordion() {
+    hideAccordionAnimations[contentNum].play();
   }
 
   if (ariaValue === 'false') {
     showItem.classList.add('js-open');
     button.setAttribute('aria-selected', true);
     content.setAttribute('aria-expanded', true);
-    showshow();
+    showAccordion();
   } else {
     showItem.classList.remove('js-open');
     button.setAttribute('aria-selected', false);
     content.setAttribute('aria-expanded', false);
-    hideshow();
+    hideAccordion();
   }
 }
 
@@ -42,7 +42,7 @@ showItems.forEach(item => {
   const contentHeight = anime.get(contentEl, 'height', 'px');
   anime.set(contentEl, { height: 0 });
 
-  showShowAnimations[contentNum] = anime({
+  showAccordionAnimations[contentNum] = anime({
     targets: contentEl,
     height: contentHeight,
     autoplay: false,
@@ -50,7 +50,7 @@ showItems.forEach(item => {
     duration: 100,
   });
 
-  showHideAnimations[contentNum] = anime({
+  hideAccordionAnimations[contentNum] = anime({
     targets: contentEl,
     height: 0,
     autoplay: false,
@@ -58,30 +58,10 @@ showItems.forEach(item => {
     duration: 500,
   });
 
-  item.addEventListener('click', handleshowClick);
+  item.addEventListener('click', handleAccordionClick);
 });
 
-// mobile trigger
-const sideNav = document.querySelector('.typhoon-side-nav--wrap');
-const mobileNavBtn = sideNav.querySelector('.typhoon-side-nav--mobile');
-
-function handleMobileNavClick(e) {
-  const mobileNavEl = sideNav.querySelector('.typhoon-side-menu--wrap');
-  const getAriaValue = mobileNavBtn.getAttribute('aria-expanded');
-
-  if (getAriaValue === 'false') {
-    sideNav.classList.add('js-nav-open');
-    mobileNavBtn.setAttribute('aria-expanded', true);
-  } else {
-    sideNav.classList.remove('js-nav-open');
-    mobileNavBtn.setAttribute('aria-expanded', false);
-  }
-}
-
-mobileNavBtn.addEventListener('click', handleMobileNavClick);
-
-// $window.on('scroll resize', check_if_in_view);
-// $window.trigger('scroll');
+// adds highlight to current page in nav
 const navList = document.querySelectorAll('.typhoon-side-nav--list');
 
 navList.forEach(navCol => {
@@ -97,3 +77,60 @@ navList.forEach(navCol => {
     navCol.classList.add('js-current');
   }
 });
+
+// mobile trigger
+
+function mobileNavAnimation(e) {
+  const sideNav = document.querySelector('.typhoon-side-nav--wrap');
+  const mobileNavBtn = sideNav.querySelector('.typhoon-side-nav--mobile');
+  const mobileNavEl = sideNav.querySelector('.typhoon-side-menu--wrap');
+  const contentHeight = anime.get(mobileNavEl, 'height', 'px');
+  anime.set(mobileNavEl, { height: 0 });
+
+  function openMobileNav() {
+    anime({
+      targets: mobileNavEl,
+      height: contentHeight,
+      autoplay: false,
+      easing: 'linear',
+      duration: 200,
+    }).play();
+  }
+
+  function closeMobileNav() {
+    anime({
+      targets: mobileNavEl,
+      height: 0,
+      autoplay: false,
+      easing: 'linear',
+      duration: 200,
+    }).play();
+  }
+
+  function handleMobileNavClick(event) {
+    const getAriaValue = mobileNavBtn.getAttribute('aria-expanded');
+    const navLinks = sideNav.querySelectorAll('.typhoon-side-nav--sub-page');
+    console.log(event.target);
+
+    if (getAriaValue === 'false') {
+      sideNav.classList.add('js-nav-open');
+      mobileNavBtn.setAttribute('aria-expanded', true);
+      openMobileNav();
+    } else if (event.target === navLinks) {
+      sideNav.classList.remove('js-nav-open');
+      mobileNavBtn.setAttribute('aria-expanded', false);
+      closeMobileNav();
+    } else {
+      sideNav.classList.remove('js-nav-open');
+      mobileNavBtn.setAttribute('aria-expanded', false);
+      closeMobileNav();
+    }
+  }
+
+  sideNav.addEventListener('click', handleMobileNavClick);
+}
+
+mobileNavAnimation();
+
+// $window.on('scroll resize', check_if_in_view);
+// $window.trigger('scroll');
