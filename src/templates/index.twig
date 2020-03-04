@@ -71,7 +71,9 @@
 {% block content %}
   <section class="lib-basic-card--wrap tyhpoon-overview-overlap">
     {% for card in basicCards %}
-      <article class="lib-basic-card {{ card.cardClass }}">
+      <div class="lib-basic-card {{
+        card.cardClass
+        }} lib-mr-2xl lib-mb-2xl sm:lib-mr-0 xs:lib-mr-0">
         <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
           <span class="lib-aria-text">{{ card.ariaText }}</span>
           <div class="lib-basic-card--text-wrap">
@@ -91,7 +93,7 @@
             </div>
           </div>
         </a>
-      </article>
+      </div>
     {% endfor %}
   </section>
 

@@ -46,7 +46,7 @@
   {
     utilityClass: 'lib-m-auto',
     displayClass: 'margin-auto',
-    desc: 'Sets x-axis margins to auto to horizontally center element'
+    desc: 'Sets margins to auto'
   },
 ] %}
 
@@ -121,7 +121,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
 
 {% block content %}
 <article class="lib-mb-4xl">
-  <h2 id="primary-colors">
+  <h2 id="utility-classes">
     Spacing Utility Classes
   </h2>
   <p>There are utility classes for both padding and margins in Typhoon. Each follows the same structure of the library
@@ -143,8 +143,8 @@ descriptive naming convition instead of numeric values to improve flexibility.
         </th>
       </tr>
     </thead>
-     <tbody>
-    {% for space in utilityClass %}
+    <tbody>
+      {% for space in utilityClass %}
       <tr>
         <td class="example">
           <span>{{space.utilityClass}} </span>
@@ -158,15 +158,27 @@ descriptive naming convition instead of numeric values to improve flexibility.
           {{space.desc}}
         </td>
       </tr>
-    {% endfor %}
-    </tbody> 
+      {% endfor %}
+    </tbody>
   </table>
 </article>
+<article class="lib-mb-4xl">
+  <h2 id="responsive-classes">Responsive Spacing Classes</h2>
+  <p>Typhoon also uses breakpoints classes for all margin and padding elements mentioned above. These classes create
+    extra flexibility by quickly changing spacing based on screen width. Each breakpoint only works for the specificied
+    screen width. For example <code>md:lib-pt-md</code> sets <code>padding-top</code> for the medium screen size
+    <code>sm:lib-p-sm</code> sets <code>padding</code> for a small screen.</p>
+  <p>Adjust your screen size to see the example below</p>
+  <div class="responsive-display lib-mt-md">
+    <div class="xl:lib-m-2xl lg:lib-m-xl md:lib-m-md sm:lib-m-sm xs:lib-m-0"></div>
+  </div>
+</article>
 <article>
-  <h2 id="primary-colors">
-    Spacing Sizes
+  <h2 id="spacing-modifiers">
+    Spacing Modifiers
   </h2>
-  <p>The spacing modifiers are preset to improve the design process. The <code>md</code> from the abouve exmaple can be replaced with any of the below values.</p>
+  <p>The spacing modifiers are preset to improve the design process. The <code>md</code> from the abouve exmaple can be
+    replaced with any of the below values.</p>
   <table class="typhoon-spacing-table spacing-tokens lib-mt-2xl">
     <thead>
       <tr>
@@ -179,17 +191,17 @@ descriptive naming convition instead of numeric values to improve flexibility.
       </tr>
     </thead>
     <tbody>
-    {% for token in spaceToken %}
+      {% for token in spaceToken %}
       <tr>
         <td class="modifier">
           <span>{{token.modifier}}</spa>
         </td>
         <td class="value">
-        <span>{{token.rem}} rem</span><span>{{token.px}} px</span>
+          <span>{{token.rem}} rem</span><span>{{token.px}} px</span>
           </div>
         </td>
       </tr>
-    {% endfor %}
+      {% endfor %}
     </tbody>
   </table>
 </article>
