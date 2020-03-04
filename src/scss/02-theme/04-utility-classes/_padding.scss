@@ -49,103 +49,42 @@ $padding-list: (
   .lib-pl-#{$space} {
     padding-left: $spacing;
   }
+}
 
-  @include media-breakpoint-only(xs) {
-    .xs\:lib-p-#{$space} {
+@each $space, $spacing in $padding-list {
+  @include media-breakpoint-only(xl) {
+    .xl\:lib-p-#{$space} {
       padding: $spacing;
     }
-
-    .xs\:lib-px-#{$space} {
+    .xl\:lib-px-#{$space} {
       padding-left: $spacing;
       padding-right: $spacing;
     }
 
-    .xs\:lib-py-#{$space} {
+    .xl\:lib-py-#{$space} {
       padding-top: $spacing;
       padding-bottom: $spacing;
     }
 
-    .xs\:lib-pt-#{$space} {
+    .xl\:lib-pt-#{$space} {
       padding-top: $spacing;
     }
 
-    .xs\:lib-pr-#{$space} {
+    .xl\:lib-pr-#{$space} {
       padding-right: $spacing;
     }
 
-    .xs\:lib-pb-#{$space} {
+    .xl\:lib-pb-#{$space} {
       padding-bottom: $spacing;
     }
 
-    .xs\:lib-pl-#{$space} {
+    .xl\:lib-pl-#{$space} {
       padding-left: $spacing;
     }
   }
+}
 
-  @include media-breakpoint-only(sm) {
-    .sm\:lib-p-#{$space} {
-      padding: $spacing;
-    }
-
-    .sm\:lib-px-#{$space} {
-      padding-left: $spacing;
-      padding-right: $spacing;
-    }
-
-    .sm\:lib-py-#{$space} {
-      padding-top: $spacing;
-      padding-bottom: $spacing;
-    }
-
-    .sm\:lib-pt-#{$space} {
-      padding-top: $spacing;
-    }
-
-    .sm\:lib-pr-#{$space} {
-      padding-right: $spacing;
-    }
-
-    .sm\:lib-pb-#{$space} {
-      padding-bottom: $spacing;
-    }
-
-    .sm\:lib-pl-#{$space} {
-      padding-left: $spacing;
-    }
-  }
-
-  @include media-breakpoint-only(md) {
-    .md\:lib-p-#{$space} {
-      padding: $spacing;
-    }
-
-    .md\:lib-px-#{$space} {
-      padding-left: $spacing;
-      padding-right: $spacing;
-    }
-
-    .md\:lib-py-#{$space} {
-      padding-top: $spacing;
-      padding-bottom: $spacing;
-    }
-
-    .md\:lib-pt-#{$space} {
-      padding-top: $spacing;
-    }
-
-    .md\:lib-pr-#{$space} {
-      padding-right: $spacing;
-    }
-
-    .md\:lib-pb-#{$space} {
-      padding-bottom: $spacing;
-    }
-
-    .md\:lib-pl-#{$space} {
-      padding-left: $spacing;
-    }
-  }
-
+@each $space, $spacing in $padding-list {
   @include media-breakpoint-only(lg) {
     .lg\:lib-p-#{$space} {
       padding: $spacing;
@@ -177,34 +116,105 @@ $padding-list: (
       padding-left: $spacing;
     }
   }
+}
 
-  @include media-breakpoint-only(xl) {
-    .xl\:lib-p-#{$space} {
+@each $space, $spacing in $padding-list {
+  @include media-breakpoint-only(md) {
+    .md\:lib-p-#{$space} {
       padding: $spacing;
     }
-    .xl\:lib-px-#{$space} {
+
+    .md\:lib-px-#{$space} {
       padding-left: $spacing;
       padding-right: $spacing;
     }
 
-    .xl\:lib-py-#{$space} {
+    .md\:lib-py-#{$space} {
       padding-top: $spacing;
       padding-bottom: $spacing;
     }
 
-    .xl\:lib-pt-#{$space} {
+    .md\:lib-pt-#{$space} {
       padding-top: $spacing;
     }
 
-    .xl\:lib-pr-#{$space} {
+    .md\:lib-pr-#{$space} {
       padding-right: $spacing;
     }
 
-    .xl\:lib-pb-#{$space} {
+    .md\:lib-pb-#{$space} {
       padding-bottom: $spacing;
     }
 
-    .xl\:lib-pl-#{$space} {
+    .md\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include media-breakpoint-only(sm) {
+    .sm\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .sm\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .sm\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .sm\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .sm\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .sm\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .sm\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include media-breakpoint-only(xs) {
+    .xs\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .xs\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .xs\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .xs\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .xs\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .xs\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .xs\:lib-pl-#{$space} {
       padding-left: $spacing;
     }
   }

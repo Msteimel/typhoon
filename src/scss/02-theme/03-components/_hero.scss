@@ -1,7 +1,11 @@
 .lib-hero--wrap {
   position: relative;
-  height: rem(375);
+  height: rem(425);
   margin: 0 rem(-15);
+
+  @include media-breakpoint-down(md) {
+    height: rem(375);
+  }
 }
 
 .lib-hero {
@@ -10,4 +14,8 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+
+  @include media-breakpoint-only(xs) {
+    // text-align: center;
+  }
 }

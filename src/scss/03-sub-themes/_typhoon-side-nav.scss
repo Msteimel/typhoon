@@ -6,6 +6,7 @@
   @include media-breakpoint-down(sm) {
     position: relative;
     flex: 0 0 100%;
+    border: none;
     z-index: 2;
   }
 }

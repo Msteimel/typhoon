@@ -50,103 +50,42 @@ $margin-list: (
   .lib-ml-#{$space} {
     margin-left: $spacing;
   }
+}
 
-  @include media-breakpoint-only(xs) {
-    .xs\:lib-m-#{$space} {
+@each $space, $spacing in $margin-list {
+  @include media-breakpoint-only(xl) {
+    .xl\:lib-m-#{$space} {
       margin: $spacing;
     }
-
-    .xs\:lib-mx-#{$space} {
+    .xl\:lib-mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .xs\:lib-my-#{$space} {
+    .xl\:lib-my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .xs\:lib-mt-#{$space} {
+    .xl\:lib-mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .xs\:lib-mr-#{$space} {
+    .xl\:lib-mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .xs\:lib-mb-#{$space} {
+    .xl\:lib-mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .xs\:lib-ml-#{$space} {
+    .xl\:lib-ml-#{$space} {
       margin-left: $spacing;
     }
   }
+}
 
-  @include media-breakpoint-only(sm) {
-    .sm\:lib-m-#{$space} {
-      margin: $spacing;
-    }
-
-    .sm\:lib-mx-#{$space} {
-      margin-left: $spacing;
-      margin-right: $spacing;
-    }
-
-    .sm\:lib-my-#{$space} {
-      margin-top: $spacing;
-      margin-bottom: $spacing;
-    }
-
-    .sm\:lib-mt-#{$space} {
-      margin-top: $spacing;
-    }
-
-    .sm\:lib-mr-#{$space} {
-      margin-right: $spacing;
-    }
-
-    .sm\:lib-mb-#{$space} {
-      margin-bottom: $spacing;
-    }
-
-    .sm\:lib-ml-#{$space} {
-      margin-left: $spacing;
-    }
-  }
-
-  @include media-breakpoint-only(md) {
-    .md\:lib-m-#{$space} {
-      margin: $spacing;
-    }
-
-    .md\:lib-mx-#{$space} {
-      margin-left: $spacing;
-      margin-right: $spacing;
-    }
-
-    .md\:lib-my-#{$space} {
-      margin-top: $spacing;
-      margin-bottom: $spacing;
-    }
-
-    .md\:lib-mt-#{$space} {
-      margin-top: $spacing;
-    }
-
-    .md\:lib-mr-#{$space} {
-      margin-right: $spacing;
-    }
-
-    .md\:lib-mb-#{$space} {
-      margin-bottom: $spacing;
-    }
-
-    .md\:lib-ml-#{$space} {
-      margin-left: $spacing;
-    }
-  }
-
+@each $space, $spacing in $margin-list {
   @include media-breakpoint-only(lg) {
     .lg\:lib-m-#{$space} {
       margin: $spacing;
@@ -178,34 +117,105 @@ $margin-list: (
       margin-left: $spacing;
     }
   }
+}
 
-  @include media-breakpoint-only(xl) {
-    .xl\:lib-m-#{$space} {
+@each $space, $spacing in $margin-list {
+  @include media-breakpoint-only(md) {
+    .md\:lib-m-#{$space} {
       margin: $spacing;
     }
-    .xl\:lib-mx-#{$space} {
+
+    .md\:lib-mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .xl\:lib-my-#{$space} {
+    .md\:lib-my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .xl\:lib-mt-#{$space} {
+    .md\:lib-mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .xl\:lib-mr-#{$space} {
+    .md\:lib-mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .xl\:lib-mb-#{$space} {
+    .md\:lib-mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .xl\:lib-ml-#{$space} {
+    .md\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include media-breakpoint-only(sm) {
+    .sm\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .sm\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .sm\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .sm\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .sm\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .sm\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .sm\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include media-breakpoint-only(xs) {
+    .xs\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .xs\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .xs\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .xs\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .xs\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .xs\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .xs\:lib-ml-#{$space} {
       margin-left: $spacing;
     }
   }

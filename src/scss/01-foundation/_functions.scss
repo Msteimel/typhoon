@@ -7,7 +7,7 @@
 }
 
 // Calculate px from a rem/em value
-@function px-calc($rem, $base-val: $em-base) {
+@function px-calc($rem, $base-val: $fs-md) {
   @if unit($rem) == px {
     @return $rem;
   }

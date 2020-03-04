@@ -37,6 +37,20 @@
   }
 }
 
+.responsive-display {
+  background-color: $blue-100;
+  display: inline-block;
+  border-radius: $br2;
+  line-height: 0;
+
+  div {
+    width: $space-2xl;
+    height: $space-2xl;
+    background-color: $red-500;
+    border-radius: $br2;
+  }
+}
+
 .utility-spacing {
   .example {
     width: $space-4xl;
@@ -86,9 +100,18 @@
 }
 
 .spacing-tokens {
-  max-width: 50%;
+  @include media-breakpoint-only(xl) {
+    max-width: 50%;
+  }
+
+  width: 100%;
+
   .modifier {
     width: 15rem;
+
+    @include media-breakpoint-only(xs) {
+      width: 10rem;
+    }
   }
 
   .value {

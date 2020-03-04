@@ -19,7 +19,7 @@
       Spacing -
 Typhoon Design System
     </title>
-  <link href="/global.css?12fb3ff842e2c3d9997a" rel="stylesheet"></head>
+  <link href="/global.css?7e8549022ce2f5df90cb" rel="stylesheet"></head>
 
   <body>
           <header class="typhoon-top-nav--wrap lib-bg-white">
@@ -157,8 +157,25 @@ Typhoon Design System
             <span class="lib-text-white">Spacing</span>
           </a>
         </li>
-          
-              </ul>
+                              <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl-lg">
+              <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+                href="#utility-classes">
+                <span class="lib-text-white">Utility Classes</span>
+              </a>
+            </li>
+                      <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl-lg">
+              <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+                href="#responsive-classes">
+                <span class="lib-text-white">Responsive Classes</span>
+              </a>
+            </li>
+                      <li class="typhoon-side-nav--item typhoon-side-nav--sub-page lib-pl-lg">
+              <a class="typhoon-side-nav--link typhoon-side-nav--sub-link"
+                href="#spacing-modifiers">
+                <span class="lib-text-white">Spacing Modifiers</span>
+              </a>
+            </li>
+                        </ul>
           <ul class="typhoon-side-nav--list lib-m-0 lib-p-0">
         <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px-md">
           <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
@@ -270,16 +287,14 @@ Typhoon Design System
         </aside>
       
       <div class="col">
-        <div class="lib-hero--wrap">
+        <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
           <div class="lib-hero">
             
-  <div class="lib-header-special">
-    <div>
-      <h1 class="lib-header-special--text lib-text-white">
-        Spacing
-      </h1>
-    </div>
-    <span class="lib-header-special--sub lib-mt-xs lib-text-yellow-400">
+  <div class="lib-header-special lib-mt-7xl lib-ml-5xl md:lib-ml-4xl sm:lib-ml-3xl xs:lib-ml-xl">
+    <h1 class="lib-header-special--text lib-text-white">
+      Spacing
+    </h1>
+    <span class="lib-header-special--sub lib-mt-md lib-text-yellow-400">
       Typhoon spacing guide
     </span>
   </div>
@@ -302,7 +317,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           </section>
           <div class="typoon-main-content-wrap">
             <article class="lib-mb-4xl">
-  <h2 id="primary-colors">
+  <h2 id="utility-classes">
     Spacing Utility Classes
   </h2>
   <p>There are utility classes for both padding and margins in Typhoon. Each follows the same structure of the library
@@ -324,8 +339,8 @@ descriptive naming convition instead of numeric values to improve flexibility.
         </th>
       </tr>
     </thead>
-     <tbody>
-          <tr>
+    <tbody>
+            <tr>
         <td class="example">
           <span>lib-m-md </span>
         </td>
@@ -338,7 +353,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on all side of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-mx-md </span>
         </td>
@@ -351,7 +366,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the x-axis of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-my-md </span>
         </td>
@@ -364,7 +379,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the y-axis of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-mt-md </span>
         </td>
@@ -377,7 +392,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the top side of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-mr-md </span>
         </td>
@@ -390,7 +405,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the right side of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-mb-md </span>
         </td>
@@ -403,7 +418,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the bottom side of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-ml-md </span>
         </td>
@@ -416,7 +431,7 @@ descriptive naming convition instead of numeric values to improve flexibility.
           Adds margins on the left side of an element
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="example">
           <span>lib-m-auto </span>
         </td>
@@ -426,17 +441,29 @@ descriptive naming convition instead of numeric values to improve flexibility.
           </div>
         </td>
         <td class="description">
-          Sets x-axis margins to auto to horizontally center element
+          Sets margins to auto
         </td>
       </tr>
-        </tbody> 
+          </tbody>
   </table>
 </article>
+<article class="lib-mb-4xl">
+  <h2 id="responsive-classes">Responsive Spacing Classes</h2>
+  <p>Typhoon also uses breakpoints classes for all margin and padding elements mentioned above. These classes create
+    extra flexibility by quickly changing spacing based on screen width. Each breakpoint only works for the specificied
+    screen width. For example <code>md:lib-pt-md</code> sets <code>padding-top</code> for the medium screen size
+    <code>sm:lib-p-sm</code> sets <code>padding</code> for a small screen.</p>
+  <p>Adjust your screen size to see the example below</p>
+  <div class="responsive-display lib-mt-md">
+    <div class="xl:lib-m-2xl lg:lib-m-xl md:lib-m-md sm:lib-m-sm xs:lib-m-0"></div>
+  </div>
+</article>
 <article>
-  <h2 id="primary-colors">
-    Spacing Sizes
+  <h2 id="spacing-modifiers">
+    Spacing Modifiers
   </h2>
-  <p>The spacing modifiers are preset to improve the design process. The <code>md</code> from the abouve exmaple can be replaced with any of the below values.</p>
+  <p>The spacing modifiers are preset to improve the design process. The <code>md</code> from the abouve exmaple can be
+    replaced with any of the below values.</p>
   <table class="typhoon-spacing-table spacing-tokens lib-mt-2xl">
     <thead>
       <tr>
@@ -449,115 +476,115 @@ descriptive naming convition instead of numeric values to improve flexibility.
       </tr>
     </thead>
     <tbody>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>2xs</spa>
         </td>
         <td class="value">
-        <span>0.25 rem</span><span>4 px</span>
+          <span>0.25 rem</span><span>4 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>xs</spa>
         </td>
         <td class="value">
-        <span>0.5 rem</span><span>8 px</span>
+          <span>0.5 rem</span><span>8 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>sm</spa>
         </td>
         <td class="value">
-        <span>0.75 rem</span><span>12 px</span>
+          <span>0.75 rem</span><span>12 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>md</spa>
         </td>
         <td class="value">
-        <span>1 rem</span><span>16 px</span>
+          <span>1 rem</span><span>16 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>lg</spa>
         </td>
         <td class="value">
-        <span>1.5 rem</span><span>24 px</span>
+          <span>1.5 rem</span><span>24 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>xl</spa>
         </td>
         <td class="value">
-        <span>2 rem</span><span>32 px</span>
+          <span>2 rem</span><span>32 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>2xl</spa>
         </td>
         <td class="value">
-        <span>2.5 rem</span><span>40 px</span>
+          <span>2.5 rem</span><span>40 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>3xl</spa>
         </td>
         <td class="value">
-        <span>3 rem</span><span>48 px</span>
+          <span>3 rem</span><span>48 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>4xl</spa>
         </td>
         <td class="value">
-        <span>4 rem</span><span>64 px</span>
+          <span>4 rem</span><span>64 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>5xl</spa>
         </td>
         <td class="value">
-        <span>6 rem</span><span>96 px</span>
+          <span>6 rem</span><span>96 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>6xl</spa>
         </td>
         <td class="value">
-        <span>8 rem</span><span>128 px</span>
+          <span>8 rem</span><span>128 px</span>
           </div>
         </td>
       </tr>
-          <tr>
+            <tr>
         <td class="modifier">
           <span>7xl</spa>
         </td>
         <td class="value">
-        <span>12 rem</span><span>192 px</span>
+          <span>12 rem</span><span>192 px</span>
           </div>
         </td>
       </tr>
-        </tbody>
+          </tbody>
   </table>
 </article>
           </div>
@@ -569,6 +596,6 @@ descriptive naming convition instead of numeric values to improve flexibility.
       <footer>
   footer
 </footer>
-    <script type="text/javascript" src="/global.js?12fb3ff842e2c3d9997a"></script></body>
+    <script type="text/javascript" src="/global.js?7e8549022ce2f5df90cb"></script></body>
 </html>
 <!DOCTYPE html>

@@ -1,4 +1,5 @@
 $card-width: rem(375);
+$card-width-mobile: 100%;
 
 // defualt card is red
 $basic-card-box-shadow: $vert-light-2;
@@ -45,8 +46,12 @@ $blue-basic-card-text-blue: $blue-600;
 .lib-basic-card {
   width: $card-width;
 
-  &:not(last-of-type) {
-    margin: 0 $space-2xl $space-2xl 0;
+  @include media-breakpoint-down(sm) {
+    width: $card-width-mobile;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 
   .lib-basic-card--link {
