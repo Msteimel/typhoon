@@ -26,6 +26,7 @@ mix
     content: [`public/*/**.html`],
     css: [`public/global.css`],
     whitelistPatterns: [/js-/],
+    whitelistPatternsChildren: [/lib-link-list--item/],
   })
   .setPublicPath(`${destinationDir}`);
 
