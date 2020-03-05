@@ -25,6 +25,7 @@ mix
   .purgeCss({
     content: [`public/*/**.html`],
     css: [`public/global.css`],
+    whitelistPatterns: [/js-/],
   })
   .setPublicPath(`${destinationDir}`);
 
