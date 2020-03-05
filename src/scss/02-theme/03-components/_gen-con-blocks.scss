@@ -47,6 +47,12 @@
   .lib-gen-con--img-wrap {
     float: right;
     margin-left: $space-lg;
+
+    @include media-breakpoint-only(xs) {
+      float: initial;
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -54,6 +60,12 @@
   .lib-gen-con--img-wrap {
     float: left;
     margin-right: $space-lg;
+
+    @include media-breakpoint-only(xs) {
+      float: initial;
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -71,12 +83,28 @@
 .lib-block--two-img {
   .lib-gen-con--img-wrap {
     max-width: rem(400);
+
+    @include media-breakpoint-down(md) {
+      max-width: 45%;
+    }
+
+    @include media-breakpoint-only(xs) {
+      max-width: 100%;
+    }
   }
 }
 
 .lib-block--three-img {
   .lib-gen-con--img-wrap {
     max-width: rem(250);
+
+    @include media-breakpoint-down(md) {
+      max-width: 32%;
+    }
+
+    @include media-breakpoint-only(xs) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -85,6 +113,9 @@
   .lib-content-wrap {
     display: flex;
     justify-content: space-around;
+    @include media-breakpoint-only(xs) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -140,12 +171,21 @@
     display: flex;
     flex-wrap: wrap;
     margin: $space-2xl 0 0 0;
+
+    @include media-breakpoint-only(xs) {
+      margin: $space-lg 0 0 $space-md;
+    }
   }
 
   .lib-link-list--item {
     position: relative;
     width: 50%;
     margin-bottom: $space-md;
+
+    @include media-breakpoint-only(xs) {
+      width: 100%;
+      padding: $space-xs 0;
+    }
 
     a {
       font-family: $heading-font;
@@ -228,6 +268,10 @@
 
   .lib-quote {
     max-width: rem(637.5);
+
+    @include media-breakpoint-only(xs) {
+      max-width: 90%;
+    }
   }
 }
 
@@ -263,16 +307,34 @@
     font-size: rem(102);
     line-height: 1;
     color: $warm-grey-300;
+
+    @include media-breakpoint-only(xs) {
+      font-size: $fs-3xl;
+    }
   }
 
   &::before {
     content: open-quote;
     left: 5%;
+
+    @include media-breakpoint-only(xs) {
+      left: 2%;
+    }
   }
 
   &::after {
     content: close-quote;
     right: 5%;
+
+    @include media-breakpoint-only(xs) {
+      right: 2%;
+    }
+  }
+
+  .lib-quote {
+    @include media-breakpoint-only(xs) {
+      max-width: 90%;
+    }
   }
 }
 
@@ -283,8 +345,12 @@
   font-size: $fs-lg;
   margin: 0 auto;
 
+  @include media-breakpoint-only(xs) {
+    max-width: 95%;
+  }
+
   cite {
-    display: inline-block;
+    display: block;
     position: relative;
     font-style: initial;
     margin: 0 auto;
