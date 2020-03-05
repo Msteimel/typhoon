@@ -145,27 +145,6 @@
 }
 
 .lib-block--link-list {
-  $doc-types: (
-    '.docx': '\f1c2',
-    '.pdf': '\f1c1',
-    '.xlsx': '\f1c3',
-    '.jpg': '\f1c5',
-    '.png': '\f1c5',
-    '.com': '\f35d',
-    '.net': '\f35d',
-    '.edu': '\f35d',
-    '.org': '\f35d',
-  );
-
-  @each $docType, $icon in $doc-types {
-    .lib-link-list--item {
-      @if "a[href*='#{$docType}']" {
-        a[href*='#{$docType}']::before {
-          content: $icon;
-        }
-      }
-    }
-  }
   // box-sizing: content-box;
   .lib-link-list {
     display: flex;
@@ -207,6 +186,30 @@
       &:hover,
       &:focus {
         color: $link-hover-color;
+      }
+    }
+    /*
+ |--------------------------------------------------------------------------
+ | Changes icon based on file type
+ |--------------------------------------------------------------------------
+*/
+    $doc-types: (
+      '.docx': '\f1c2',
+      '.pdf': '\f1c1',
+      '.xlsx': '\f1c3',
+      '.jpg': '\f1c5',
+      '.png': '\f1c5',
+      '.com': '\f35d',
+      '.net': '\f35d',
+      '.edu': '\f35d',
+      '.org': '\f35d',
+    );
+
+    @each $docType, $icon in $doc-types {
+      @if "a[href*='#{$docType}']" {
+        a[href*='#{$docType}']::before {
+          content: $icon;
+        }
       }
     }
   }
