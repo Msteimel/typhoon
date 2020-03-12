@@ -22,13 +22,13 @@ p {
   color: $p-color;
   font-size: $p-fs;
   line-height: $p-lh;
+}
 
-  code {
-    padding: $space-2xs;
-    background-color: $yellow-200;
-    color: $red-700;
-    vertical-align: middle;
-  }
+code {
+  padding: $space-2xs;
+  background-color: $yellow-200;
+  color: $red-700;
+  vertical-align: middle;
 }
 
 p > a {
