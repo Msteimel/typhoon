@@ -34,12 +34,12 @@ $header-special-fs: $space-4xl;
 
   &::before {
     top: -10%;
-    left: -2%;
+    left: -$space-xs;
   }
 
   &::after {
     bottom: -6%;
-    right: -5%;
+    right: -$space-lg;
   }
 
   @include media-breakpoint-down(md) {
