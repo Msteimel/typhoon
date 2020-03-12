@@ -131,37 +131,44 @@ select {
 
   &::after {
     @include vert_center;
+    position: absolute;
     content: '\f078';
     right: $space-xl;
+    font-size: $fs-md;
     font-family: 'FontAwesome';
   }
 
-  label {
-    position: absolute;
-    top: 0;
-    transform: translateY(0);
+  select {
+    &:not(:placeholder-shown) {
+      &:valid,
+      &:invalid {
+        + label {
+          position: absolute;
+          top: -$space-lg;
+          left: 0;
+          font-size: $fs-sm;
+          padding-left: $space-lg;
+          transform: translateY(0);
+
+          &::after {
+            @include vert_center;
+            left: $space-2xs;
+            font-family: 'FontAwesome';
+            font-size: $fs-md;
+          }
+        }
+      }
+    }
   }
 }
 
-// input[type="option"] Need to build
-
-// input:focus ~ .label,
-// input:not(:focus):valid ~ .label,
-// select ~ .label {
-//   font-size: 12px;
-//   top: 0;
-//   transform: translateY(0);
-// }
-
-// textarea:focus ~ .label,
-// textarea:not(:focus):valid ~ .label {
-// }
-
-.lib-input--radio {
+.lib-input--radio,
+.lib-input--checkbox {
   transform: translateY(0);
 }
 
-input[type='radio'] {
+input[type='radio'],
+input[type='checkbox'] {
   margin: $space-sm $space-2xs;
   opacity: 0;
   position: absolute;
@@ -225,18 +232,6 @@ input[type='radio'] {
     }
   }
 }
-
-input[type='checkbox'] {
-  // opacity: 0;
-  &::before {
-  }
-  &:checked {
-  }
-}
-
-// textarea {
-//   min-height: rem(150);
-// }
 
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label {

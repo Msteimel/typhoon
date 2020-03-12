@@ -19,7 +19,7 @@
         Components -
 Typhoon Design System
     </title>
-  <link href="/global.css?6765ffb5c394b9f852c8" rel="stylesheet"></head>
+  <link href="/global.css?4c8e66a7be4815f8237e" rel="stylesheet"></head>
 
   <body>
           <header class="typhoon-top-nav--wrap lib-bg-white">
@@ -359,7 +359,7 @@ Typhoon Design System
         <div class="lib-mb-2xl col-sm-6 col-xs-12">
           <div class="lib-input lib-input--field">
             <input type="tel" name="phone-number" placeholder=" " id="phone-number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-       required />
+              required />
             <label class="lib-input--label" for="phone-number">
               Phone Number*
             </label>
@@ -375,8 +375,8 @@ Typhoon Design System
         </div>
         <div class="col-sm-12">
           <div class="lib-input lib-input--field">
-            <textarea placeholder=" " name="comment" id="comment" rows="5"/></textarea>
-            <label class="lib-input--label" for="name">
+            <textarea placeholder=" " name="comment" id="comment" rows="5" /></textarea>
+            <label class="lib-input--label" for="comment">
               Comment
             </label>
           </div>
@@ -384,30 +384,49 @@ Typhoon Design System
       </div>
     </fieldset>
     <fieldset class="lib-form--fieldset lib-mb-xl">
-      <p class="lib-mt-0">What's your favorite Monster</p>
-        <div class="lib-input lib-input--radio">
-          <input type="radio" id="kraken" name="monster" />
-          <label for="kraken">
-            Kraken
-          </label>
-        </div>
-        <div class="lib-input lib-input--radio">
-          <input type="radio" id="mind-flayer" name="monster" />
-          <label for="mind-flayer">
-            Mind Flayer
-          </label>
-        </div>
-        <div class="lib-input lib-input--radio">
-          <input type="radio" id="dragon" name="monster" />
-          <label for="dragon">
-            Dragon
-          </label>
-        </div>
+      <p>Your arsenal (pick all that apply):</p>
+      <div class="lib-input lib-input--checkbox">
+        <input type="checkbox" id="sword" name="sword">
+        <label for="sword">Sword</label>
+      </div>
+      <div class="lib-input lib-input--checkbox">
+        <input type="checkbox" id="battle-axe" name="battle-axe">
+        <label for="battle-axe">Battle Axe</label>
+      </div>
+      <div class="lib-input lib-input--checkbox">
+        <input type="checkbox" id="shiv" name="shiv">
+        <label for="shiv">Shiv</label>
+      </div>
+      <div class="lib-input lib-input--checkbox">
+        <input type="checkbox" id="fire" name="fire">
+        <label for="fire">Fire</label>
+      </div>
     </fieldset>
     <fieldset class="lib-form--fieldset lib-mb-xl">
-     <div class="lib-input--select">
+      <p class="lib-mt-0">What's your favorite Monster</p>
+      <div class="lib-input lib-input--radio">
+        <input type="radio" id="kraken" name="monster" />
+        <label for="kraken">
+          Kraken
+        </label>
+      </div>
+      <div class="lib-input lib-input--radio">
+        <input type="radio" id="mind-flayer" name="monster" />
+        <label for="mind-flayer">
+          Mind Flayer
+        </label>
+      </div>
+      <div class="lib-input lib-input--radio">
+        <input type="radio" id="dragon" name="monster" />
+        <label for="dragon">
+          Dragon
+        </label>
+      </div>
+    </fieldset>
+    <fieldset class="lib-form--fieldset lib-mb-xl">
+      <div class="lib-input--select">
         <select name="pets" id="pet-select" required>
-          <option value="" disabled selected >
+          <option value="" disabled selected>
             --Please choose an option--
           </option>
           <option value="dog">
@@ -417,15 +436,17 @@ Typhoon Design System
             Cat
           </option>
         </select>
-          <label for="pet-select">
+        <label for="pet-select">
           Choose a pet:*
         </label>
-     </div>
+      </div>
     </fieldset>
     <button class="lib-button lib-button-icon">
       Submit
     </button>
   </form>
+
+
   </section>
   <section id="accordion" class="lib-my-5xl">
     <h3>
@@ -612,6 +633,6 @@ Typhoon Design System
       <footer>
   footer
 </footer>
-    <script type="text/javascript" src="/global.js?6765ffb5c394b9f852c8"></script></body>
+    <script type="text/javascript" src="/global.js?4c8e66a7be4815f8237e"></script></body>
 </html>
 <!DOCTYPE html>
