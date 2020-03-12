@@ -1,5 +1,4 @@
 .lib-gen-con--wrap {
-  max-width: rem(850);
   margin: 0;
 
   h1 {
@@ -16,6 +15,7 @@
 // }
 
 .lib-gen-con--block {
+  max-width: rem(850);
   margin-bottom: $space-4xl;
 
   .lib-block-title {
