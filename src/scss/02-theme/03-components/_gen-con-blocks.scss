@@ -22,8 +22,14 @@
     display: inline-block;
   }
 
-  p + h3 {
+  p + h2 {
     margin-top: $space-lg;
+  }
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: $space-md;
   }
 
   p {
@@ -270,13 +276,31 @@
 
 .lib-block--quote-banner {
   padding: $space-2xl 0 $space-3xl;
-  background-color: $warm-grey-100;
+  background-color: $red-600;
+
+  .lib-quote--marks {
+    background-color: $yellow-300;
+
+    i {
+      color: $red-600;
+    }
+  }
 
   .lib-quote {
     max-width: rem(637.5);
+    color: $red-50;
 
     @include media-breakpoint-only(xs) {
       max-width: 90%;
+    }
+
+    cite {
+      color: $yellow-300;
+
+      &::before,
+      &::after {
+        color: $red-50;
+      }
     }
   }
 }
@@ -288,22 +312,25 @@
   width: rem(32);
   height: rem(32);
   border-radius: 100%;
-  background-color: $warm-grey-300;
+  background-color: $yellow-200;
 
   i {
     @include absolute-center;
     position: absolute;
+    color: $yellow-700;
     text-align: center;
   }
 }
 
 .lib-block--quote-ribbon {
+  position: relative;
   padding: $space-2xl 0 $space-2xl;
-  background-color: $warm-grey-100;
+  background-color: $white;
   box-shadow: $vert-light-2;
-  // border-radius: $br4;
-  border-left: solid 4px $warm-grey-600;
+  border-radius: $br2;
+  border-left: solid 4px $red-500;
   quotes: '“' '”';
+  overflow: hidden;
 
   &::before,
   &::after {
@@ -312,16 +339,20 @@
     font-family: $heading-font;
     font-size: rem(102);
     line-height: 1;
-    color: $warm-grey-300;
+    color: $yellow-500;
+
+    @include media-breakpoint-down(sm) {
+      font-size: $fs-6xl;
+    }
 
     @include media-breakpoint-only(xs) {
-      font-size: $fs-3xl;
+      font-size: $fs-4xl;
     }
   }
 
   &::before {
     content: open-quote;
-    left: 5%;
+    left: 4%;
 
     @include media-breakpoint-only(xs) {
       left: 2%;
@@ -330,7 +361,7 @@
 
   &::after {
     content: close-quote;
-    right: 5%;
+    right: 4%;
 
     @include media-breakpoint-only(xs) {
       right: 2%;
@@ -342,6 +373,51 @@
       max-width: 90%;
     }
   }
+
+  .quote-angles {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 10rem;
+      height: 5rem;
+      position: absolute;
+      transform: rotate(135deg);
+      transition: background-color 0.3s ease-in;
+    }
+
+    &::before {
+      bottom: -10%;
+      right: -9%;
+      background-color: $red-500;
+
+      @include media-breakpoint-down(sm) {
+        right: -14%;
+      }
+
+      @include media-breakpoint-only(xs) {
+        right: -18%;
+      }
+    }
+
+    &::after {
+      bottom: -12%;
+      right: -13%;
+      background-color: $red-400;
+
+      @include media-breakpoint-down(sm) {
+        right: -19%;
+      }
+      @include media-breakpoint-only(xs) {
+        right: -25%;
+      }
+    }
+  }
 }
 
 .lib-quote {
@@ -350,6 +426,10 @@
   font-style: italic;
   font-size: $fs-lg;
   margin: 0 auto;
+
+  @include media-breakpoint-only(sm) {
+    font-size: $fs-md;
+  }
 
   @include media-breakpoint-only(xs) {
     max-width: 95%;
@@ -360,13 +440,13 @@
     position: relative;
     font-style: initial;
     margin: 0 auto;
-    padding: $space-sm $space-sm 0;
-    color: $warm-grey-600;
+    padding: $space-md $space-sm 0;
+    color: $red-500;
 
     &::before,
     &::after {
       content: '\2014';
-      color: $warm-grey-700;
+      color: $yellow-600;
       padding: 0 $space-sm;
     }
 
