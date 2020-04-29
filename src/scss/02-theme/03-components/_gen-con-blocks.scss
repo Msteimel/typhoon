@@ -274,6 +274,46 @@
 .lib-block--quote {
 }
 
+.lib-quote {
+  max-width: 75%;
+  font-family: $heading-font;
+  font-style: italic;
+  font-size: $fs-lg;
+  margin: 0 auto;
+
+  @include media-breakpoint-only(sm) {
+    font-size: $fs-md;
+  }
+
+  @include media-breakpoint-only(xs) {
+    max-width: 95%;
+  }
+
+  cite {
+    display: block;
+    position: relative;
+    font-style: initial;
+    margin: 0 auto;
+    padding: $space-md $space-sm 0;
+    color: $red-500;
+
+    &::before,
+    &::after {
+      content: '\2014';
+      color: $yellow-600;
+      padding: 0 $space-sm;
+    }
+
+    &::before {
+      left: -10%;
+    }
+
+    &::after {
+      right: -10%;
+    }
+  }
+}
+
 .lib-block--quote-banner {
   padding: $space-2xl 0 $space-3xl;
   background-color: $red-600;
@@ -312,12 +352,12 @@
   width: rem(32);
   height: rem(32);
   border-radius: 100%;
-  background-color: $yellow-200;
+  background-color: $red-200;
 
   i {
     @include absolute-center;
     position: absolute;
-    color: $yellow-700;
+    color: $red-700;
     text-align: center;
   }
 }
@@ -416,46 +456,6 @@
       @include media-breakpoint-only(xs) {
         right: -25%;
       }
-    }
-  }
-}
-
-.lib-quote {
-  max-width: 75%;
-  font-family: $heading-font;
-  font-style: italic;
-  font-size: $fs-lg;
-  margin: 0 auto;
-
-  @include media-breakpoint-only(sm) {
-    font-size: $fs-md;
-  }
-
-  @include media-breakpoint-only(xs) {
-    max-width: 95%;
-  }
-
-  cite {
-    display: block;
-    position: relative;
-    font-style: initial;
-    margin: 0 auto;
-    padding: $space-md $space-sm 0;
-    color: $red-500;
-
-    &::before,
-    &::after {
-      content: '\2014';
-      color: $yellow-600;
-      padding: 0 $space-sm;
-    }
-
-    &::before {
-      left: -10%;
-    }
-
-    &::after {
-      right: -10%;
     }
   }
 }
