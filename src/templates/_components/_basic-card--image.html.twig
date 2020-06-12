@@ -1,8 +1,9 @@
 {# {% include './_basic-card-data.html.twig' %} #}
 
-{% set basicCards = [
+{% set basicCardsImage = [
   {
-    cardClass: '',
+    cardClass: 'lib-basic-card--image',
+    img: '/src/img/basic-card--image.jpg',
     title: 'Card Title',
     category: 'Category',
     desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -11,7 +12,8 @@
     ariaText: 'Readable by screen readers'
   },
   {
-    cardClass: 'lib-basic-card--yellow',
+    cardClass: 'lib-basic-card--yellow lib-basic-card--image',
+    img: '/src/img/basic-card--image.jpg',
     title: 'Card Title',
     category: 'Category',
     desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
@@ -20,7 +22,8 @@
     ariaText: 'Readable by screen readers'
   },
   {
-    cardClass: 'lib-basic-card--blue',
+    cardClass: 'lib-basic-card--blue lib-basic-card--image',
+    img: '/src/img/basic-card--image.jpg',
     title: 'Card Title',
     category: 'Category',
     desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
@@ -31,19 +34,25 @@
 ] %}
 
 <div class="lib-basic-card--wrap">
-  {% for card in basicCards %}
-    <div class="lib-basic-card {{
-      card.cardClass
-      }} lib-mr-2xl lib-mb-2xl sm:lib-mr-0 xs:lib-mr-0">
+  {% for card in basicCardsImage %}
+    <div class="lib-basic-card {{ card.cardClass }} lib-mr-2xl lib-mb-2xl sm:lib-mr-0 xs:lib-mr-0"">
       <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
+        <div class="lib-basic-card--image-wrap">
+          <figure>
+            <img src="{{ card.img }}" alt="alt" />
+            <div class="image-overlay"></div>
+          </figure>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              {{ card.category }}
+            </span>
+            <h3 class="lib-basic-card--title">
+              {{ card.title }}
+            </h3>
+          </div>
+        </div>
         <span class="lib-aria-text">{{ card.ariaText }}</span>
         <div class="lib-basic-card--text-wrap">
-          <span class="lib-basic-card--category lib-mb-xs">
-            {{ card.category }}
-          </span>
-          <h3 class="lib-basic-card--title">
-            {{ card.title }}
-          </h3>
           <p class="lib-basic-card--desc">
             {{ card.desc }}
           </p>
