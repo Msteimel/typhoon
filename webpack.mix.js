@@ -45,7 +45,7 @@ mix.browserSync({
   proxy: projectURL,
   files: [`${destinationDir}/*/**`, `${destinationDir}/index.html`],
   injectChanges: false,
-  browser: 'google chrome',
+  browser: 'firefox',
 });
 
 // Sourcemaps workaround
