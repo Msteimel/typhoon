@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'library-icons';
+  src: url('fonts/library-icons.eot?5458qa');
+  src: url('fonts/library-icons.eot?5458qa#iefix') format('embedded-opentype'),
+    url('fonts/library-icons.ttf?5458qa') format('truetype'),
+    url('fonts/library-icons.woff?5458qa') format('woff'),
+    url('fonts/library-icons.svg?5458qa#library-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'library-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-academic-calendar:before {
+  content: '\e900';
+}
+.icon-acceptance-or-rejection-of-a-letter:before {
+  content: '\e901';
+}
+.icon-application-documents:before {
+  content: '\e902';
+}
+.icon-art-faculty:before {
+  content: '\e903';
+}
+.icon-book-and-magnifying-glass:before {
+  content: '\e904';
+}
+.icon-business-and-economic-faculty:before {
+  content: '\e905';
+}
+.icon-carnival-masks:before {
+  content: '\e906';
+}
+.icon-college-diploma:before {
+  content: '\e907';
+}
+.icon-college-fraternity:before {
+  content: '\e908';
+}
+.icon-college-sorority:before {
+  content: '\e909';
+}
+.icon-computer-lab:before {
+  content: '\e90a';
+}
+.icon-computing-science-faculty:before {
+  content: '\e90b';
+}
+.icon-distance-courses:before {
+  content: '\e90c';
+}
+.icon-earning-a-degree:before {
+  content: '\e90d';
+}
+.icon-educational-programs:before {
+  content: '\e90e';
+}
+.icon-engineering-faculty:before {
+  content: '\e90f';
+}
+.icon-faculty-shield:before {
+  content: '\e910';
+}
+.icon-female-student:before {
+  content: '\e911';
+}
+.icon-freshman-applicant:before {
+  content: '\e912';
+}
+.icon-graduate-student:before {
+  content: '\e913';
+}
+.icon-graduation-ceremony:before {
+  content: '\e914';
+}
+.icon-group-of-students:before {
+  content: '\e915';
+}
+.icon-international-university:before {
+  content: '\e916';
+}
+.icon-law-faculty:before {
+  content: '\e917';
+}
+.icon-library-building:before {
+  content: '\e918';
+}
+.icon-male-student:before {
+  content: '\e919';
+}
+.icon-medicine-faculty:before {
+  content: '\e91a';
+}
+.icon-military-faculty:before {
+  content: '\e91b';
+}
+.icon-professor-consultation:before {
+  content: '\e91c';
+}
+.icon-science-lab:before {
+  content: '\e91d';
+}
+.icon-science-symbol:before {
+  content: '\e91e';
+}
+.icon-social-sciences-faculty:before {
+  content: '\e91f';
+}
+.icon-sport-centre:before {
+  content: '\e920';
+}
+.icon-sport-faculty:before {
+  content: '\e921';
+}
+.icon-student-cafe:before {
+  content: '\e922';
+}
+.icon-student-hostel:before {
+  content: '\e923';
+}
+.icon-student-id:before {
+  content: '\e924';
+}
+.icon-student-organization:before {
+  content: '\e925';
+}
+.icon-students-on-lecture:before {
+  content: '\e926';
+}
+.icon-study-process:before {
+  content: '\e927';
+}
+.icon-study-tools:before {
+  content: '\e928';
+}
+.icon-teaching:before {
+  content: '\e929';
+}
+.icon-university-app:before {
+  content: '\e92a';
+}
+.icon-university-building:before {
+  content: '\e92b';
+}
+.icon-university-campus:before {
+  content: '\e92c';
+}
+.icon-university-hospital:before {
+  content: '\e92d';
+}
+.icon-university-lecture:before {
+  content: '\e92e';
+}
+.icon-university-musem:before {
+  content: '\e92f';
+}
+.icon-university-proffesor:before {
+  content: '\e930';
+}
