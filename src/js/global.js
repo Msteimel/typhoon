@@ -14,6 +14,3 @@ accordion;
 
 // mobile trigger
 mobileNavAnimation();
-
-// $window.on('scroll resize', check_if_in_view);
-// $window.trigger('scroll');

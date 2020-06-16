@@ -11,7 +11,34 @@
     ariaText: 'Readable by screen readers'
   },
   {
+    cardClass: '',
+    title: 'Card Title',
+    icon: 'academic-calendar',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    linkText: 'Link words',
+    pageLink: '#',
+    ariaText: 'Readable by screen readers'
+  },
+  {
     cardClass: 'lib-basic-card--yellow',
+    title: 'Card Title',
+    category: 'Category',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '#',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Card Title',
+    icon: 'academic-calendar',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '#',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: 'lib-basic-card--blue',
     title: 'Card Title',
     category: 'Category',
     desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
@@ -22,7 +49,7 @@
   {
     cardClass: 'lib-basic-card--blue',
     title: 'Card Title',
-    category: 'Category',
+    icon: 'academic-calendar',
     desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
     linkText: 'Link words',
     pageLink: '#',
@@ -38,9 +65,14 @@
       <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
         <span class="lib-aria-text">{{ card.ariaText }}</span>
         <div class="lib-basic-card--text-wrap">
-          <span class="lib-basic-card--category lib-mb-xs">
-            {{ card.category }}
-          </span>
+          {% if card.icon %}
+            <span class="lib-icon-{{ card.icon }} lib-mb-md"></span>
+          {% endif %}
+          {% if card.category %}
+            <span class="lib-basic-card--category lib-mb-xs">
+              {{ card.category }}
+            </span>
+          {% endif %}
           <h3 class="lib-basic-card--title">
             {{ card.title }}
           </h3>

@@ -104,6 +104,10 @@ $blue-basic-card-text-blue: $blue-700;
         background-color: $basic-card-dark-tri-hover;
       }
 
+      [class*='lib-icon-'] {
+        color: $basic-card-text-color-hover;
+      }
+
       .lib-basic-card--text-wrap {
         border-color: $basic-card-border-color-hover;
       }
@@ -128,6 +132,12 @@ $blue-basic-card-text-blue: $blue-700;
         }
       }
     }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $basic-card-text-red;
+    transition: color 0.3s ease-in;
   }
 
   .lib-basic-card--text-wrap {
@@ -217,6 +227,10 @@ $blue-basic-card-text-blue: $blue-700;
         background-color: $yellow-basic-card-dark-tri-hover;
       }
 
+      [class*='lib-icon-'] {
+        color: $yellow-basic-card-text-color-hover;
+      }
+
       .lib-basic-card--category {
         color: $yellow-basic-card-text-color-hover;
       }
@@ -237,6 +251,12 @@ $blue-basic-card-text-blue: $blue-700;
         color: $yellow-basic-card-text-color-hover;
       }
     }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $yellow-basic-card-text-yellow;
+    transition: color 0.3s ease-in;
   }
 
   .lib-basic-card--text-wrap {
@@ -280,6 +300,10 @@ $blue-basic-card-text-blue: $blue-700;
         background-color: $blue-basic-card-dark-tri-hover;
       }
 
+      [class*='lib-icon-'] {
+        color: $blue-basic-card-text-color-hover;
+      }
+
       .lib-basic-card--text-wrap {
         border-color: $blue-basic-card-border-color-hover;
       }
@@ -300,6 +324,12 @@ $blue-basic-card-text-blue: $blue-700;
         color: $blue-basic-card-text-color-hover;
       }
     }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $blue-basic-card-text-blue;
+    transition: color 0.3s ease-in;
   }
 
   .lib-basic-card--text-wrap {
