@@ -30,55 +30,55 @@
 }
 
 $icon-list: (
-  'academic-calendar': \e900,
-  'acceptance-letter': \e901,
-  'application-documents': \e902,
-  'art-faculty': \e903,
+  'calendar': \e900,
+  'letter': \e901,
+  'documents': \e902,
+  'art': \e903,
   'book': \e904,
   'business-and-economic': \e905,
   'carnival-masks': \e906,
-  'college-diploma': \e907,
-  'college-fraternity': \e908,
-  'college-sorority': \e909,
+  'diploma': \e907,
+  'fraternity': \e908,
+  'sorority': \e909,
   'computer-lab': \e90a,
-  'computing-science-faculty': \e90b,
-  'distance-courses': \e90c,
+  'computing-science': \e90b,
+  'online-courses': \e90c,
   'earning-a-degree': \e90d,
   'educational-programs': \e90e,
-  'engineering-faculty': \e90f,
+  'engineering': \e90f,
   'faculty-shield': \e910,
   'female-student': \e911,
-  'freshman-applicant': \e912,
+  'freshman': \e912,
   'graduate-student': \e913,
   'graduation-ceremony': \e914,
   'group-of-students': \e915,
   'international-university': \e916,
-  'law-faculty': \e917,
-  'library-building': \e918,
+  'law': \e917,
+  'library': \e918,
   'male-student': \e919,
-  'medicine-faculty': \e91a,
-  'military-faculty': \e91b,
+  'medicine': \e91a,
+  'military': \e91b,
   'professor-consultation': \e91c,
   'science-lab': \e91d,
   'science-symbol': \e91e,
-  'social-sciences-faculty': \e91f,
+  'social-sciences': \e91f,
   'sport-centre': \e920,
   'sport-faculty': \e921,
-  'student-cafe': \e922,
-  'student-hostel': \e923,
-  'student-id': \e924,
-  'student-organization': \e925,
+  'cafe': \e922,
+  'hostel': \e923,
+  'id': \e924,
+  'organization': \e925,
   'students-on-lecture': \e926,
   'study-process': \e927,
   'study-tools': \e928,
   'teaching': \e929,
   'university-app': \e92a,
-  'university-building': \e92b,
-  'university-campus': \e92c,
-  'university-hospital': \e92d,
-  'university-lecture': \e92e,
-  'university-musem': \e92f,
-  'university-professor': \e930,
+  'building': \e92b,
+  'campus': \e92c,
+  'hospital': \e92d,
+  'lecture': \e92e,
+  'museum': \e92f,
+  'professor': \e930,
 );
 
 @each $icon-key, $icon-value in $icon-list {
@@ -86,109 +86,3 @@ $icon-list: (
     content: '#{$icon-value}';
   }
 }
-
-// .icon-educational-programs:before {
-//   content: '\e90e';
-// }
-// .icon-engineering-faculty:before {
-//   content: '\e90f';
-// }
-// .icon-faculty-shield:before {
-//   content: '\e910';
-// }
-// .icon-female-student:before {
-//   content: '\e911';
-// }
-// .icon-freshman-applicant:before {
-//   content: '\e912';
-// }
-// .icon-graduate-student:before {
-//   content: '\e913';
-// }
-// .icon-graduation-ceremony:before {
-//   content: '\e914';
-// }
-// .icon-group-of-students:before {
-//   content: '\e915';
-// }
-// .icon-international-university:before {
-//   content: '\e916';
-// }
-// .icon-law-faculty:before {
-//   content: '\e917';
-// }
-// .icon-library-building:before {
-//   content: '\e918';
-// }
-// .icon-male-student:before {
-//   content: '\e919';
-// }
-// .icon-medicine-faculty:before {
-//   content: '\e91a';
-// }
-// .icon-military-faculty:before {
-//   content: '\e91b';
-// }
-// .icon-professor-consultation:before {
-//   content: '\e91c';
-// }
-// .icon-science-lab:before {
-//   content: '\e91d';
-// }
-// .icon-science-symbol:before {
-//   content: '\e91e';
-// }
-// .icon-social-sciences-faculty:before {
-//   content: '\e91f';
-// }
-// .icon-sport-centre:before {
-//   content: '\e920';
-// }
-// .icon-sport-faculty:before {
-//   content: '\e921';
-// }
-// .icon-student-cafe:before {
-//   content: '\e922';
-// }
-// .icon-student-hostel:before {
-//   content: '\e923';
-// }
-// .icon-student-id:before {
-//   content: '\e924';
-// }
-// .icon-student-organization:before {
-//   content: '\e925';
-// }
-// .icon-students-on-lecture:before {
-//   content: '\e926';
-// }
-// .icon-study-process:before {
-//   content: '\e927';
-// }
-// .icon-study-tools:before {
-//   content: '\e928';
-// }
-// .icon-teaching:before {
-//   content: '\e929';
-// }
-// .icon-university-app:before {
-//   content: '\e92a';
-// }
-// .icon-university-building:before {
-//   content: '\e92b';
-// }
-// .icon-university-campus:before {
-//   content: '\e92c';
-// }
-// .icon-university-hospital:before {
-//   content: '\e92d';
-// }
-// .icon-university-lecture:before {
-//   content: '\e92e';
-// }
-// .icon-university-musem:before {
-//   content: '\e92f';
-// }
-// .icon-university-proffesor:before {
-//   content: '\e930';
-// }
