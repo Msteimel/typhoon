@@ -124,7 +124,7 @@ $blue-basic-card-text-blue: $blue-700;
         color: $basic-card-text-color-hover;
       }
 
-      .lib-basic-card--cta {
+      .lib-cta {
         color: $basic-card-text-color-hover;
 
         &::after {
@@ -166,11 +166,11 @@ $blue-basic-card-text-blue: $blue-700;
     transition: color 0.3s ease-in;
   }
 
-  .lib-basic-card--cta--wrap {
+  .lib-cta--wrap {
     margin-top: auto;
   }
 
-  .lib-basic-card--cta {
+  .lib-cta {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -247,7 +247,7 @@ $blue-basic-card-text-blue: $blue-700;
         color: $yellow-basic-card-text-color-hover;
       }
 
-      .lib-basic-card--cta {
+      .lib-cta {
         color: $yellow-basic-card-text-color-hover;
       }
     }
@@ -267,7 +267,7 @@ $blue-basic-card-text-blue: $blue-700;
     color: $yellow-basic-card-text-yellow;
   }
 
-  .lib-basic-card--cta {
+  .lib-cta {
     color: $yellow-basic-card-text-yellow;
   }
 }
@@ -320,7 +320,7 @@ $blue-basic-card-text-blue: $blue-700;
         color: $blue-basic-card-text-color-hover;
       }
 
-      .lib-basic-card--cta {
+      .lib-cta {
         color: $blue-basic-card-text-color-hover;
       }
     }
@@ -340,7 +340,7 @@ $blue-basic-card-text-blue: $blue-700;
     color: $blue-basic-card-text-blue;
   }
 
-  .lib-basic-card--cta {
+  .lib-cta {
     color: $blue-basic-card-text-blue;
   }
 }
