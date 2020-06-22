@@ -4,69 +4,67 @@
 {% set pageTitle = 'Typhoon Design' %}
 {% set pageDesc = 'Iowa State University Library Design System' %}
 
-{% set basicCards =
-  [
-    {
-      cardClass: '',
-      title: 'Introduction',
-      category: 'Content',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      linkText: 'Link words',
-      pageLink: '/intro'
-    },
-    {
-      cardClass: '',
-      title: 'Writing-Guide',
-      category: 'Content',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/writing-guide'
-    },
-    {
-      cardClass: 'lib-basic-card--yellow',
-      title: 'Colors',
-      category: 'Design & Dev',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/color'
-    },
-    {
-      cardClass: '',
-      title: 'Typography',
-      category: 'Content',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/typography',
-      ariaText: 'Readable by screen readers'
-    },
-    {
-      cardClass: 'lib-basic-card--yellow',
-      title: 'Spacing',
-      category: 'Design & Dev',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/spacing'
-    },
-    {
-      cardClass: 'lib-basic-card--yellow',
-      title: 'Components',
-      category: 'Design & Dev',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/components',
-      ariaText: 'Readable by screen readers'
-    },
-    {
-      cardClass: '',
-      title: 'General Content',
-      category: 'Content',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
-      linkText: 'Link words',
-      pageLink: '/general-content',
-      ariaText: 'Readable by screen readers'
-    }
-  ]
-%}
+{% set basicCards = [
+  {
+    cardClass: '',
+    title: 'Introduction',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    linkText: 'Link words',
+    pageLink: '/intro'
+  },
+  {
+    cardClass: '',
+    title: 'Writing-Guide',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/writing-guide'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Colors',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/color'
+  },
+  {
+    cardClass: '',
+    title: 'Typography',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/typography',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Spacing',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/spacing'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Components',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/components',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: '',
+    title: 'General Content',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/general-content',
+    ariaText: 'Readable by screen readers'
+  }
+] %}
 
 {% block content %}
   <section class="lib-basic-card--wrap tyhpoon-overview-overlap">
@@ -87,7 +85,7 @@
               {{ card.desc }}
             </p>
             <div>
-              <p class="lib-basic-card--cta">
+              <p class="lib-cta">
                 {{ card.linkText }}
               </p>
             </div>
