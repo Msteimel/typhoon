@@ -72,7 +72,12 @@ $colors: (
   'green-900': $green-900,
   // defaults
     'white': $white,
-  'black': $black
+  'black': $black,
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+  'link': $link-color,
+  'text': $text-color
 );
 
 @each $color, $colors in $colors {
@@ -83,4 +88,8 @@ $colors: (
   .lib-text-#{$color} {
     color: $colors;
   }
+
+  // .lib-bc-#{$color} {
+  //   border-color: $colors;
+  // }
 }
