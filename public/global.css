@@ -10880,6 +10880,46 @@ input:not(:focus):valid~.floating-label {
   color: #212121;
 }
 
+.lib-bg-primary {
+  background-color: #c6102e;
+}
+
+.lib-text-primary {
+  color: #c6102e;
+}
+
+.lib-bg-secondary {
+  background-color: #f1be46;
+}
+
+.lib-text-secondary {
+  color: #f1be46;
+}
+
+.lib-bg-accent {
+  background-color: #0d87c9;
+}
+
+.lib-text-accent {
+  color: #0d87c9;
+}
+
+.lib-bg-link {
+  background-color: #c6102e;
+}
+
+.lib-text-link {
+  color: #c6102e;
+}
+
+.lib-bg-text {
+  background-color: #212121;
+}
+
+.lib-text-text {
+  color: #212121;
+}
+
 .clearfix {
   *zoom: 1;
   clear: both;
