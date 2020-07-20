@@ -21,10 +21,12 @@
     </title>
   <link href="/global.css" rel="stylesheet"></head>
 
-  <body>
-          <header class="typhoon-top-nav--wrap lib-bg-white">
-  <div class="lib-mx-2xl">
-    <nav class="typhoon-top-nav d-flex justify-content-between">
+  
+  <body class="lib-grid typhoon-page-home">
+            <header class="typhoon-top-nav--wrap lib-bg-white">
+
+    <div class="lib-mx-2xl">
+    <nav class="typhoon-top-nav">
       <span class="typhoon-top-nav--title lib-py-md lib-text-xl" role="titles">
         <a class="typhoon-top-nav--link lib-text-red-500" href="/">Typhoon</a>
       </span>
@@ -40,10 +42,8 @@
   </div>
 </header>
   
-  <div class="container-fluid typhoon-page-wrap typhoon-page-home">
-    <div class="row justify-content-start typhoon-full-height">
-              <aside class="col typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
-          
+      <aside class="typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
+      
 <div class="typhoon-side-nav lib-bg-red-600 xs:lib-px-2xl xs:lib-py-xs sm:lib-px-2xl sm:lib-py-xs" >
   <button 
     class="typhoon-side-nav--mobile lib-my-auto lib-p-md"
@@ -306,43 +306,38 @@
               </a>
             </li>
                         </ul>
+          <ul class="typhoon-side-nav--list lib-m-0 lib-p-0">
+        <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px-md">
+          <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
+            href="/css-grid/index.html">
+            <span class="lib-text-white">CSS Grid Dev</span>
+          </a>
+        </li>
+          
+              </ul>
      </div>
 </nav>
-        </aside>
-      
-      <div class="col">
-        <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
-          <div class="lib-hero">
-            
-  <div class="lib-header-special lib-mt-7xl lib-ml-5xl md:lib-ml-4xl sm:lib-ml-3xl xs:lib-ml-xl">
-    <h1 class="lib-header-special--text lib-text-white">
-      Typhoon Design
-    </h1>
-    <span class="lib-header-special--sub lib-mt-md lib-text-yellow-400">
-      Iowa State University Library Design System
-    </span>
-  </div>
-          </div>
+    </aside>
+    
+  <main>
+    
+    <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
+      <div class="typhoon-overview-text--wrap">
+        <div class="">
+          <h2 class="lib-heading-underline">
+            Overview
+          </h2>
+          <p class="lead">
+                          Non minim anim cupidatat nostrud Lorem enim esse sit qui sint
+              ullamco nulla enim adipisicing. Nulla cillum veniam exercitation
+              ex sunt exercitation mollit. Elit irure nulla irure pariatur
+              adipisicing ex quis eiusmod ipsum nisi laboris.
+                      </p>
         </div>
-        <main>
-          <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
-            <div class="typhoon-overview-text--wrap">
-              <div class="row flex-column">
-                <h2 class="lib-heading-underline">
-                  Overview
-                </h2>
-                <p class="lead">
-                                      Non minim anim cupidatat nostrud Lorem enim esse sit qui
-                    sint ullamco nulla enim adipisicing. Nulla cillum veniam
-                    exercitation ex sunt exercitation mollit. Elit irure nulla
-                    irure pariatur adipisicing ex quis eiusmod ipsum nisi
-                    laboris.
-                                  </p>
-              </div>
-            </div>
-          </section>
-          <div class="typoon-main-content-wrap">
-              <section class="lib-basic-card--wrap tyhpoon-overview-overlap">
+      </div>
+    </section>
+    <div class="typoon-main-content-wrap">
+        <section class="lib-basic-card--wrap tyhpoon-overview-overlap">
           <div class="lib-basic-card  lib-mr-2xl lib-mb-2xl sm:lib-mr-0 xs:lib-mr-0">
         <a href="/intro/index.html" class="lib-basic-card--link">
           <span class="lib-aria-text"></span>
@@ -493,13 +488,13 @@
       </section>
 
   
-          </div>
-        </main>
-      </div>
     </div>
-  </div>
+  </main>
+  
 
-      <footer>
+        <footer>
+
+
   footer
 </footer>
     <script type="text/javascript" src="/global.js"></script></body>

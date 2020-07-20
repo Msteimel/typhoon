@@ -21,10 +21,12 @@ Typhoon Design System
     </title>
   <link href="/global.css" rel="stylesheet"></head>
 
-  <body>
-          <header class="typhoon-top-nav--wrap lib-bg-white">
-  <div class="lib-mx-2xl">
-    <nav class="typhoon-top-nav d-flex justify-content-between">
+  
+  <body class="lib-grid typhoon-page-color">
+            <header class="typhoon-top-nav--wrap lib-bg-white">
+
+    <div class="lib-mx-2xl">
+    <nav class="typhoon-top-nav">
       <span class="typhoon-top-nav--title lib-py-md lib-text-xl" role="titles">
         <a class="typhoon-top-nav--link lib-text-red-500" href="/">Typhoon</a>
       </span>
@@ -40,10 +42,8 @@ Typhoon Design System
   </div>
 </header>
   
-  <div class="container-fluid typhoon-page-wrap typhoon-page-color">
-    <div class="row justify-content-start typhoon-full-height">
-              <aside class="col typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
-          
+      <aside class="typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
+      
 <div class="typhoon-side-nav lib-bg-red-600 xs:lib-px-2xl xs:lib-py-xs sm:lib-px-2xl sm:lib-py-xs" >
   <button 
     class="typhoon-side-nav--mobile lib-my-auto lib-p-md"
@@ -306,43 +306,39 @@ Typhoon Design System
               </a>
             </li>
                         </ul>
+          <ul class="typhoon-side-nav--list lib-m-0 lib-p-0">
+        <li class="typhoon-side-nav--item typhoon-side-nav--main-page lib-px-md">
+          <a class="typhoon-side-nav--link typhoon-side-nav--main-link"
+            href="/css-grid/index.html">
+            <span class="lib-text-white">CSS Grid Dev</span>
+          </a>
+        </li>
+          
+              </ul>
      </div>
 </nav>
-        </aside>
-      
-      <div class="col">
-        <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
-          <div class="lib-hero">
-            
-  <div class="lib-header-special lib-mt-7xl lib-ml-5xl md:lib-ml-4xl sm:lib-ml-3xl xs:lib-ml-xl">
-    <h1 class="lib-header-special--text lib-text-white">
-      Color
-    </h1>
-    <span class="lib-header-special--sub lib-mt-md lib-text-yellow-400">
-      Typhoon Color Palette
-    </span>
-  </div>
-          </div>
-        </div>
-        <main>
-          <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
-            <div class="typhoon-overview-text--wrap">
-              <div class="row flex-column">
-                <h2 class="lib-heading-underline">
-                  Overview
-                </h2>
-                <p class="lead">
-                    Typhoon uses a color pallete generated from three university markting approved
+    </aside>
+    
+  <main>
+    
+    <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
+      <div class="typhoon-overview-text--wrap">
+        <div class="">
+          <h2 class="lib-heading-underline">
+            Overview
+          </h2>
+          <p class="lead">
+              Typhoon uses a color pallete generated from three university markting approved
   colors. Due to the complexities of the web design these colors were expanded
   to create a variety of colors needed for good web design. The main colors are
   red and yellow with a blue for accent. Additionally there are a neural colors
   for general use and support colors for alerts and form confirmations.
-                </p>
-              </div>
-            </div>
-          </section>
-          <div class="typoon-main-content-wrap">
-              <section class="tyhpoon-overview-overlap">
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="typoon-main-content-wrap">
+        <section class="tyhpoon-overview-overlap">
     <ul class="typhoon-main-color--list">
               <li class="typhoon-main-color--display lib-mr-2xl sm:lib-mr-md xs:lib-mx-auto lib-mb-2xl lib-br2">
           <div class="color-display lib-bg-red-500"></div>
@@ -698,13 +694,13 @@ Typhoon Design System
               </div>
       </div>
 </section>
-          </div>
-        </main>
-      </div>
     </div>
-  </div>
+  </main>
+  
 
-      <footer>
+        <footer>
+
+
   footer
 </footer>
     <script type="text/javascript" src="/global.js"></script></body>

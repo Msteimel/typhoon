@@ -42,15 +42,20 @@ html {
 }
 
 body {
+  margin: 0;
   font-size: $font-size-base;
   font-family: $body-font;
   background-color: $white;
+  color: $text-color;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+
+  // Creating options for Flex vs Grid
+  &.flex {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .grid {

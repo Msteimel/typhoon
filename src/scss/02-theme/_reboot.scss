@@ -51,15 +51,15 @@ section {
 // 3. Set an explicit initial text-align value so that we can later use
 //    the `inherit` value on things like `<th>` elements.
 
-body {
-  margin: 0; // 1
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  text-align: left; // 3
-  background-color: $body-bg; // 2
-}
+// body {
+//   margin: 0; // 1
+//   font-size: $font-size-base;
+//   font-weight: $font-weight-base;
+//   line-height: $line-height-base;
+//   color: $body-color;
+//   text-align: left; // 3
+//   background-color: $body-bg; // 2
+// }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
 // on elements that programmatically receive focus but wouldn't normally show a visible
@@ -94,16 +94,16 @@ hr {
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
 // stylelint-disable-next-line selector-list-comma-newline-after
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  font-weight: 400;
-  // margin-bottom: $headings-margin-bottom;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin-top: 0;
+//   font-weight: 400;
+//   // margin-bottom: $headings-margin-bottom;
+// }
 
 // Reset margins on paragraphs
 //
@@ -153,7 +153,7 @@ ul ol {
 }
 
 dt {
-  font-weight: $dt-font-weight;
+  font-weight: $font-weight-bolder;
 }
 
 dd {
@@ -221,7 +221,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-monospace;
+  font-family: $nimbus-sans_stack;
   font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
 
@@ -268,9 +268,9 @@ table {
 }
 
 caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
-  color: $table-caption-color;
+  // padding-top: $table-cell-padding;
+  // padding-bottom: $table-cell-padding;
+  // color: $table-caption-color;
   text-align: left;
   caption-side: bottom;
 }

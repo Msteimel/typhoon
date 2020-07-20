@@ -16,15 +16,14 @@
       rel="stylesheet" />
 
     <title>
-      Spacing -
-Typhoon Design System
+        CSS Grid Dev -
+Dev Version
     </title>
   <link href="/global.css" rel="stylesheet"></head>
 
   
-  <body class="lib-grid typhoon-page-">
-            <header class="typhoon-top-nav--wrap lib-bg-white">
-
+  <body class="lib-grid typhoon-page-wrap typhoon-page-css-grid lib-mt-6xl">
+          <header class="lib-full typhoon-top-nav--wrap lib-bg-white">
     <div class="lib-mx-2xl">
     <nav class="typhoon-top-nav">
       <span class="typhoon-top-nav--title lib-py-md lib-text-xl" role="titles">
@@ -42,8 +41,17 @@ Typhoon Design System
   </div>
 </header>
   
-      <aside class="typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
-      
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <aside class="typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
+    
 <div class="typhoon-side-nav lib-bg-red-600 xs:lib-px-2xl xs:lib-py-xs sm:lib-px-2xl sm:lib-py-xs" >
   <button 
     class="typhoon-side-nav--mobile lib-my-auto lib-p-md"
@@ -317,302 +325,162 @@ Typhoon Design System
               </ul>
      </div>
 </nav>
-    </aside>
-    
-  <main>
-    
-    <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
-      <div class="typhoon-overview-text--wrap">
-        <div class="">
-          <h2 class="lib-heading-underline">
-            Overview
-          </h2>
-          <p class="lead">
-            Typhoon uses pre-set spacing design tokens and utility classes to streamling
-design and speed up development. Both tokens and utility classes use a
-descriptive naming convition instead of numeric values to improve flexibility.
-          </p>
-        </div>
+  </aside>
+  <main class="lib-mx-2xl">
+      <section class="lib-basic-card--wrap">
+          <div class="lib-basic-card ">
+        <a href="/intro/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text"></span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Content
+            </span>
+            <h3 class="lib-basic-card--title">
+              Introduction
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
+          </div>
+        </a>
       </div>
-    </section>
-    <div class="typoon-main-content-wrap">
-      <article class="lib-mb-4xl">
-  <h2 id="utility-classes">
-    Spacing Utility Classes
-  </h2>
-  <p>There are utility classes for both padding and margins in Typhoon. Each follows the same structure of the library
-    prefix, the type of spacing and which part of the element, and the size. For example <code>lib-pt-md</code>
-    provides padding (p) to the top (t) of the element. The amount of spacing is the medium spacing token. If you wanted
-    to do margins, you would use <code>lib-mt-md</code> instead. Padding and margin have the same class except margin,
-    which has an <code>lib-m-auto</code>, which set the x-axis margins to auto for horizontal centering.</p>
-  <table class="typhoon-spacing-table utility-spacing lib-mt-2xl">
-    <thead>
-      <tr>
-        <th class="example">
-          Class Example
-        </th>
-        <th class="display">
-          Display
-        </th>
-        <th class="description">
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-            <tr>
-        <td class="example">
-          <span>lib-m-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-all"></div>
+          <div class="lib-basic-card lib-basic-card--yellow">
+        <a href="/writing-guide/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text"></span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Content
+            </span>
+            <h3 class="lib-basic-card--title">
+              Writing-Guide
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on all side of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-mx-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-x"></div>
+        </a>
+      </div>
+          <div class="lib-basic-card ">
+        <a href="/color/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text"></span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Design & Dev
+            </span>
+            <h3 class="lib-basic-card--title">
+              Colors
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on the x-axis of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-my-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-y"></div>
+        </a>
+      </div>
+          <div class="lib-basic-card lib-basic-card--yellow">
+        <a href="/typography/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text">Readable by screen readers</span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Content
+            </span>
+            <h3 class="lib-basic-card--title">
+              Typography
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on the y-axis of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-mt-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-t"></div>
+        </a>
+      </div>
+          <div class="lib-basic-card ">
+        <a href="/spacing/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text"></span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Design & Dev
+            </span>
+            <h3 class="lib-basic-card--title">
+              Spacing
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniamUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on the top side of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-mr-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-r"></div>
+        </a>
+      </div>
+          <div class="lib-basic-card lib-basic-card--yellow">
+        <a href="/components/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text">Readable by screen readers</span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Design & Dev
+            </span>
+            <h3 class="lib-basic-card--title">
+              Components
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on the right side of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-mb-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-b"></div>
+        </a>
+      </div>
+          <div class="lib-basic-card ">
+        <a href="/general-content/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text">Readable by screen readers</span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              Content
+            </span>
+            <h3 class="lib-basic-card--title">
+              General Content
+            </h3>
+            <p class="lib-basic-card--desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.
+            </p>
+            <div>
+              <p class="lib-cta">
+                Link words
+              </p>
+            </div>
           </div>
-        </td>
-        <td class="description">
-          Adds margins on the bottom side of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-ml-md </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-l"></div>
-          </div>
-        </td>
-        <td class="description">
-          Adds margins on the left side of an element
-        </td>
-      </tr>
-            <tr>
-        <td class="example">
-          <span>lib-m-auto </span>
-        </td>
-        <td class="display">
-          <div class="spacing-display">
-            <div class="margin-auto"></div>
-          </div>
-        </td>
-        <td class="description">
-          Sets margins to auto
-        </td>
-      </tr>
-          </tbody>
-  </table>
-</article>
-<article class="lib-mb-4xl">
-  <h2 id="responsive-classes">Responsive Spacing Classes</h2>
-  <p>Typhoon also uses breakpoints classes for all margin and padding elements mentioned above. These classes create
-    extra flexibility by quickly changing spacing based on screen width. Each breakpoint only works for the specificied
-    screen width. For example <code>md:lib-pt-md</code> sets <code>padding-top</code> for the medium screen size
-    <code>sm:lib-p-sm</code> sets <code>padding</code> for a small screen.</p>
-  <p>Adjust your screen size to see the example below</p>
-  <div class="responsive-display lib-mt-md">
-    <div class="xl:lib-m-2xl lg:lib-m-xl md:lib-m-md sm:lib-m-sm xs:lib-m-0"></div>
-  </div>
-</article>
-<article>
-  <h2 id="spacing-modifiers">
-    Spacing Modifiers
-  </h2>
-  <p>The spacing modifiers are preset to improve the design process. The <code>md</code> from the abouve exmaple can be
-    replaced with any of the below values.</p>
-  <table class="typhoon-spacing-table spacing-tokens lib-mt-2xl">
-    <thead>
-      <tr>
-        <th class="modifier">
-          Spacing Modifier
-        </th>
-        <th class="value">
-          Value
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-            <tr>
-        <td class="modifier">
-          <span>2xs</spa>
-        </td>
-        <td class="value">
-          <span>0.25 rem</span><span>4 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>xs</spa>
-        </td>
-        <td class="value">
-          <span>0.5 rem</span><span>8 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>sm</spa>
-        </td>
-        <td class="value">
-          <span>0.75 rem</span><span>12 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>md</spa>
-        </td>
-        <td class="value">
-          <span>1 rem</span><span>16 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>lg</spa>
-        </td>
-        <td class="value">
-          <span>1.5 rem</span><span>24 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>xl</spa>
-        </td>
-        <td class="value">
-          <span>2 rem</span><span>32 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>2xl</spa>
-        </td>
-        <td class="value">
-          <span>2.5 rem</span><span>40 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>3xl</spa>
-        </td>
-        <td class="value">
-          <span>3 rem</span><span>48 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>4xl</spa>
-        </td>
-        <td class="value">
-          <span>4 rem</span><span>64 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>5xl</spa>
-        </td>
-        <td class="value">
-          <span>6 rem</span><span>96 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>6xl</spa>
-        </td>
-        <td class="value">
-          <span>8 rem</span><span>128 px</span>
-          </div>
-        </td>
-      </tr>
-            <tr>
-        <td class="modifier">
-          <span>7xl</spa>
-        </td>
-        <td class="value">
-          <span>12 rem</span><span>192 px</span>
-          </div>
-        </td>
-      </tr>
-          </tbody>
-  </table>
-</article>
-    </div>
-  </main>
+        </a>
+      </div>
+      </section>
+
   
+  </main>
 
-        <footer>
-
+        <footer class="lib-full">
 
   footer
 </footer>

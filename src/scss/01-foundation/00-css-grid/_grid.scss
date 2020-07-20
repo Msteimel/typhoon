@@ -1,0 +1,26 @@
+.lib-grid {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  footer {
+    grid-column: 1 / -1;
+  }
+
+  aside {
+    grid-column: 1 / 2;
+  }
+
+  main {
+    grid-column: 2 / -1;
+  }
+}
+
+.lib-full {
+  grid-column: 1 / -1;
+}
