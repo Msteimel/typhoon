@@ -1,7 +1,6 @@
 .lib-hero--wrap {
   position: relative;
   height: rem(425);
-  margin: 0 rem(-15);
 
   @include media-breakpoint-down(md) {
     height: rem(375);

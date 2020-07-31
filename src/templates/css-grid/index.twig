@@ -1,0 +1,101 @@
+{% extends '../_grid-dev.html.twig' %}
+
+{% set pageClass = 'css-grid' %}
+{% set pageTitle = 'CSS Grid Dev' %}
+{% set pageDesc = 'Testing out CSS Grid' %}
+
+{% block title %}
+  CSS Grid Dev -
+{% endblock %}
+
+{% set basicCards = [
+  {
+    cardClass: '',
+    title: 'Introduction',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    linkText: 'Link words',
+    pageLink: '/intro'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Writing-Guide',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/writing-guide'
+  },
+  {
+    cardClass: '',
+    title: 'Colors',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/color'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Typography',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/typography',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: '',
+    title: 'Spacing',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniamUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/spacing'
+  },
+  {
+    cardClass: 'lib-basic-card--yellow',
+    title: 'Components',
+    category: 'Design & Dev',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/components',
+    ariaText: 'Readable by screen readers'
+  },
+  {
+    cardClass: '',
+    title: 'General Content',
+    category: 'Content',
+    desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam.',
+    linkText: 'Link words',
+    pageLink: '/general-content',
+    ariaText: 'Readable by screen readers'
+  }
+] %}
+
+{% block content %}
+  <section class="lib-basic-card--wrap">
+    {% for card in basicCards %}
+      <div class="lib-basic-card {{ card.cardClass }}">
+        <a href="{{ card.pageLink }}/index.html" class="lib-basic-card--link">
+          <span class="lib-aria-text">{{ card.ariaText }}</span>
+          <div class="lib-basic-card--text-wrap">
+            <span class="lib-basic-card--category lib-mb-xs">
+              {{ card.category }}
+            </span>
+            <h3 class="lib-basic-card--title">
+              {{ card.title }}
+            </h3>
+            <p class="lib-basic-card--desc">
+              {{ card.desc }}
+            </p>
+            <div>
+              <p class="lib-cta">
+                {{ card.linkText }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </section>
+
+  {# <div class="footer-wrap"></div> #}
+{% endblock %}

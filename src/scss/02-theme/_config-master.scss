@@ -45,12 +45,18 @@ body {
   font-size: $font-size-base;
   font-family: $body-font;
   background-color: $white;
+  color: $text-color;
+  min-height: 100vh;
+  margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+
+  // Creating options for Flex vs Grid
+  &.flex {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .grid {

@@ -18,23 +18,19 @@
     <title>
       {% block title %}
 
-      {% endblock %}Typhoon Design System
+      {% endblock %}Dev Version
     </title>
   </head>
 
   {% set page = pageClass %}
 
-  <body class="lib-grid typhoon-page-{{ page }}">
+  <body class="lib-grid typhoon-page-wrap typhoon-page-{{ page }} lib-mt-6xl">
     {% block body %}
       {% block topNav %}
 
       {% endblock %}
 
       {% block sideNav %}
-
-      {% endblock %}
-
-      {% block overview %}
 
       {% endblock %}
 

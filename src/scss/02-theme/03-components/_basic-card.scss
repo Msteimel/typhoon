@@ -41,10 +41,20 @@ $blue-basic-card-text-blue: $blue-700;
 .lib-basic-card--wrap {
   display: flex;
   flex-wrap: wrap;
+
+  .lib-grid & {
+    display: grid;
+    gap: $space-lg;
+    grid-template-columns: repeat(auto-fit, minmax(rem(375), 1fr));
+  }
 }
 
 .lib-basic-card {
   max-width: $card-width;
+
+  .lib-grid & {
+    max-width: none;
+  }
 
   @include media-breakpoint-down(sm) {
     width: $card-width-mobile;

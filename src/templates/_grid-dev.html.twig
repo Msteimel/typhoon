@@ -1,0 +1,39 @@
+{% extends './_grid-base.html.twig' %}
+
+{% set isGrid = true %}
+
+{% block body %}
+  {% block topNav %}
+    {% include '/_blocks/_top-nav.html.twig' %}
+  {% endblock %}
+
+  {# <div class="lib-full typhoon-page-wrap typhoon-page-{{ page }} lib-mt-6xl"> #}
+  {# <div class="typhoon-full-height"> #}
+  {#                           {% block sideNav %}
+        <aside class="col typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
+          {% include '/_blocks/_side-nav.html.twig' %}
+        </aside>
+      {% endblock %} #}
+
+  {# <div class="col"> #}
+  {#                     <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
+          <div class="lib-hero">
+            {% include '/_elements/_header-special.html.twig' %}
+          </div>
+        </div> #}
+  {# </div> #}
+  {# </div> #}
+  {# </div> #}
+  <aside class="typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
+    {% include '/_blocks/_side-nav.html.twig' %}
+  </aside>
+  <main class="lib-mx-2xl">
+    {% block content %}
+
+    {% endblock %}
+  </main>
+
+  {% block footer %}
+    {% include '/_blocks/_footer.html.twig' %}
+  {% endblock %}
+{% endblock %}

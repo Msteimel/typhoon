@@ -6,6 +6,11 @@
   z-index: 100;
 }
 
+.typhoon-top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .typhoon-top-nav--link {
   font-family: $heading-font;
   text-decoration: none;

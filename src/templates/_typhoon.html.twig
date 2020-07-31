@@ -7,48 +7,46 @@
     {% include '/_blocks/_top-nav.html.twig' %}
   {% endblock %}
 
-  <div class="container-fluid typhoon-page-wrap typhoon-page-{{ page }}">
-    <div class="row justify-content-start typhoon-full-height">
-      {% block sideNav %}
-        <aside class="col typhoon-side-nav--wrap lib-p-0 lib-bg-red-600">
-          {% include '/_blocks/_side-nav.html.twig' %}
-        </aside>
-      {% endblock %}
-
-      <div class="col">
-        <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
-          <div class="lib-hero">
-            {% include '/_elements/_header-special.html.twig' %}
-          </div>
-        </div>
-        <main>
-          <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
-            <div class="typhoon-overview-text--wrap">
-              <div class="row flex-column">
-                <h2 class="lib-heading-underline">
-                  Overview
-                </h2>
-                <p class="lead">
-                  {% block overview %}
-                    Non minim anim cupidatat nostrud Lorem enim esse sit qui
-                    sint ullamco nulla enim adipisicing. Nulla cillum veniam
-                    exercitation ex sunt exercitation mollit. Elit irure nulla
-                    irure pariatur adipisicing ex quis eiusmod ipsum nisi
-                    laboris.
-                  {% endblock %}
-                </p>
-              </div>
-            </div>
-          </section>
-          <div class="typoon-main-content-wrap">
-            {% block content %}
-
-            {% endblock %}
-          </div>
-        </main>
+  {% block sideNav %}
+    <aside class="typhoon-side-nav--wrap lib-pt-4xl lib-bg-red-600">
+      {% include '/_blocks/_side-nav.html.twig' %}
+    </aside>
+  {% endblock %}
+  {#           <div class="typhoon-page-wrap typhoon-page-{{ page }}">
+    <div class="typhoon-full-height">
+      <div class=""> #}
+  <main>
+    <div class="lib-hero--wrap sm:lib-mt-4xl xs:lib-mt-4xl">
+      <div class="lib-hero">
+        {% include '/_elements/_header-special.html.twig' %}
       </div>
     </div>
-  </div>
+    <section class="typhoon-overview--wrap lib-bg-red-50 lib-py-4xl">
+      <div class="typhoon-overview-text--wrap">
+        <div class="">
+          <h2 class="lib-heading-underline">
+            Overview
+          </h2>
+          <p class="lead">
+            {% block overview %}
+              Non minim anim cupidatat nostrud Lorem enim esse sit qui sint
+              ullamco nulla enim adipisicing. Nulla cillum veniam exercitation
+              ex sunt exercitation mollit. Elit irure nulla irure pariatur
+              adipisicing ex quis eiusmod ipsum nisi laboris.
+            {% endblock %}
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="typoon-main-content-wrap">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </main>
+  {#           </div>
+    </div>
+  </div> #}
 
   {% block footer %}
     {% include '/_blocks/_footer.html.twig' %}
