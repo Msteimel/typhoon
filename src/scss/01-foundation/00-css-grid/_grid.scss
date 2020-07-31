@@ -14,10 +14,18 @@
 
   aside {
     grid-column: 1 / 2;
+
+    @include media-breakpoint-down(sm) {
+      grid-column: 1 / -1;
+    }
   }
 
   main {
     grid-column: 2 / -1;
+
+    @include media-breakpoint-down(sm) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
