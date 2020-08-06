@@ -2,7 +2,7 @@
   .lib-button {
     width: rem(200);
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       width: 100%;
     }
   }

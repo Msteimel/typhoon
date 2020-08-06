@@ -2,15 +2,33 @@
 var baseEndpoint = 'https://api.density.io/v2/';
 
 // API Auth Token
-var densityToken = 'tok_Gj4NFeMxCtg62gZeDvsgygVy6elahJyE2m6owBA9VCA';
+var densityToken = 'tok_X3RAYB1p9dgMYSMU2MICYxD1StPh0Bmx4Jf6gLh1biS';
 
 // API id for room in questions
-var space_id = 'spc_768300251122499898';
+var space_id = 'spc_825429597414752714';
 
-var countEl = document.querySelector('.occ');
+var densityEl = document.querySelector('.js-densityHook');
+var densityMessageEl = densityEl.querySelector('.alert-text--main');
 
-export var webSocketOccupants = new XMLHttpRequest();
-export var initialOccupants = new XMLHttpRequest();
+var webSocketOccupants = new XMLHttpRequest();
+var initialOccupants = new XMLHttpRequest();
+
+function occupantsAlert(count) {
+  var full = count >= 1200;
+  var crowded = count > 500 && count < 1200;
+  densityEl.classList.remove('lib-alert--red', 'lib-alert--yellow');
+
+  if (full) {
+    densityEl.classList.add('lib-alert--red');
+    densityMessageEl.innerHTML = 'Unlikely';
+  } else if (crowded) {
+    densityEl.classList.add('lib-alert--yellow');
+    densityMessageEl.innerHTML = 'Likely';
+  } else {
+    densityEl.classList.add('lib-alert--green');
+    densityMessageEl.innerHTML = 'Available';
+  }
+}
 
 initialOccupants.open('GET', baseEndpoint + 'spaces/' + space_id, true);
 initialOccupants.setRequestHeader('Authorization', 'Bearer ' + densityToken);
@@ -22,9 +40,7 @@ initialOccupants.onload = function() {
     var count = data.current_count;
 
     // set html display
-    console.log(count);
-
-    countEl.innerHTML = '<p>' + count + '</p>';
+    occupantsAlert(count);
   } else {
     console.log('error');
     // We reached our target server, but it returned an error
@@ -46,8 +62,7 @@ webSocketOccupants.onload = function() {
       if (data.payload.space_id == space_id) {
         var count = data.payload.count;
 
-        // set html display
-        countEl.innerHTML = '<p>' + count + '</p>';
+        occupantsAlert(count);
       }
     };
   } else {
@@ -57,13 +72,13 @@ webSocketOccupants.onload = function() {
 };
 
 initialOccupants.onerror = function() {
-  countEl.innerHTML =
-    '<p> An error has occurred. Please try again shortly.</p>';
+  densityMessageEl.innerHTML =
+    'An error has occurred. Please try again shortly.';
 };
 
 webSocketOccupants.onerror = function() {
-  countEl.innerHTML =
-    '<p> An error has occurred. Please try again shortly.</p>';
+  densityMessageEl.innerHTML =
+    'An error has occurred. Please try again shortly.';
 };
 
 initialOccupants.send();

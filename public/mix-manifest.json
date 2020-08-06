@@ -1,4 +1,6 @@
 {
-    "/global.js": "/global.js?id=fb4c4c161c7b77fe7189",
-    "/global.css": "/global.css?id=145dc3bd2c2aecf59889"
+    "/global.js": "/global.js",
+    "/global.css": "/global.css",
+    "/global.js.map": "/global.js.map",
+    "/global.css.map": "/global.css.map"
 }

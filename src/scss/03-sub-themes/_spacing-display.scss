@@ -100,7 +100,7 @@
 }
 
 .spacing-tokens {
-  @include media-breakpoint-only(xl) {
+  @include bp(xl) {
     max-width: 50%;
   }
 
@@ -109,7 +109,7 @@
   .modifier {
     width: 15rem;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       width: 10rem;
     }
   }

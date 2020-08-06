@@ -53,7 +53,7 @@ $margin-list: (
 }
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-only(xl) {
+  @include bp(xl) {
     .xl\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -86,7 +86,7 @@ $margin-list: (
 }
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-only(lg) {
+  @include bp(lg) {
     .lg\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -120,7 +120,7 @@ $margin-list: (
 }
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-only(md) {
+  @include bp(md) {
     .md\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -154,7 +154,7 @@ $margin-list: (
 }
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-only(sm) {
+  @include bp(sm) {
     .sm\:lib-m-#{$space} {
       margin: $spacing;
     }
@@ -188,7 +188,7 @@ $margin-list: (
 }
 
 @each $space, $spacing in $margin-list {
-  @include media-breakpoint-only(xs) {
+  @include bp(xs) {
     .xs\:lib-m-#{$space} {
       margin: $spacing;
     }

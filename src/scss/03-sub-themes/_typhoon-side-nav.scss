@@ -3,7 +3,7 @@
   border-right: 1px solid $red-800;
   z-index: 1;
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     flex: 0 0 100%;
     border: none;
     position: relative;
@@ -30,12 +30,12 @@
   text-decoration: none;
   background: transparent;
   transition: color 0.3s ease;
+  display: none;
 
-  @include media-breakpoint-up(med) {
-    display: none;
+  @include bp(med) {
   }
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     display: inline-block;
     align-self: flex-end;
   }
@@ -65,14 +65,14 @@
 }
 
 .typhoon-side-menu--wrap {
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     position: relative;
     overflow: hidden;
   }
 }
 
 .typhoon-side-nav--list {
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     &:first-of-type {
       margin-top: $space-sm;
     }
@@ -88,7 +88,7 @@
   flex-direction: column;
   height: $space-2xl;
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     height: $space-3xl;
   }
 }

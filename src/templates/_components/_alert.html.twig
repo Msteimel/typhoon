@@ -1,0 +1,71 @@
+{% set alerts = [
+  {
+    color: 'lib-alert--red',
+    topText: 'Library seating is',
+    bottomText: 'Unlikely'
+  },
+  {
+    color: 'lib-alert--yellow',
+    topText: 'Library seating is',
+    bottomText: 'Likely'
+  },
+  {
+    color: 'lib-alert--blue',
+    topText: 'Library seating is',
+    bottomText: 'Blue'
+  },
+  {
+    color: 'lib-alert--green',
+    topText: 'Library seating is',
+    bottomText: 'Available'
+  }
+] %}
+
+<div class="lib-alert--wrap lib-flex">
+  {% for alert in alerts %}
+    <div class="lib-alert {{ alert.color }} lib-mx-xl lib-my-md">
+      <div class="lib-alert--icon-block">
+        <i class="fas fa-landmark"></i>
+      </div>
+      <div class="lib-alert--text lib-m-lg">
+        <span class="alert-text--top lib-text-lg lib-mb-sm">
+          {{ alert.topText }}
+        </span>
+        <span class="alert-text--main lib-text-4xl">
+          {{ alert.bottomText }}
+        </span>
+      </div>
+    </div>
+  {% endfor %}
+
+  <div class="lib-alert--wrap lib-flex">
+    <div class="lib-alert lib-alert--yellow js-densityHook lib-mx-xl lib-my-md">
+      <div class="lib-alert--icon-block">
+        <i class="fas fa-landmark"></i>
+      </div>
+      <div class="lib-alert--text lib-m-lg">
+        <span class="alert-text--top lib-text-lg lib-mb-sm">
+          Library seating is
+        </span>
+        <span class="alert-text--main lib-text-4xl">Likely</span>
+      </div>
+    </div>
+    <div class="lib-alert lib-alert--blue lib-mx-xl lib-my-md">
+      <div class="lib-alert--icon-block">
+        <i class="fas fa-landmark"></i>
+      </div>
+      <div class="lib-alert--text lib-m-lg">
+        <span class="alert-text--top lib-text-md lib-mb-sm">
+          Learn about modifications, safety guidelines, and Cyclones Care
+          efforts <a href="https://www.lib.iastate.edu/covid-19">here</a>.
+        </span>
+        <span class="lib-text-md">
+          You can reach the library by <a href="tel:515-294-3642">phone</a>, <a href="mailto:circdesk@iastate.edu">
+            email
+          </a> or <a href="https://www.lib.iastate.edu/help-services/assistance/ask-a-librarian">Ask
+            Us Live Chat</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

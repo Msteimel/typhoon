@@ -2,7 +2,7 @@
   position: relative;
   height: rem(425);
 
-  @include media-breakpoint-down(md) {
+  @include bp(md) {
     height: rem(375);
   }
 }
@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   height: 100%;
 
-  @include media-breakpoint-only(xs) {
+  @include bp(xs) {
     // text-align: center;
   }
 }

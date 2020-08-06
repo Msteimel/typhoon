@@ -56,7 +56,7 @@ $blue-basic-card-text-blue: $blue-700;
     max-width: none;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     width: $card-width-mobile;
   }
 

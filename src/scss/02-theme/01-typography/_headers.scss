@@ -37,7 +37,7 @@ h1,
   margin: 0;
   margin-bottom: $space-2xl;
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     font-size: $fs-3xl;
   }
 }

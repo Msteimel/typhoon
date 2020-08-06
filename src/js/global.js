@@ -2,7 +2,7 @@
 import SmoothScroll from 'smooth-scroll';
 import { navHighlight } from './nav-highlight.js';
 import * as accordion from './accordion.js';
-// import * as capacity from './libCapacity';
+import * as capacity from './libCapacity';
 import { mobileNavAnimation } from './mobile-nav.js';
 
 var scroll = new SmoothScroll('a[href*="#"]');
@@ -14,7 +14,7 @@ navHighlight;
 accordion;
 
 // capacity
-// capacity;
+capacity;
 
 // mobile trigger
 mobileNavAnimation();
