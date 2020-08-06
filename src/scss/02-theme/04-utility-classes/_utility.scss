@@ -22,7 +22,7 @@
   margin-left: calc(50% - 49vw);
   margin-right: calc(50% - 49vw);
 
-  @include media-breakpoint-only(xl) {
+  @include bp(xl) {
     margin-left: calc(25% - 80vw);
     margin-right: calc(25% - 80vw);
   }

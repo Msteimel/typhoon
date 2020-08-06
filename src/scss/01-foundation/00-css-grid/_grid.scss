@@ -3,7 +3,7 @@
   grid-template-columns: 230px 1fr;
   grid-template-rows: auto 1fr auto;
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     grid-template-columns: 1fr;
   }
 
@@ -15,7 +15,7 @@
   aside {
     grid-column: 1 / 2;
 
-    @include media-breakpoint-down(sm) {
+    @include bp(sm) {
       grid-column: 1 / -1;
     }
   }
@@ -23,7 +23,7 @@
   main {
     grid-column: 2 / -1;
 
-    @include media-breakpoint-down(sm) {
+    @include bp(sm) {
       grid-column: 1 / -1;
     }
   }

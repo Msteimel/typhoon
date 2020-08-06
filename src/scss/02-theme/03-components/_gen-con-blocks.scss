@@ -54,7 +54,7 @@
     float: right;
     margin-left: $space-lg;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       float: initial;
       max-width: 100%;
       margin: 0 auto;
@@ -67,7 +67,7 @@
     float: left;
     margin-right: $space-lg;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       float: initial;
       max-width: 100%;
       margin: 0 auto;
@@ -90,11 +90,11 @@
   .lib-gen-con--img-wrap {
     max-width: rem(400);
 
-    @include media-breakpoint-down(md) {
+    @include bp(md) {
       max-width: 45%;
     }
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       max-width: 100%;
     }
   }
@@ -104,11 +104,11 @@
   .lib-gen-con--img-wrap {
     max-width: rem(250);
 
-    @include media-breakpoint-down(md) {
+    @include bp(md) {
       max-width: 32%;
     }
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       max-width: 100%;
     }
   }
@@ -119,7 +119,7 @@
   .lib-content-wrap {
     display: flex;
     justify-content: space-around;
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       flex-direction: column;
     }
   }
@@ -157,7 +157,7 @@
     flex-wrap: wrap;
     margin: $space-2xl 0 0 0;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       margin: $space-lg 0 0 $space-md;
     }
   }
@@ -168,7 +168,7 @@
     margin-bottom: $space-md;
     padding-right: $space-xs;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       width: 100%;
       padding: $space-xs 0;
     }
@@ -282,11 +282,11 @@
   font-size: $fs-lg;
   margin: 0 auto;
 
-  @include media-breakpoint-only(sm) {
+  @include bp(sm) {
     font-size: $fs-md;
   }
 
-  @include media-breakpoint-only(xs) {
+  @include bp(xs) {
     max-width: 95%;
   }
 
@@ -331,7 +331,7 @@
     max-width: rem(637.5);
     color: $red-50;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       max-width: 90%;
     }
 
@@ -382,11 +382,11 @@
     line-height: 1;
     color: $yellow-500;
 
-    @include media-breakpoint-down(sm) {
+    @include bp(sm) {
       font-size: $fs-6xl;
     }
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       font-size: $fs-4xl;
     }
   }
@@ -395,7 +395,7 @@
     content: open-quote;
     left: 4%;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       left: 2%;
     }
   }
@@ -404,13 +404,13 @@
     content: close-quote;
     right: 4%;
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       right: 2%;
     }
   }
 
   .lib-quote {
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       max-width: 90%;
     }
   }
@@ -437,11 +437,11 @@
       right: -9%;
       background-color: $red-500;
 
-      @include media-breakpoint-down(sm) {
+      @include bp(sm) {
         right: -14%;
       }
 
-      @include media-breakpoint-only(xs) {
+      @include bp(xs) {
         right: -18%;
       }
     }
@@ -451,10 +451,10 @@
       right: -13%;
       background-color: $red-400;
 
-      @include media-breakpoint-down(sm) {
+      @include bp(sm) {
         right: -19%;
       }
-      @include media-breakpoint-only(xs) {
+      @include bp(xs) {
         right: -25%;
       }
     }

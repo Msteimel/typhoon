@@ -107,11 +107,11 @@
   position: relative;
   overflow: hidden;
 
-  @include media-breakpoint-down(md) {
+  @include bp(md) {
     width: 90%;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include bp(sm) {
     width: 95%;
   }
 
@@ -124,7 +124,7 @@
     text-decoration: none;
     transition: color 0.3s ease;
 
-    @include media-breakpoint-down(xs) {
+    @include bp(xs) {
       display: block;
       // flex-direction: column;
     }
@@ -144,15 +144,15 @@
     width: 100%;
     z-index: 2;
 
-    @include media-breakpoint-only(md) {
+    @include bp(md) {
       width: 60%;
     }
 
-    @include media-breakpoint-only(sm) {
+    @include bp(sm) {
       width: 80%;
     }
 
-    @include media-breakpoint-only(xs) {
+    @include bp(xs) {
       width: rem(250);
     }
 
